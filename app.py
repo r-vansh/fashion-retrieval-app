@@ -5,8 +5,55 @@ import clip
 import torch
 import pickle
 from PIL import Image
+import zipfile
+import requests
 
 
+# -------------------------
+# DOWNLOAD IMAGES
+# -------------------------
+
+ZIP_URL = (
+    "https://github.com/r-vansh/fashion-retrieval-app/releases/download/v1/images.zip"
+)
+
+if not os.path.exists(
+    "dataset/images"
+):
+
+    st.info(
+        "Downloading images..."
+    )
+
+    zip_path = (
+        "images.zip"
+    )
+
+    response = requests.get(
+        ZIP_URL
+    )
+
+    with open(
+        zip_path,
+        "wb"
+    ) as f:
+
+        f.write(
+            response.content
+        )
+
+    with zipfile.ZipFile(
+        zip_path,
+        "r"
+    ) as zip_ref:
+
+        zip_ref.extractall(
+            "dataset"
+        )
+
+    os.remove(
+        zip_path
+    )
 
 st.set_page_config(
     page_title="Fashion Retrieval",
@@ -223,9 +270,8 @@ with st.spinner("Loading Fashion Retrieval..."):
         "rb"
     ) as f:
 
-        image_paths, image_embeddings = (
-            pickle.load(f)
-        )
+         image_embeddings, image_paths = pickle.load(f)
+    
     
     # -------------------------
     # FIX IMAGE PATHS
@@ -731,7 +777,7 @@ if uploaded_file:
 
         st.image(
             uploaded_image,
-            use_container_width=True
+            width="stretch"
         )
 
     with right_col:
@@ -792,7 +838,7 @@ if uploaded_file:
 
                     st.image(
                         image_path,
-                        use_container_width=True
+                        width="stretch"
                     )
 
                     match_score = min(
