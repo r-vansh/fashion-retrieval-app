@@ -1,0 +1,181 @@
+image_id,file_name,category,silhouette,sleeve,neckline,color,style,pattern,extra_notes
+img_drs_a_001,img_drs_a_001.jpg,dress,peplum,sleeveless,v-neck,blue and beige,modern,checkered,fitted waist and tie around neck
+img_drs_a_002,img_drs_a_002.jpg,dress,peplum,sleeveless,round,black,pret and minimal,plain,box pleated bottom
+img_drs_a_003,img_drs_a_003.jpg,dress,fitted,sleeveless,v-neck,deep red,glam,plain,wrap like dress
+img_drs_a_004,img_drs_a_004.jpg ,dress,a-line,sleeveless,halter,red,glam,plain,a slit dress
+img_drs_a_005,img_drs_a_005.jpg,dress,straight,sleeveless,halter,multicolor,casual,pattern,detailed patterns
+img_drs_a_006,img_drs_a_006.jpg,dress,a-line,sleeveless,v-neck,blue,modern,plain,
+img_drs_a_007,img_drs_a_007.jpg,dress,fitted,sleeveless,v-neck,light sap green,modern,beaded,beaded embroidery work
+img_drs_a_008,img_drs_a_008.jpg,dress,a-line,sleeveless,v-neck,black,glam,plain,has bow and flares
+img_drs_a_009,img_drs_a_009.jpg,dress,straight,sleeveless,strapless,lettuce green,minimal,plain,tie around neck
+img_drs_a_010,img_drs_a_010.jpg,dress ,fitted,long,round,multicolor,minimal,plain,wavy edge finishes
+img_pnt_a_011,img_pnt_a_011.jpg,pant,loose-fitted,none,none,yellow,casual,plain,
+img_pnt_a_012,img_pnt_a_012.jpg,pant,loose-fitted,none,none,grey,casual,plain,
+img_pnt_a_013,img_pnt_a_013.jpg,pant,loose-fitted,none,none,faded grey,casual,denim,
+img_pnt_a_014,img_pnt_a_014.jpg,pant,flared,none,none,white,formal,denim,flared legs
+img_pnt_a_015,img_pnt_a_015.jpg,pant,flared,none,none,faded dark blue,formal,denim,flared legs 
+img_pnt_a_016,img_pnt_a_016.jpg,pant,loose-fitted,none,none,grey,formal,plain,
+img_pnt_a_017,img_pnt_a_017.jpg,pant,loose-fitted,none,none,yellow,minimal,plain,pleated shorts 
+img_skt_a_018,img_skt_a_018.jpg,skirt,a-line,none,none,black,minimal,plain,
+img_skt_a_019,img_skt_a_019.jpg,skirt,flared,none,none,white,casual,plain,shirring effect
+img_skt_a_020,img_skt_a_020.jpg,skirt,a-line,none,none,brown and beige,tailored,checkered,
+img_skt_a_021,img_skt_a_021.jpg,skirt,fitted,none,none,blue,casual,denim,
+img_skt_a_022,img_skt_a_022.jpg,skirt,fitted,none,none,dark blue,casual,denim,has small slit
+img_skt_a_023,img_skt_a_023.jpg,skirt,a-line,none,none,chocolate brown,tailored,plain,with a gold buckle belt 
+img_skt_a_024,img_skt_a_024.jpg,skirt,flared,none,none,multicolor,modern,animal print,mini skirt with many flares
+img_skt_a_025,img_skt_a_025.jpg,skirt,fitted,none,none,multicolor,modern,animal print,sequin work and twist effect
+img_skt_a_026,img_skt_a_026.jpg,skirt,fitted,none,none,brown,modern,plain with bead,big sequin beaded
+img_skt_a_027,img_skt_a_027.jpg,skirt,fitted,none,none,black,modern,plain with bead,sequins with glittering effect
+img_top_a_028,img_top_a_028.jpg,top,a-line,sleeveless,halter,multicolor,modern and minimal,polka dots,neck tie at the back
+img_top_a_029,img_top_a_029.jpg,top,fitted,sleeveless,round,multicolor,casual,plain,
+img_top_a_030,img_top_a_030.jpg,top,loose-fitted,short,round,beige and red,casual,printed,
+img_top_a_031,img_top_a_031.jpg,top,fitted,sleeveless,square,lcream and black,casual,polka dots,
+img_top_a_032,img_top_a_032.jpg,top,fitted,sleeveless,square,yellow,modern,plain,
+img_top_a_033,img_top_a_033.jpg,top,fitted,sleeveless,square,yellow and white,casual,checkered ,lemon printed at the centre
+img_top_a_034,img_top_a_034.jpg,top,fitted,off-shoulder,square,multicolor,modern,checkered,shirring effect on the off-shoulder
+img_top_a_035,img_top_a_035.jpg ,top,fitted,sleeveless,round,multicolor,casual,stripes,
+img_top_a_036,img_top_a_036.jpg,top,fitted,sleeveless,asymmetrical,black,modern,plain,
+img_top_a_037,img_top_a_037.jpg,top,fitted,short,square,blue,casual,plain,
+img_top_a_038,img_top_a_038.jpg,top,fitted,short,round,black,casual,plain,
+img_top_a_039,img_top_a_039.jpg,top,fitted,long,sweetheart,pink,modern,plain,lacework with a bow
+img_top_a_040,img_top_a_040.jpg,top,fitted,sleeveless,collar,pink,casual,plain,
+img_top_a_041,img_top_a_041.jpg,top,fitted,sleeveless,square,multicolor,modern,printed,
+img_top_a_042,img_top_a_042.jpg,top,fitted,off-shoulder,square,grey,modern,plain,
+img_top_a_043,img_top_a_043.jpg,top,fitted,sleeveless,collar,multicolor,modern,stripes,
+img_top_a_044,img_top_a_044.jpg,top,fitted,short,square,brown,modern,plain,
+img_top_a_045,img_top_a_045.jpg,top,fitted,sleeveless,square,black and beige,modern,waves print,
+img_top_a_046,img_top_a_046.jpg,top,fitted,sleeveless,square,hot red,formal,plain,
+img_top_a_047,img_top_a_047.jpg,top,fitted,sleeveless,halter and v,red,modern,plain,
+img_top_a_048,img_top_a_048.jpg,top,fitted,sleeveless,halter,light yellow,modern,plain,
+img_top_a_049,img_top_a_049.jpg,top,fitted,sleeveless,cowl and high,blue,modern,plain ,
+img_top_a_050,img_top_a_050.jpg,top,fitted,sleeveless,cowl and halter-high,cream and red,modern,floral print,cowl neck tie at the back
+img_top_a_051,img_top_a_051.jpg,top,fitted,sleeveless,asymmetrical,yellow,modern,plain,
+img_top_a_052,img_top_a_052.jpg,top,fitted,sleeveless,v-neck,green,casual and modern,checkered,bow at the front
+img_top_a_053,img_top_a_053.jpg,top,fitted,sleeveless,sweetheart,yellow,modern,plain,flare and bow for the neck
+img_top_a_054,img_top_a_054.jpg,top,fitted,short,v-neck,light teal blue,modern,textured,lacework with bows
+img_top_a_055,img_top_a_055.jpg,top,fitted,sleeveless,halter,pink and orange,glam,floral print,gathered tie to the side
+img_top_a_056,img_top_a_056.jpg,top,peplum,sleeveless,sweetheart,teal blue,modern,floral embroidery,tie in the front
+img_top_a_057,img_top_a_057.jpg,top,peplum,sleeveless,sweetheart,yellow,glam,plain,shirring effect of the fabric
+img_top_a_058,img_top_a_058.jpg,top,peplum,sleeveless,v-neck,brown,modern,plain,
+img_top_a_059,img_top_a_059.jpg,top ,peplum,sleeveless,v-neck,sap green,modern,embossed effect,
+img_top_a_060,img_top_a_060.jpg,top,loose-fitted,sleeveless,v-neck,dark red,glam,plain,flared layers 
+img_drs_b_001,img_drs_b_001.jpg,dress,fit-and-flare,long,round,red,minimal,plain,zipper on the neck
+img_drs_b_002,img_drs_b_002.jpg,dress,fitted,sleeveless,v-neck,white,formal,plain,
+img_drs_b_003,img_drs_b_003.jpg,dress,a-line,long,crew,green,avant-garde,colorblock,
+img_drs_b_004,img_drs_b_004.jpg,dress,fitted,long,v-neck,white,formal,floral,
+img_drs_b_005,img_drs_b_005.jpg,dress,a-line,puff,v-neck,blue,cottagecore,floral,peter pan collar
+img_drs_b_006,img_drs_b_006.jpg,dress,a-line,puff,square,white,cottagecore,floral,slit on the leg 
+img_drs_b_007,img_drs_b_007.jpg,dress,sun-dress,sleeveless,v-neck,multicolar,formal,floral,
+img_drs_b_008,img_drs_b_008.jpg,dress,fitted,long,round,white,formal,plain,open back
+img_drs_b_009,img_drs_b_009.jpg,dress,fitted,sleeveless,round,white,formal,plain,cape 
+img_drs_b_010,img_drs_b_010.jpg,dress,a-line,puff,sweetheart,white,cottagecore,floral,off-shoulder sleeves
+img_drs_b_011,img_drs_b_011.jpg,dress,a-line,puff,v-neck,purple,cottagecore,lattice,
+img_drs_b_012,img_drs_b_012.jpg,dress,bouffont,puff,round,white,formal,plain,open back
+img_drs_b_013,img_drs_b_013.jpg,dress,a-line,puff,round,white,formal,plain with texture,V-neck in the back 
+img_drs_b_014,img_drs_b_014.jpg,dress,blouson,sleeveless,halter,white,bohemian,plain,belt
+img_drs_b_015,img_drs_b_015.jpg,dress,a-line,sleeveless,v-neck,green,formal,plain,wrap boddice
+img_drs_b_016,img_drs_b_016.jpg,dress,dobycon,sleeveless,choker and strapless,blue,glamourous,plain,
+img_drs_b_017,img_drs_b_017.jpg,dress,fitted,sleeveless,spaghetti straps,white,minimal,plain,lace up back
+img_drs_b_018,img_drs_b_018.jpg,dress,blouson,long,round,pink,avant-garde,plain,pleated fabric
+img_jkt_b_019,img_jkt_b_019.jpg,jacket ,straight,long,collar,blue,casual,plain,
+img_jkt_b_020,img_jkt_b_020.jpg,jacket ,straight,long,collar,blue,casual,plain,oversized 
+img_jkt_b_021,img_jkt_b_021.jpg,jacket ,oversized,long,wide lapel collar,dark green,tailored,plain,double-breasted button closure with dropped shoulders
+img_jkt_b_022,img_jkt_b_022.jpg,jacket ,balmacaan,long,notched lapel collar,green,tailored,plain,dropped shoulders
+img_jkt_b_023,img_jkt_b_023.jpg,jacket ,shearling,long,shearling collar,brown,aviator,plain,belted cuffs 
+img_jkt_b_024,img_jkt_b_024.jpg,jacket ,bomber,long,collar,brown,casual,plain,oversized 
+img_jkt_b_025,img_jkt_b_025.jpg,jacket ,bomber,long,collar,burgundy,casual,plain,
+img_pnt_b_026,img_pnt_b_026.jpg,pants,wide leg,none,none,black,avant-garde,plain,overlay
+img_pnt_b_027,img_pnt_b_027.jpg,pants,straight,none,none,blue,modern,plain with texture at the bottom,jeans
+img_pnt_b_028,img_pnt_b_028.jpg,pants,wide leg,none,none,blue,modern,plain,jeans with strap-on waist
+img_pnt_b_029,img_pnt_b_029.jpg,pants,wide leg,none,none,gray,minimal,plain,
+img_pnt_b_030,img_pnt_b_030.jpg,pants,wide leg,none,none,white,sporty,plain with texture,waffle fabric
+img_pnt_b_031,img_pnt_b_031.jpg,pants,straight,none,none,white,tailored,plain,
+img_pnt_b_032,img_pnt_b_032.jpg,pants,wide leg,none,none,white,tailored,plain,
+img_pnt_b_033,img_pnt_b_033.jpg,pants,sweat pants,none,none,yellow,sporty,plain,
+img_pnt_b_034,img_pnt_b_034.jpg,pants,straight,none,none,white,tailored,plain,with pleats
+img_pnt_b_035,img_pnt_b_035.jpg,pants,straight,none,none,dark beige,tailored,plain,with pleats
+img_pnt_b_036,img_pnt_b_036.jpg,pants,pegged,none,none,salmon pink,casual,plain ,
+img_pnt_b_037,img_pnt_b_037.jpg,pants,loose-fitted,none,none,white,bohemian,floral,balloon fit
+img_pnt_b_038,img_pnt_b_038.jpg,pants,loose-fitted,none,none,blue,bohemian,floral,balloon fit
+img_pnt_b_039,img_pnt_b_039.jpg,pants,wide leg,none,none,green with orange,bohemian,floral,short lenght 
+img_pnt_b_040,img_pnt_b_040.jpg,pants,wide leg,none,none,pink,bohemian,floral,
+img_pnt_b_041,img_pnt_b_041.jpg,pants,straight,none,none,white,tailored,plain,belt 
+img_skt_b_042,img_skt_b_042.jpg,skirt,a-line,none,none,black,minimal,plain,with pleats
+img_skt_b_043,img_skt_b_043.jpg,skirt,asymmetric,none,none,grey,avant-garde,plain,
+img_top_b_044,img_top_b_044.jpg,top,loose-fitted,long,round,blue,avant-garde,plain,pleated fabric
+img_top_b_045,img_top_b_045.jpg,top,blazer,puff,v-neck,white,avant-garde,floral with beads,
+img_top_b_046,img_top_b_046.jpg,top,blazer,long,v-neck,black,tailored,plain,
+img_top_b_047,img_top_b_047.jpg,top,bust pockets,long,v-neck,pink,avant-garde,plain,oversized
+img_top_b_048,img_top_b_048.jpg,top,corseted shirt,long,v-neck,yellow,avant-garde,plain,
+img_top_b_049,img_top_b_049.jpg,top,loose-fitted,long,round,orange,avant-garde,plain,pleated fabric
+img_top_b_050,img_top_b_050.jpg,top,cropped,short,round,grey,casual,plain,
+img_top_b_051,img_top_b_051.jpg,top,vest,sleeveless,v-neck,brown,tailored,plain,
+img_top_b_052,img_top_b_052.jpg,top,loose-fitted,long,off shoulder,white,casual,plain,
+img_top_b_053,img_top_b_053.jpg,top,blazer,long,v-neck,black,tailored,plain,oversized
+img_top_b_054,img_top_b_054.jpg,top,loose-fitted,puff,round,white,casual,polka dots ,
+img_top_b_055,img_top_b_055.jpg,top,button down,long,round,white,cottagecore,floral,peter pan collar
+img_top_b_056,img_top_b_056.jpg,top,blazer,long,v-neck,red,tailored,plain,oversized 
+img_top_b_057,img_top_b_057.jpg,top,blazer,long,v-neck,pink,tailored,plain,
+img_top_b_058,img_top_b_058.jpg,top,blazer,long,v-neck,burgundy,tailored,plain,fitted with asymmetrical collar
+img_top_b_059,img_top_b_059.jpg,top,peplum,long,round,burgundy,tailored,plain,cutout on the chest
+img_top_b_060,img_top_b_060.jpg,top,blazer,long,v-neck,black,tailored,plain,cropped
+img_drs_c_001,img_drs_c_001.jpg,dress,a-line,short,v-neck,green,bohemian,paisley,midi length with fitted waist and lightweight fabric
+img_drs_c_002,img_drs_c_002.jpg,dress,straight,sleeveless,round,brown,minimal,solid,linen fabric knee length relaxed fit
+img_drs_c_003,img_drs_c_003.jpg,dress,fitted,long,round,multicolor,elegant chic,floral,midi length includes belt with square buckle
+img_drs_c_004,img_drs_c_004.jpg,dress,column,off-shoulder,asymmetrical,multicolor,modern summer,floral,midi length one shoulder ruffle waist drape
+img_drs_c_005,img_drs_c_005.jpg,dress,kaftan,long,v-neck,teal yellow,boho resort,geometric,floor length side slit drawstring waist
+img_drs_c_006,img_drs_c_006.jpg,dress,column,puff,v-neck,blue,formal evening,striped sequins,floor length with belted waist and vertical sequin lines
+img_drs_c_007,img_drs_c_007.jpg,dress,column,off-shoulder,square,blue,formal elegant,solid,floor length with high side slit and waist tie detail
+img_drs_c_008,img_drs_c_008.jpg,dress,fitted,off-shoulder,asymmetrical,green,glam,solid,floor length with ruffle detail on neckline and strap
+img_drs_c_009,img_drs_c_009.jpg,dress,fitted,off-shoulder,asymmetrical,purple pink,couture high fashion,metallic brocade,floor length with draped side panel and structured bodice
+img_drs_c_010,img_drs_c_010.jpg,dress,fitted,off-shoulder,sweetheart,brown,formal,solid,floor length with peplum waist ruffle and high side slit
+img_drs_c_011,img_drs_c_011.jpg,dress,fitted,sleeveless,square,white,cocktail glam,lattice pearl,mini length with pearl embroidery and fringe hem
+img_drs_c_012,img_drs_c_012.jpg,dress,ball gown,sleeveless,sweetheart,mint green,formal romantic,solid,tiered ruffle skirt with corset style sheer bodice
+img_drs_c_013,img_drs_c_013.jpg,dress,fitted,sleeveless,sweetheart,pink,glam,solid,corset bodice with sequin trim and draped wrap skirt
+img_drs_c_014,img_drs_c_014.jpg,dress,straight,short,v-neck,denim blue,casual folk,floral embroidery,midi length denim fabric with colorful embroidery on neck
+img_drs_c_015,img_drs_c_015.jpg,dress,column,sleeveless,round,silver,avant garde runway,metallic mesh,floor length sheer chainmail texture with high neck back
+img_drs_c_016,img_drs_c_016.jpg,dress,column,long,round,brown,avant garde,ribbed,floor length knit with distressed laddering and cutouts
+img_drs_c_017,img_drs_c_017.jpg,dress,straight,long,turtleneck,dark pink,casual winter,ribbed,mini length sweater dress in fuzzy knit texture
+img_drs_c_018,img_drs_c_018.jpg,dress,asymmetrical,sleeveless,halter,blue,edgy modern,solid,midi length sheer fabric with draped wrap and side cutout
+img_drs_c_019,img_drs_c_019.jpg,dress,column,sleeveless,asymmetrical,cream brown black,chic summer,abstract floral,midi length with side zipper and structured bodice
+img_skt_c_020,img_skt_c_020.jpg,skirt,pencil,none,none,blue,avant-garde,studded,denim with silver metal studs and front slit
+img_skt_c_021,img_skt_c_021.jpg,skirt,a-line,none,none,blue,casual,solid,denim with diagonal seam detail and belt
+img_skt_c_022,img_skt_c_022.jpg,skirt,a-line,none,none,grey,casual,solid,tech fabric with paneling part of matching set
+img_skt_c_023,img_skt_c_023.jpg,skirt,fitted,none,none,green,bohemian,floral,sheer fabric with yellow flowers and drawstring waist
+img_skt_c_024,img_skt_c_024.jpg,skirt,mini,none,none,blue,western,floral embroidery,denim with heavy red and blue floral embroidery
+img_skt_c_025,img_skt_c_025.jpg,skirt,fitted,none,none,yellow,sporty,solid,sweatshirt material with drawstring and side pocket
+img_skt_c_026,img_skt_c_026.jpg,skirt,fitted,none,none,sage green,casual,solid,button front with side buckle belt detail
+img_skt_c_027,img_skt_c_027.jpg,skirt,flared,none,none,white,bohemian,lace,tiered sheer lace with intricate floral patterns
+img_skt_c_028,img_skt_c_028.jpg,skirt,pleated,none,none,white,sporty,solid,tennis skirt with wide pleats and side tie
+img_jkt_c_029,img_jkt_c_029.jpg,jacket,bomber,long,none,black,avant-garde,solid,leather with elasticated cuffs and hem
+img_jkt_c_030,img_jkt_c_030.jpg,jacket,bomber,long,none,blue,quirky,graphic,featuring white animal line drawings and contrast collar
+img_jkt_c_031,img_jkt_c_031.jpg,jacket,barn,long,none,brown,casual,solid,suede material with large front patch pockets and button closure
+img_jkt_c_032,img_jkt_c_032.jpg,jacket,bomber,long,none,multicolor,casual,plaid,quilted with a blue plaid hood and multiple colors
+img_jkt_c_033,img_jkt_c_033.jpg,jacket,hoodie,long,none,dark grey,sporty,solid,oversized zip-up with white contrast stitching detail
+img_jkt_c_034,img_jkt_c_034.jpg,jacket,bomber,long,none,brown,rugged,solid,shearling-lined aviator style with asymmetrical zip
+img_jkt_c_035,img_jkt_c_035.jpg,jacket,bomber,long,none,multicolor,casual,geometric,bold primary colors with yellow and blue striped patterns
+img_jkt_c_036,img_jkt_c_036.jpg,jacket,rain jacket,long,none,red,sporty,solid,hooded technical shell with white lettering on sleeve
+img_jkt_c_037,img_jkt_c_037.jpg,jacket,military,long,none,white,avant-garde,solid,hussar-style with prominent metal dome buttons and braiding
+img_jkt_c_038,img_jkt_c_038.jpg,jacket,bomber,long,none,white,minimal,solid,collared with zip closure and chest pocket
+img_jkt_c_039,img_jkt_c_039.jpg,jacket,bomber,long,none,black,avant-garde,solid,paneled leather and ribbed knit hybrid with a pointed collar
+img_jkt_c_040,img_jkt_c_040.jpg,jacket,bomber,long,none,pink,casual,solid,oversized heavy-duty parka with large front flap pockets and hood
+img_jkt_c_041,img_jkt_c_041.jpg,jacket,bomber,long,none,faded blue,avant-garde,solid,"distressed leather with industrial hardware, belt-loop hem, and high neck"
+img_jkt_c_042,img_jkt_c_042.jpg,jacket,bomber,long,none,black,avant-garde,solid,"classic leather silhouette heavily embellished with pins, studs, and a butterfly motif"
+img_jkt_c_043,img_jkt_c_043.jpg,jacket,bomber,long,none,teal multi,casual,plaid,exaggerated bubble silhouette with drawstring cuffs and high neck
+img_jkt_c_044,img_jkt_c_044.jpg,jacket,trucker,long,none,dark wash,formal,solid,denim jacket with contrast white stitching and traditional chest pockets
+img_jkt_c_045,img_jkt_c_045.jpg,jacket,bomber,long,none,charcoal,casual,solid,technical nylon with layered construction and multiple utility zippers
+img_jkt_c_046,img_jkt_c_046.jpg,jacket,anorak,long,none,black multi,casual,colorblock,quarter-zip pullover with green paneling and various heritage-style patches
+img_pnt_c_047,img_pnt_c_047.jpg,pants,straight,none,none,yellow,formal,solid,high-waisted trousers with front pleats and a matching belt
+img_pnt_c_048,img_pnt_c_048.jpg,pants,flared,none,none,multicolor,avant-garde,side-stripe,velvet-textured trousers with a split-hem detail and vertical white stripes
+img_pnt_c_049,img_pnt_c_049.jpg,pants,wide leg,none,none,black,formal,solid,relaxed high-waisted trousers with deep front pleats
+img_pnt_c_050,img_pnt_c_050.jpg,pants,straight,none,none,yellow,formal,solid,high-waisted trousers featuring decorative side buttons
+img_pnt_c_051,img_pnt_c_051.jpg,pants,wide leg,none,none,black,casual,solid,leather-look cargo pants with multiple side flap pockets
+img_pnt_c_052,img_pnt_c_052.jpg,pants,wide leg,none,none,brown,casual,solid,relaxed fit cotton trousers with a traditional button fly
+img_pnt_c_053,img_pnt_c_053.jpg,pants,wide leg,none,none,multicolor,casual,pinstripe,lightweight pajama-style trousers with vertical blue stripes
+img_pnt_c_054,img_pnt_c_054.jpg,pants,relaxed,none,none,green,casual,solid,drawstring cargo trousers with oversized utility pockets
+img_top_c_055,img_top_c_055.jpg,top,tank,sleeveless,round,white,grunge,ribbed,layered look with a pastel lace bra overlay and button-down neckline
+img_top_c_056,img_top_c_056.jpg,top,corset,sleeveless,sweetheart,burgundy,bohemian,floral,tapestry-style bodice with leather buckle straps and rose print
+img_top_c_057,img_top_c_057.jpg,top,tube,sleeveless,strapless,burgundy,minimal,solid,pleated faux-leather bandeau with a cropped fit
+img_top_c_058,img_top_c_058.jpg,top,sweatshirt,puff,mock neck,white,avant-garde,solid,structured ultra-crop with massive architectural sleeves and a large floral appliqué
+img_top_c_059,img_top_c_059.jpg,top,corset,sleeveless,square,white,bohemian,graphic,pointed hem bodice featuring a frog graphic and shoulder ties
+img_top_c_060,img_top_c_060.jpg,top,bolero set,long,round,pink white,casual,stripes,two-piece crochet set including a micro-bralette and a matching shrug with crew neckline
