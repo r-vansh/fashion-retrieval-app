@@ -299,71 +299,30 @@ image_paths = (
 )
 
 # -------------------------
-# CONVERT TO TENSORS
+# ENSURE EMBEDDINGS TENSORS
 # -------------------------
 
-fixed_embeddings = []
+image_embeddings = [
 
-for emb in image_embeddings:
+    emb.cpu()
 
-    try:
+    if isinstance(
+        emb,
+        torch.Tensor
+    )
 
-        # already tensor
-        if isinstance(
-            emb,
-            torch.Tensor
-        ):
+    else torch.tensor(
+        emb,
+        dtype=torch.float32
+    )
 
-            fixed_embeddings.append(
-                emb.cpu()
-            )
-
-        else:
-
-            fixed_embeddings.append(
-                torch.as_tensor(
-                    emb
-                ).cpu()
-            )
-
-    except Exception:
-
-        # skip broken embeddings
-        continue
-
-
-image_embeddings = (
-    fixed_embeddings
+    for emb in image_embeddings
+]
+st.write(
+    "TOTAL EMBEDDINGS:",
+    len(image_embeddings)
 )
 
-# FIX IMAGE PATHS
-# -------------------------
-
-fixed_paths = []
-
-for path in image_paths:
-
-    if path is None:
-
-        continue
-
-    path = str(path)
-
-    filename = os.path.basename(
-        path
-    )
-
-    fixed_path = os.path.join(
-        "dataset",
-        "images",
-        filename
-    )
-
-    fixed_paths.append(
-        fixed_path
-    )
-
-image_paths = fixed_paths
 # -------------------------
 # FIND SIMILAR
 # -------------------------
