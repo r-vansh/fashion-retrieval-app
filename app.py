@@ -258,7 +258,8 @@ with st.spinner("Loading Fashion Retrieval..."):
 
     model, preprocess = clip.load(
         "ViT-B/32",
-        device=device
+        device=device,
+        download_root="./clip_cache"
     )
 
     # -------------------------
