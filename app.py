@@ -271,7 +271,54 @@ with st.spinner("Loading Fashion Retrieval..."):
         "rb"
     ) as f:
 
-         image_embeddings, image_paths = pickle.load(f)
+        loaded_data = pickle.load(f)
+        
+    st.write(type(loaded_data))
+    st.write(type(loaded_data[0]))
+
+    if isinstance(
+        loaded_data[0],
+        tuple
+    ):
+        st.write(
+            type(
+                loaded_data[0][0]
+            )
+        )
+
+        st.write(
+            type(
+                loaded_data[0][1]
+            )
+        )
+
+# -------------------------
+# SAFE LOADING
+# -------------------------
+
+if isinstance(
+    loaded_data,
+    tuple
+):
+
+    image_embeddings, image_paths = (
+        loaded_data
+    )
+
+else:
+
+    image_embeddings = []
+    image_paths = []
+
+    for item in loaded_data:
+
+        image_embeddings.append(
+            item[0]
+        )
+
+        image_paths.append(
+            item[1]
+        )
     
     
     # -------------------------
