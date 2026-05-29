@@ -871,6 +871,15 @@ if uploaded_file:
                 query_pattern=query_pattern
             )
             
+            st.write(
+                "RESULTS:",
+                len(results)
+            )
+
+            st.write(
+                results[:2]
+            )
+            
             status.update(label="Designs Found!", state="complete")
 
         cols = st.columns(
