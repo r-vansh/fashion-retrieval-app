@@ -903,6 +903,14 @@ if uploaded_file:
 
                 with card:
 
+                    st.write(image_path)
+
+                    st.write(
+                        os.path.exists(
+                            image_path
+                        )
+                    )
+
                     st.image(
                         image_path,
                         width="stretch"
