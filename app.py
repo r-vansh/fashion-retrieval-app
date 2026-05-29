@@ -302,18 +302,31 @@ fixed_embeddings = []
 
 for emb in image_embeddings:
 
-    if not isinstance(
-        emb,
-        torch.Tensor
-    ):
+    try:
 
-        emb = torch.tensor(
-            emb
-        )
+        # already tensor
+        if isinstance(
+            emb,
+            torch.Tensor
+        ):
 
-    fixed_embeddings.append(
-        emb
-    )
+            fixed_embeddings.append(
+                emb.cpu()
+            )
+
+        else:
+
+            fixed_embeddings.append(
+                torch.as_tensor(
+                    emb
+                ).cpu()
+            )
+
+    except Exception:
+
+        # skip broken embeddings
+        continue
+
 
 image_embeddings = (
     fixed_embeddings
