@@ -302,22 +302,48 @@ image_paths = (
 # ENSURE EMBEDDINGS TENSORS
 # -------------------------
 
-image_embeddings = [
+fixed_embeddings = []
 
-    emb.cpu()
+for emb in image_embeddings:
 
-    if isinstance(
-        emb,
-        torch.Tensor
-    )
+    try:
 
-    else torch.tensor(
-        emb,
-        dtype=torch.float32
-    )
+        # already tensor
+        if isinstance(
+            emb,
+            torch.Tensor
+        ):
 
-    for emb in image_embeddings
-]
+            fixed_embeddings.append(
+                emb.float().cpu()
+            )
+
+        # numpy array / list
+        elif hasattr(
+            emb,
+            "shape"
+        ) or isinstance(
+            emb,
+            list
+        ):
+
+            fixed_embeddings.append(
+                torch.FloatTensor(
+                    emb
+                ).cpu()
+            )
+
+    except Exception as e:
+
+        st.write(
+            "SKIPPED:",
+            type(emb)
+        )
+
+image_embeddings = (
+    fixed_embeddings
+)
+
 st.write(
     "TOTAL EMBEDDINGS:",
     len(image_embeddings)
