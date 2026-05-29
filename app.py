@@ -14,7 +14,7 @@ import requests
 # -------------------------
 
 ZIP_URL = (
-    "https://github.com/r-vansh/fashion-retrieval-app/releases/download/v1/images.zip"
+    "https://github.com/r-vansh/fashion-retrieval-app/releases/download/v1/images.zip?raw=1"
 )
 
 if not os.path.exists(
@@ -30,8 +30,10 @@ if not os.path.exists(
     )
 
     response = requests.get(
-        ZIP_URL
+        ZIP_URL,
+        allow_redirects=True
     )
+    response.raise_for_status()
 
     with open(
         zip_path,
@@ -41,6 +43,12 @@ if not os.path.exists(
         f.write(
             response.content
         )
+
+    st.write(
+        os.path.getsize(
+            zip_path
+        )
+    )
 
     with zipfile.ZipFile(
         zip_path,
