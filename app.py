@@ -59,9 +59,13 @@ if not os.path.exists(
             "dataset"
         )
 
-    os.remove(
+    if os.path.exists(
         zip_path
-    )
+    ):
+
+        os.remove(
+            zip_path
+        )
 
 st.set_page_config(
     page_title="Fashion Retrieval",
