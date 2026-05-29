@@ -899,34 +899,38 @@ if uploaded_file:
 
             with cols[i % 3]:
 
-                card = st.container(border=True)
+                card = st.container(
+                    border=True
+                )
 
                 with card:
 
-                    st.write(image_path)
-
                     st.write(
-                        os.path.exists(
-                            image_path
-                        )
-                    )
-
-                if os.path.exists(
-                    image_path
-                ):
-
-                    st.image(
-                        image_path,
-                        width="stretch"
-                    )
-                    
-                else:
-
-                    st.write(
-                        "Missing image:",
+                        "PATH:",
                         image_path
                     )
-                    
+
+                    exists = os.path.exists(
+                        image_path
+                    )
+
+                    st.write(
+                        "EXISTS:",
+                        exists
+                    )
+
+                    if exists:
+
+                        st.image(
+                            image_path,
+                            width="stretch"
+                        )
+
+                    else:
+
+                        st.error(
+                            "Image missing"
+                        )
 
                     match_score = min(
                         max(
