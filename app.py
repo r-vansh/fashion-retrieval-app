@@ -911,10 +911,22 @@ if uploaded_file:
                         )
                     )
 
+                if os.path.exists(
+                    image_path
+                ):
+
                     st.image(
                         image_path,
                         width="stretch"
                     )
+                    
+                else:
+
+                    st.write(
+                        "Missing image:",
+                        image_path
+                    )
+                    
 
                     match_score = min(
                         max(
