@@ -278,26 +278,35 @@ with st.spinner("Loading Fashion Retrieval..."):
     # FIX IMAGE PATHS
     # -------------------------
 
-    fixed_paths = []
+    # -------------------------
+# FIX IMAGE PATHS
+# -------------------------
 
-    for path in image_paths:
+fixed_paths = []
 
-        filename = os.path.basename(
-            path
-        )
+for path in image_paths:
 
-        fixed_path = os.path.join(
-            "dataset",
-            "images",
-            filename
-        )
+    if path is None:
 
-        fixed_paths.append(
-            fixed_path
-        )
+        continue
 
-    image_paths = fixed_paths
+    path = str(path)
 
+    filename = os.path.basename(
+        path
+    )
+
+    fixed_path = os.path.join(
+        "dataset",
+        "images",
+        filename
+    )
+
+    fixed_paths.append(
+        fixed_path
+    )
+
+image_paths = fixed_paths
 # -------------------------
 # FIND SIMILAR
 # -------------------------
