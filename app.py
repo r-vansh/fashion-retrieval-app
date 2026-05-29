@@ -921,10 +921,38 @@ if uploaded_file:
 
                     if exists:
 
-                        st.image(
-                            image_path,
-                            width="stretch"
-                        )
+                        try:
+
+                            st.write(
+                                image_path
+                            )
+
+                            st.write(
+                                os.path.exists(
+                                    image_path
+                                )
+                            )
+
+                            if os.path.exists(
+                                image_path
+                            ):
+
+                                st.image(
+                                    image_path,
+                                    width="stretch"
+                                )
+
+                            else:
+
+                                st.error(
+                                    f"Missing: {image_path}"
+                                )
+
+                        except Exception as e:
+
+                            st.error(
+                                str(e)
+                            )
 
                     else:
 
