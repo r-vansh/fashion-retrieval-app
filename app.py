@@ -740,6 +740,10 @@ if uploaded_file:
         uploaded_file
     ).convert("RGB")
 
+    uploaded_image.thumbnail(
+        (512, 512)
+    )
+
     st.markdown("---")
 
     left_col, right_col = st.columns(
