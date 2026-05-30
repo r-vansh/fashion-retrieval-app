@@ -254,28 +254,48 @@ with st.spinner("Loading Fashion Retrieval..."):
 
     device = "cpu"
 
-    model, preprocess = clip.load(
-        "ViT-B/32",
-        device=device,
-        download_root="./clip_cache"
-    )
-    model.eval()
 
-    torch.set_num_threads(1)
+    @st.cache_resource
+    def load_clip():
+
+        model, preprocess = clip.load(
+            "ViT-B/32",
+            device=device,
+            download_root="./clip_cache"
+        )
+
+        model.eval()
+
+        torch.set_num_threads(1)
+
+        return (
+            model,
+            preprocess
+        )
+
+
+model, preprocess = load_clip()
 
 # -------------------------
 # LOAD EMBEDDINGS
 # -------------------------
 
-with open(
-    "embeddings.pkl",
-    "rb"
-) as f:
+@st.cache_data
+def load_embeddings():
 
-    image_paths, image_embeddings = (
-        pickle.load(f)
-    )
+    with open(
+        "embeddings.pkl",
+        "rb"
+    ) as f:
 
+        return pickle.load(
+            f
+        )
+
+
+image_paths, image_embeddings = (
+    load_embeddings()
+)
     
 # -------------------------
 # FIND SIMILAR
