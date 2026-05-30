@@ -45,6 +45,9 @@ for file in files:
         path = os.path.join(
             images_folder,
             file
+        ).replace(
+            "\\",
+            "/"
         )
 
         image = preprocess(

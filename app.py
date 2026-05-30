@@ -288,7 +288,8 @@ st.write(
     os.path.exists(
         image_paths[0]
     )
-)    
+)
+    
 # -------------------------
 # FIND SIMILAR
 # -------------------------
