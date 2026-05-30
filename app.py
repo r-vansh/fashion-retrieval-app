@@ -505,16 +505,16 @@ def find_similar(
         ).strip().lower()
 
         # normalize pants/pant
-        if category == "pants":
-            category = "pant"
+        # if category == "pants":
+        #     category = "pant"
 
-        if selected == "pants":
-            selected = "pant"
+        # if selected == "pants":
+        #     selected = "pant"
 
-        if selected != "all":
+        # if selected != "all":
 
-            if category != selected:
-                continue
+        #     if category != selected:
+        #         continue
 
         # -------------------------
         # SCORING
