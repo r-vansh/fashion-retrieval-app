@@ -14,7 +14,7 @@ import requests
 # -------------------------
 
 ZIP_URL = (
-    "https://github.com/r-vansh/fashion-retrieval-app/releases/download/v1/images.zip?raw=1"
+    "https://github.com/r-vansh/fashion-retrieval-app/releases/download/v1/images.zip"
 )
 
 import shutil
@@ -39,7 +39,7 @@ if True:
 
     response = requests.get(
         ZIP_URL,
-        allow_redirects=True
+        stream=True
     )
 
     response.raise_for_status()
@@ -49,9 +49,20 @@ if True:
         "wb"
     ) as f:
 
-        f.write(
-            response.content
+        for chunk in response.iter_content(
+            chunk_size=8192
+        ):
+
+            f.write(
+                chunk
+            )
+
+    st.write(
+        "ZIP SIZE:",
+        os.path.getsize(
+            zip_path
         )
+    )
 
     with zipfile.ZipFile(
         zip_path,
@@ -62,33 +73,6 @@ if True:
             "dataset"
         )
 
-
-    st.write(
-        "DATASET:",
-        os.listdir(
-            "dataset"
-        )
-    )
-
-    if os.path.exists(
-        "dataset/images"
-    ):
-
-        st.write(
-            "TOTAL IMAGES:",
-            len(
-                os.listdir(
-                    "dataset/images"
-                )
-            )
-        )
-
-    else:
-
-        st.write(
-            "dataset/images NOT FOUND"
-        )
-
     if os.path.exists(
         zip_path
     ):
@@ -96,11 +80,6 @@ if True:
         os.remove(
             zip_path
         )
-
-st.set_page_config(
-    page_title="Fashion Retrieval",
-    layout="wide"
-)
 
 # Initialize loading state
 if "loading_complete" not in st.session_state:
