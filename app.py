@@ -252,17 +252,16 @@ with st.spinner("Loading Fashion Retrieval..."):
     # LOAD CLIP
     # -------------------------
 
-    device = (
-        "cuda"
-        if torch.cuda.is_available()
-        else "cpu"
-    )
+    device = "cpu"
 
     model, preprocess = clip.load(
         "ViT-B/32",
         device=device,
         download_root="./clip_cache"
     )
+    model.eval()
+
+    torch.set_num_threads(1)
 
 # -------------------------
 # LOAD EMBEDDINGS
