@@ -17,25 +17,15 @@ ZIP_URL = (
     "https://github.com/r-vansh/fashion-retrieval-app/releases/download/v1/images.zip"
 )
 
-import shutil
-
-if True:
-
-    if os.path.exists(
-        "dataset"
-    ):
-
-        shutil.rmtree(
-            "dataset"
-        )
+if not os.path.exists(
+    "dataset/images"
+):
 
     st.info(
         "Downloading images..."
     )
 
-    zip_path = (
-        "images.zip"
-    )
+    zip_path = "images.zip"
 
     response = requests.get(
         ZIP_URL,
@@ -53,16 +43,7 @@ if True:
             chunk_size=8192
         ):
 
-            f.write(
-                chunk
-            )
-
-    st.write(
-        "ZIP SIZE:",
-        os.path.getsize(
-            zip_path
-        )
-    )
+            f.write(chunk)
 
     with zipfile.ZipFile(
         zip_path,
@@ -73,13 +54,9 @@ if True:
             "dataset"
         )
 
-    if os.path.exists(
+    os.remove(
         zip_path
-    ):
-
-        os.remove(
-            zip_path
-        )
+    )
 
 # Initialize loading state
 if "loading_complete" not in st.session_state:
@@ -283,127 +260,19 @@ with st.spinner("Loading Fashion Retrieval..."):
         download_root="./clip_cache"
     )
 
-    # -------------------------
-    # LOAD EMBEDDINGS
-    # -------------------------
-
-    with open(
-        "embeddings.pkl",
-        "rb"
-    ) as f:
-
-        loaded_data = pickle.load(f)
-    # st.write(
-    #     "LOADED TYPE:",
-    #     str(type(loaded_data))
-    # )
-
-    # st.write(
-    #     "LOADED LENGTH:",
-    #     len(loaded_data)
-    # )
-
-    # st.write(
-    #     "FIRST ITEM TYPE:",
-    #     str(
-    #         type(
-    #             loaded_data[0]
-    #         )
-    #     )
-    # )
-
-    # st.write(
-    #     "FIRST ITEM SAMPLE:"
-    # )
-
-    # st.write(
-    #     str(
-    #         loaded_data[0]
-    #     )[:500]
-    # )
-
-    # st.stop()
-        
-
 # -------------------------
 # LOAD EMBEDDINGS
 # -------------------------
 
-image_paths = (
-    loaded_data[0]
-)
+with open(
+    "embeddings.pkl",
+    "rb"
+) as f:
 
-image_embeddings = (
-    loaded_data[1]
-)
-
-image_embeddings = [
-
-    emb.float().cpu()
-
-    if isinstance(
-        emb,
-        torch.Tensor
+    image_paths, image_embeddings = (
+        pickle.load(f)
     )
-
-    else torch.tensor(
-        emb,
-        dtype=torch.float32
-    )
-
-    for emb in image_embeddings
-]
-# -------------------------
-# ENSURE EMBEDDINGS TENSORS
-# -------------------------
-
-fixed_embeddings = []
-
-for emb in image_embeddings:
-
-    try:
-
-        # already tensor
-        if isinstance(
-            emb,
-            torch.Tensor
-        ):
-
-            fixed_embeddings.append(
-                emb.float().cpu()
-            )
-
-        # numpy array / list
-        elif hasattr(
-            emb,
-            "shape"
-        ) or isinstance(
-            emb,
-            list
-        ):
-
-            fixed_embeddings.append(
-                torch.FloatTensor(
-                    emb
-                ).cpu()
-            )
-
-    except Exception as e:
-
-        st.write(
-            "SKIPPED:",
-            type(emb)
-        )
-
-image_embeddings = (
-    fixed_embeddings
-)
-
-st.write(
-    "TOTAL EMBEDDINGS:",
-    len(image_embeddings)
-)
-
+    
 # -------------------------
 # FIND SIMILAR
 # -------------------------
@@ -436,6 +305,13 @@ def find_similar(
             )
         )
 
+        query_embedding /= (
+            query_embedding.norm(
+                dim=-1,
+                keepdim=True
+            )
+        )
+
     similarities = []
 
     for i, emb in enumerate(
@@ -444,110 +320,165 @@ def find_similar(
 
         similarity = (
             torch.cosine_similarity(
-                query_embedding.cpu(),
-                emb
+                query_embedding.cpu().squeeze(0),
+                emb.squeeze(0),
+                dim=0
             ).item()
         )
 
         image_path = image_paths[i]
 
-        image_name = os.path.basename(
-            image_path
-        ).replace(".jpg", "")
-
-        # matched_rows = metadata[
-        #     metadata["image_id"]
-        #     .astype(str)
-        #     .str.strip()
-        #     ==
-        #     str(image_name)
-        #     .strip()
-        # ]
-
-        # if matched_rows.empty:
-
-        #     continue
-
-        # row = matched_rows.iloc[0]
-        
-        try:
-
-            matched_rows = metadata[
-                metadata["image_id"]
-                .astype(str)
-                .str.strip()
-                ==
-                str(image_name)
-                .strip()
-            ]
-
-            row = (
-                matched_rows.iloc[0]
-                if not matched_rows.empty
-                else None
+        image_name = (
+            os.path.basename(
+                image_path
             )
+            .replace(".jpg", "")
+            .replace(".png", "")
+            .strip()
+        )
 
-        except Exception:
+        matched_rows = metadata[
+            metadata["image_id"]
+            .astype(str)
+            .str.strip()
+            ==
+            image_name
+        ]
 
-            row = None
-        
+        if matched_rows.empty:
+            continue
+
+        row = matched_rows.iloc[0]
 
         # -------------------------
         # CATEGORY FILTER
         # -------------------------
 
-        category = str(
-            row["category"]
-        ).strip().lower()
-
-        selected = str(
+        if (
             selected_category
-        ).strip().lower()
+            != "All"
+        ):
 
-        # normalize pants/pant
-        # if category == "pants":
-        #     category = "pant"
+            category = str(
+                row["category"]
+            ).strip().lower()
 
-        # if selected == "pants":
-        #     selected = "pant"
+            selected = (
+                selected_category
+                .strip()
+                .lower()
+            )
 
-        # if selected != "all":
+            # normalize pants/pant
+            category = (
+                category
+                .replace(
+                    "pants",
+                    "pant"
+                )
+            )
 
-        #     if category != selected:
-        #         continue
+            selected = (
+                selected
+                .replace(
+                    "pants",
+                    "pant"
+                )
+            )
+
+            if (
+                category
+                != selected
+            ):
+                continue
 
         # -------------------------
-        # SCORING
+        # HYBRID SCORE
         # -------------------------
 
-        final_score = similarity
+        final_score = (
+            similarity * 0.75
+        )
 
-        if use_style:
+        if (
+            use_style
+            and query_style
+            != "Auto"
+        ):
 
-            style = str(
-                row["style"]
-            ).lower()
+            if (
+                str(
+                    row["style"]
+                ).lower()
+                ==
+                query_style.lower()
+            ):
 
-            if style != "na":
-                final_score += 0.20
+                final_score += 0.10
 
-        if use_silhouette:
+        if (
+            use_silhouette
+            and query_silhouette
+            != "Auto"
+        ):
 
-            silhouette = str(
-                row["silhouette"]
-            ).lower()
+            if (
+                str(
+                    row["silhouette"]
+                ).lower()
+                ==
+                query_silhouette.lower()
+            ):
 
-            if silhouette != "na":
-                final_score += 0.30
-        
-        if use_neckline:
+                final_score += 0.08
 
-            neckline = str(
-                row["neckline"]
-            ).lower()
+        if (
+            use_neckline
+            and query_neckline
+            != "Auto"
+        ):
 
-            if neckline != "none":
-                final_score += 0.15        
+            if (
+                str(
+                    row["neckline"]
+                ).lower()
+                ==
+                query_neckline.lower()
+            ):
+
+                final_score += 0.04
+
+        if (
+            use_sleeve
+            and query_sleeve
+            != "Auto"
+        ):
+
+            if (
+                str(
+                    row["sleeve"]
+                ).lower()
+                ==
+                query_sleeve.lower()
+            ):
+
+                final_score += 0.04
+
+        if (
+            use_pattern
+            and query_pattern
+            != "Auto"
+        ):
+
+            if (
+                str(
+                    row["pattern"]
+                ).lower()
+                ==
+                query_pattern.lower()
+            ):
+
+                final_score += 0.04
 
         similarities.append(
             (
@@ -562,132 +493,7 @@ def find_similar(
         reverse=True
     )
 
-    # return similarities[:top_k]
-    candidate_pool = similarities[:80]
-    reranked = []
-
-    for idx, score, visual_similarity in candidate_pool:
-
-        image_path = image_paths[idx]
-
-        image_name = os.path.basename(
-            image_path
-        ).replace(".jpg", "")
-        
-        st.write(
-            "SEARCHING:",
-            image_name
-        )
-
-        row = metadata[
-            metadata["image_id"]
-            == image_name
-        ].iloc[0]
-
-        rerank_score = score
-        reranked.append(
-            (
-                idx,
-                rerank_score,
-                visual_similarity
-            )
-        )
-
-        continue
-
-        # -------------------------
-        # QUERY METADATA MATCH
-        # -------------------------
-
-        if (
-            use_style
-            and query_style != "Auto"
-        ):
-
-            if (
-                str(row["style"])
-                .lower()
-                ==
-                query_style.lower()
-            ):
-                
-                rerank_score += 0.12
-
-
-        if (
-            use_silhouette
-            and query_silhouette
-            != "Auto"
-        ):
-
-            if (
-                str(row["silhouette"])
-                .lower()
-                ==
-                query_silhouette.lower()
-            ):
-                
-                rerank_score += 0.18
-
-
-        if (
-            use_neckline
-            and query_neckline
-            != "Auto"
-        ):
-
-            if (
-                str(row["neckline"])
-                .lower()
-                ==
-                query_neckline.lower()
-            ):
-                
-                rerank_score += 0.10
-                
-        if (
-            use_sleeve
-            and query_sleeve
-            != "Auto"
-        ):
-
-            if (
-                str(row["sleeve"]).lower()
-                ==
-                query_sleeve.lower()
-            ):
-
-                rerank_score += 0.12
-                
-        if (
-            use_pattern
-            and query_pattern
-            != "Auto"
-        ):
-
-            if (
-                str(row["pattern"]).lower()
-                ==
-                query_pattern.lower()
-            ):
-
-                rerank_score += 0.10    
-
-
-        reranked.append(
-            (
-                idx,
-                rerank_score,
-                visual_similarity
-            )
-        )
-
-    reranked.sort(
-        key=lambda x: x[1],
-        reverse=True
-    )
-    
-    return reranked[:top_k]
+    return similarities[:top_k]
 
 # -------------------------
 # UPLOAD IMAGE
@@ -957,15 +763,6 @@ if uploaded_file:
                 query_pattern=query_pattern
             )
             
-            st.write(
-                "RESULTS:",
-                len(results)
-            )
-
-            st.write(
-                results[:2]
-            )
-            
             status.update(label="Designs Found!", state="complete")
 
         cols = st.columns(
@@ -983,14 +780,27 @@ if uploaded_file:
                 idx
             ]
 
-            image_name = os.path.basename(
-                image_path
-            ).replace(".jpg","")
+            image_name = (
+                os.path.basename(
+                    image_path
+                )
+                .replace(".jpg", "")
+                .replace(".png", "")
+                .strip()
+            )
 
-            row = metadata[
+            matched_rows = metadata[
                 metadata["image_id"]
-                == image_name
-            ].iloc[0]
+                .astype(str)
+                .str.strip()
+                ==
+                image_name.strip()
+            ]
+
+            if matched_rows.empty:
+                continue
+
+            row = matched_rows.iloc[0]
 
             with cols[i % 3]:
 
@@ -1000,75 +810,15 @@ if uploaded_file:
 
                 with card:
 
-                    st.write(
-                        "PATH:",
-                        image_path
+                    st.image(
+                        image_path,
+                        width="stretch"
                     )
-
-                    exists = os.path.exists(
-                        image_path
-                    )
-
-                    st.write(
-                        "EXISTS:",
-                        exists
-                    )
-
-                    if exists:
-
-                        try:
-
-                            st.write(
-                                image_path
-                            )
-
-                            st.write(
-                                os.path.exists(
-                                    image_path
-                                )
-                            )
-
-                            if os.path.exists(
-                                image_path
-                            ):
-
-                                st.image(
-                                    image_path,
-                                    width="stretch"
-                                )
-
-                            else:
-
-                                st.error(
-                                    f"Missing: {image_path}"
-                                )
-
-                        except Exception as e:
-
-                            st.error(
-                                str(e)
-                            )
-
-                    else:
-
-                        st.error(
-                            "Image missing"
-                        )
-
-                    match_score = min(
-                        max(
-                            int(score * 100),
-                            50
-                        ),
-                        98
-                    )
-                    
-                    
 
                     match_score = int(
                         visual_similarity * 100
-                    )
-
+                    )              
+                    
                     st.markdown(
                         f"""
 <div style="display:flex; flex-direction:column; gap:4px;">

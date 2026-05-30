@@ -59,6 +59,13 @@ for file in files:
                 )
             )
 
+            embedding /= (
+                embedding.norm(
+                    dim=-1,
+                    keepdim=True
+                )
+            )
+
         image_paths.append(
             path
         )
