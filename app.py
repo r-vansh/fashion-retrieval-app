@@ -284,6 +284,29 @@ with st.spinner("Loading Fashion Retrieval..."):
     ) as f:
 
         loaded_data = pickle.load(f)
+    st.write(
+        "LOADED TYPE:",
+        type(loaded_data)
+    )
+
+    st.write(
+        "LOADED LENGTH:",
+        len(loaded_data)
+    )
+
+    st.write(
+        "FIRST ITEM TYPE:",
+        type(
+            loaded_data[0]
+        )
+    )
+
+    st.write(
+        "FIRST ITEM:",
+        loaded_data[0]
+    )
+
+    st.stop()
         
 
 # -------------------------
