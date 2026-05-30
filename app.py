@@ -829,8 +829,50 @@ if uploaded_file:
 
                     match_score = int(
                         visual_similarity * 100
-                    )              
-                    
+                    )
+
+                    category_text = str(
+                        row.get(
+                            "category",
+                            "Unknown"
+                        )
+                    ).title()
+
+                    style_text = str(
+                        row.get(
+                            "style",
+                            "Unknown"
+                        )
+                    ).title()
+
+                    silhouette_text = str(
+                        row.get(
+                            "silhouette",
+                            "Unknown"
+                        )
+                    ).title()
+
+                    neckline_text = str(
+                        row.get(
+                            "neckline",
+                            "Unknown"
+                        )
+                    ).title()
+
+                    sleeve_text = str(
+                        row.get(
+                            "sleeve",
+                            "Unknown"
+                        )
+                    ).title()
+
+                    pattern_text = str(
+                        row.get(
+                            "pattern",
+                            "Unknown"
+                        )
+                    ).title()
+
                     st.markdown(
                         f"""
 <div style="display:flex; flex-direction:column; gap:4px;">
@@ -839,9 +881,7 @@ if uploaded_file:
 font-size:18px;
 font-weight:700;
 ">
-{
-str(row.get("category","Unknown")).title()
-}
+{category_text}
 </div>
 
 <div style="display:flex; column-gap:8px; row-gap:8px; flex-wrap:wrap;">
@@ -853,9 +893,7 @@ padding:6px 12px;
 border-radius:20px;
 font-size:13px;
 ">
-{
-str(row.get("style","Unknown")).title()
-}
+{style_text}
 </span> <span style="
 background:#F1F1EE;
 border: 1px solid #EDEDE9;
@@ -863,9 +901,7 @@ padding:6px 12px;
 border-radius:20px;
 font-size:13px;
 ">
-{
-str(row.get("silhouette","Unknown")).title()
-}
+{silhouette_text}
 </span> <span style="
 background:#F1F1EE;
 border: 1px solid #EDEDE9;
@@ -873,9 +909,7 @@ padding:6px 12px;
 border-radius:20px;
 font-size:13px;
 ">
-{
-str(row.get("neckline","Unknown")).title()
-}
+{neckline_text}
 </span> <span style="
 background:#F1F1EE;
 border: 1px solid #EDEDE9;
@@ -883,9 +917,7 @@ padding:6px 12px;
 border-radius:20px;
 font-size:13px;
 ">
-{
-str(row.get("sleeve","Unknown")).title()
-}
+{sleeve_text}
 </span> <span style="
 background:#F1F1EE;
 border: 1px solid #EDEDE9;
@@ -893,9 +925,7 @@ padding:6px 12px;
 border-radius:20px;
 font-size:13px;
 ">
-{
-str(row.get("pattern","Unknown")).title()
-}
+{pattern_text}
 </span>
 
 </div>
