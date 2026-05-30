@@ -273,22 +273,6 @@ with open(
         pickle.load(f)
     )
 
-st.write(
-    "EMBEDDINGS:",
-    len(image_embeddings)
-)
-
-st.write(
-    "FIRST PATH:",
-    image_paths[0]
-)
-
-st.write(
-    "IMAGE EXISTS:",
-    os.path.exists(
-        image_paths[0]
-    )
-)
     
 # -------------------------
 # FIND SIMILAR
