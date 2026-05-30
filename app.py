@@ -839,7 +839,9 @@ if uploaded_file:
 font-size:18px;
 font-weight:700;
 ">
-{row['category'].title()}
+{
+str(row.get("category","Unknown")).title()
+}
 </div>
 
 <div style="display:flex; column-gap:8px; row-gap:8px; flex-wrap:wrap;">
@@ -851,7 +853,9 @@ padding:6px 12px;
 border-radius:20px;
 font-size:13px;
 ">
-{row['style'].title()}
+{
+str(row.get("style","Unknown")).title()
+}
 </span> <span style="
 background:#F1F1EE;
 border: 1px solid #EDEDE9;
@@ -859,7 +863,9 @@ padding:6px 12px;
 border-radius:20px;
 font-size:13px;
 ">
-{row['silhouette'].title()}
+{
+str(row.get("silhouette","Unknown")).title()
+}
 </span> <span style="
 background:#F1F1EE;
 border: 1px solid #EDEDE9;
@@ -867,7 +873,9 @@ padding:6px 12px;
 border-radius:20px;
 font-size:13px;
 ">
-{row['neckline'].title()}
+{
+str(row.get("neckline","Unknown")).title()
+}
 </span> <span style="
 background:#F1F1EE;
 border: 1px solid #EDEDE9;
@@ -875,7 +883,9 @@ padding:6px 12px;
 border-radius:20px;
 font-size:13px;
 ">
-{row['sleeve'].title()}
+{
+str(row.get("sleeve","Unknown")).title()
+}
 </span> <span style="
 background:#F1F1EE;
 border: 1px solid #EDEDE9;
@@ -883,7 +893,9 @@ padding:6px 12px;
 border-radius:20px;
 font-size:13px;
 ">
-{row['pattern'].title()}
+{
+str(row.get("pattern","Unknown")).title()
+}
 </span>
 
 </div>
