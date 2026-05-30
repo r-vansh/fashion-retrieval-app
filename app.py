@@ -476,20 +476,42 @@ def find_similar(
             image_path
         ).replace(".jpg", "")
 
-        matched_rows = metadata[
-            metadata["image_id"]
-            .astype(str)
-            .str.strip()
-            ==
-            str(image_name)
-            .strip()
-        ]
+        # matched_rows = metadata[
+        #     metadata["image_id"]
+        #     .astype(str)
+        #     .str.strip()
+        #     ==
+        #     str(image_name)
+        #     .strip()
+        # ]
 
-        if matched_rows.empty:
+        # if matched_rows.empty:
 
-            continue
+        #     continue
 
-        row = matched_rows.iloc[0]
+        # row = matched_rows.iloc[0]
+        
+        try:
+
+            matched_rows = metadata[
+                metadata["image_id"]
+                .astype(str)
+                .str.strip()
+                ==
+                str(image_name)
+                .strip()
+            ]
+
+            row = (
+                matched_rows.iloc[0]
+                if not matched_rows.empty
+                else None
+            )
+
+        except Exception:
+
+            row = None
+        
 
         # -------------------------
         # CATEGORY FILTER
@@ -584,6 +606,15 @@ def find_similar(
         ].iloc[0]
 
         rerank_score = score
+        reranked.append(
+            (
+                idx,
+                rerank_score,
+                visual_similarity
+            )
+        )
+
+        continue
 
         # -------------------------
         # QUERY METADATA MATCH
