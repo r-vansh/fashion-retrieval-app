@@ -114,6 +114,7 @@ def evaluate(catalog, recall_at, visual_only):
     evaluated_queries = 0
     skipped_queries = 0
     total_relevant_items = 0
+    average_precision_total = 0.0
 
     for query_index, (_, query_row, _) in enumerate(catalog):
         relevant_indexes = {
@@ -152,6 +153,20 @@ def evaluate(catalog, recall_at, visual_only):
 
         evaluated_queries += 1
         total_relevant_items += len(relevant_indexes)
+        relevant_items_seen = 0
+        average_precision = 0.0
+
+        for rank, (candidate_index, _) in enumerate(
+            ranked_indexes,
+            start=1,
+        ):
+            if candidate_index in relevant_indexes:
+                relevant_items_seen += 1
+                average_precision += relevant_items_seen / rank
+
+        average_precision_total += (
+            average_precision / len(relevant_indexes)
+        )
 
         for k in recall_at:
             retrieved_indexes = {
@@ -175,6 +190,9 @@ def evaluate(catalog, recall_at, visual_only):
         "average_relevant_items": (
             total_relevant_items / evaluated_queries
         ),
+        "mean_average_precision": (
+            average_precision_total / evaluated_queries
+        ),
         "recall": {
             k: recall_totals[k] / evaluated_queries
             for k in recall_at
@@ -184,7 +202,7 @@ def evaluate(catalog, recall_at, visual_only):
 
 def parse_args():
     parser = argparse.ArgumentParser(
-        description="Evaluate fashion retrieval quality with Recall@K."
+        description="Evaluate fashion retrieval quality with Recall@K and mAP."
     )
     parser.add_argument(
         "--metadata",
@@ -246,6 +264,7 @@ def main():
         "Average relevant items per evaluated query: "
         f"{results['average_relevant_items']:.2f}"
     )
+    print(f"mAP: {results['mean_average_precision']:.4f}")
 
     for k, recall in results["recall"].items():
         print(f"Recall@{k}: {recall:.4f}")
