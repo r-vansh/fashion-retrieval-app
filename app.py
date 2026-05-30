@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import os
 import clip
+import faiss
+import numpy as np
 import torch
 import pickle
 from PIL import Image
@@ -296,6 +298,69 @@ def load_embeddings():
 image_paths, image_embeddings = (
     load_embeddings()
 )
+
+
+@st.cache_resource
+def load_faiss_index():
+
+    valid_embeddings = []
+    original_indices = []
+
+    for i, embedding in enumerate(
+        image_embeddings
+    ):
+
+        if (
+            embedding is None
+            or embedding.numel() == 0
+        ):
+
+            continue
+
+        vector = (
+            embedding
+            .cpu()
+            .numpy()
+            .reshape(-1)
+            .astype("float32")
+        )
+
+        valid_embeddings.append(
+            vector
+        )
+        original_indices.append(
+            i
+        )
+
+    if not valid_embeddings:
+
+        raise ValueError(
+            "No valid embeddings found."
+        )
+
+    vectors = np.stack(
+        valid_embeddings
+    )
+    faiss.normalize_L2(
+        vectors
+    )
+
+    index = faiss.IndexFlatIP(
+        vectors.shape[1]
+    )
+    index.add(
+        vectors
+    )
+
+    return (
+        index,
+        original_indices
+    )
+
+
+faiss_index, faiss_original_indices = (
+    load_faiss_index()
+)
     
 # -------------------------
 # FIND SIMILAR
@@ -338,37 +403,33 @@ def find_similar(
 
     similarities = []
 
-    for i, emb in enumerate(
-        image_embeddings
+    query_vector = (
+        query_embedding
+        .cpu()
+        .numpy()
+        .astype("float32")
+    )
+    faiss.normalize_L2(
+        query_vector
+    )
+
+    faiss_similarities, faiss_positions = (
+        faiss_index.search(
+            query_vector,
+            faiss_index.ntotal
+        )
+    )
+
+    for similarity, faiss_position in zip(
+        faiss_similarities[0],
+        faiss_positions[0]
     ):
-        if emb is None:
-            continue
-
-        try:
-
-            emb = emb.cpu()
-
-        except:
-
-            continue
-
-        if emb.numel() == 0:
-
-            continue
-
-        try:
-
-            similarity = (
-                torch.cosine_similarity(
-                    query_embedding.cpu().squeeze(0),
-                    emb.squeeze(0),
-                    dim=0
-                ).item()
-            )
-
-        except:
-
-            continue
+        i = faiss_original_indices[
+            faiss_position
+        ]
+        similarity = float(
+            similarity
+        )
         image_path = image_paths[i]
 
         image_name = (
