@@ -17,9 +17,17 @@ ZIP_URL = (
     "https://github.com/r-vansh/fashion-retrieval-app/releases/download/v1/images.zip?raw=1"
 )
 
-if not os.path.exists(
-    "dataset/images"
-):
+import shutil
+
+if True:
+
+    if os.path.exists(
+        "dataset"
+    ):
+
+        shutil.rmtree(
+            "dataset"
+        )
 
     st.info(
         "Downloading images..."
@@ -33,6 +41,7 @@ if not os.path.exists(
         ZIP_URL,
         allow_redirects=True
     )
+
     response.raise_for_status()
 
     with open(
@@ -44,12 +53,6 @@ if not os.path.exists(
             response.content
         )
 
-    st.write(
-        os.path.getsize(
-            zip_path
-        )
-    )
-
     with zipfile.ZipFile(
         zip_path,
         "r"
@@ -57,6 +60,33 @@ if not os.path.exists(
 
         zip_ref.extractall(
             "dataset"
+        )
+
+
+    st.write(
+        "DATASET:",
+        os.listdir(
+            "dataset"
+        )
+    )
+
+    if os.path.exists(
+        "dataset/images"
+    ):
+
+        st.write(
+            "TOTAL IMAGES:",
+            len(
+                os.listdir(
+                    "dataset/images"
+                )
+            )
+        )
+
+    else:
+
+        st.write(
+            "dataset/images NOT FOUND"
         )
 
     if os.path.exists(
