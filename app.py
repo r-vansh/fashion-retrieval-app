@@ -369,7 +369,10 @@ def find_similar(
         ):
 
             category = str(
-                row["category"]
+                row.get(
+                    "category",
+                    ""
+                )
             ).strip().lower()
 
             selected = (
@@ -378,7 +381,6 @@ def find_similar(
                 .lower()
             )
 
-            # normalize pants/pant
             category = (
                 category
                 .replace(
@@ -395,11 +397,15 @@ def find_similar(
                 )
             )
 
+            if not category:
+
+                continue
+
             if (
                 category
                 != selected
             ):
-                
+
                 continue
 
         # -------------------------
