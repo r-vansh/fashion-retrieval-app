@@ -354,6 +354,10 @@ def find_similar(
             continue
 
         row = matched_rows.iloc[0]
+        
+        row = row.fillna(
+            "Unknown"
+        )
 
         # -------------------------
         # CATEGORY FILTER
@@ -822,10 +826,18 @@ if uploaded_file:
 
                 with card:
 
-                    st.image(
-                        image_path,
-                        width="stretch"
-                    )
+                    if os.path.exists(
+                        image_path
+                    ):
+
+                        st.image(
+                            image_path,
+                            width="stretch"
+                        )
+
+                    else:
+
+                        continue
 
                     match_score = int(
                         visual_similarity * 100
