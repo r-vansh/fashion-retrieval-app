@@ -395,6 +395,7 @@ def find_similar(
                 category
                 != selected
             ):
+                
                 continue
 
         # -------------------------
@@ -769,7 +770,13 @@ if uploaded_file:
             )
             
             status.update(label="Designs Found!", state="complete")
+            if len(results) == 0:
 
+                st.warning(
+                    "No matching results found. Try changing category or metadata filters."
+                )
+
+                st.stop()
         cols = st.columns(
             3,
             gap="small"
