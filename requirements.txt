@@ -4,7 +4,6 @@ attrs==26.1.0
 beautifulsoup4==4.14.3
 blinker==1.9.0
 cachetools==7.1.4
-certifi==2026.5.20
 charset-normalizer==3.4.7
 click==8.4.1
 clip @ git+https://github.com/openai/CLIP.git@d05afc436d78f1c48dc0dbf8e5980a9d471f35f6
@@ -49,9 +48,9 @@ streamlit==1.57.0
 sympy==1.14.0
 tenacity==9.1.4
 toml==0.10.2
+torch==2.12.0+cpu
+torchvision==0.27.0+cpu
 --extra-index-url https://download.pytorch.org/whl/cpu
-torch==2.7.0
-torchvision==0.22.0
 tqdm==4.67.3
 typing_extensions==4.15.0
 tzdata==2026.2
