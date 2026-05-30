@@ -451,7 +451,7 @@ def find_similar(
         # -------------------------
 
         final_score = (
-            similarity * 0.75
+            similarity * 0.90
         )
 
         if (
@@ -468,7 +468,7 @@ def find_similar(
                 query_style.lower()
             ):
 
-                final_score += 0.10
+                final_score += 0.04
 
         if (
             use_silhouette
@@ -484,7 +484,7 @@ def find_similar(
                 query_silhouette.lower()
             ):
 
-                final_score += 0.08
+                final_score += 0.03
 
         if (
             use_neckline
@@ -500,7 +500,7 @@ def find_similar(
                 query_neckline.lower()
             ):
 
-                final_score += 0.04
+                final_score += 0.015
 
         if (
             use_sleeve
@@ -516,7 +516,7 @@ def find_similar(
                 query_sleeve.lower()
             ):
 
-                final_score += 0.04
+                final_score += 0.015
 
         if (
             use_pattern
@@ -532,7 +532,7 @@ def find_similar(
                 query_pattern.lower()
             ):
 
-                final_score += 0.04
+                final_score += 0.015
 
         similarities.append(
             (
