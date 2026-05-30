@@ -284,50 +284,66 @@ with st.spinner("Loading Fashion Retrieval..."):
     ) as f:
 
         loaded_data = pickle.load(f)
-    st.write(
-        "LOADED TYPE:",
-        str(type(loaded_data))
-    )
+    # st.write(
+    #     "LOADED TYPE:",
+    #     str(type(loaded_data))
+    # )
 
-    st.write(
-        "LOADED LENGTH:",
-        len(loaded_data)
-    )
+    # st.write(
+    #     "LOADED LENGTH:",
+    #     len(loaded_data)
+    # )
 
-    st.write(
-        "FIRST ITEM TYPE:",
-        str(
-            type(
-                loaded_data[0]
-            )
-        )
-    )
+    # st.write(
+    #     "FIRST ITEM TYPE:",
+    #     str(
+    #         type(
+    #             loaded_data[0]
+    #         )
+    #     )
+    # )
 
-    st.write(
-        "FIRST ITEM SAMPLE:"
-    )
+    # st.write(
+    #     "FIRST ITEM SAMPLE:"
+    # )
 
-    st.write(
-        str(
-            loaded_data[0]
-        )[:500]
-    )
+    # st.write(
+    #     str(
+    #         loaded_data[0]
+    #     )[:500]
+    # )
 
-    st.stop()
+    # st.stop()
         
 
 # -------------------------
 # LOAD EMBEDDINGS
 # -------------------------
 
-image_embeddings = (
+image_paths = (
     loaded_data[0]
 )
 
-image_paths = (
+image_embeddings = (
     loaded_data[1]
 )
 
+image_embeddings = [
+
+    emb.float().cpu()
+
+    if isinstance(
+        emb,
+        torch.Tensor
+    )
+
+    else torch.tensor(
+        emb,
+        dtype=torch.float32
+    )
+
+    for emb in image_embeddings
+]
 # -------------------------
 # ENSURE EMBEDDINGS TENSORS
 # -------------------------
