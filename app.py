@@ -321,15 +321,34 @@ def find_similar(
     for i, emb in enumerate(
         image_embeddings
     ):
+        if emb is None:
+            continue
 
-        similarity = (
-            torch.cosine_similarity(
-                query_embedding.cpu().squeeze(0),
-                emb.squeeze(0),
-                dim=0
-            ).item()
-        )
+        try:
 
+            emb = emb.cpu()
+
+        except:
+
+            continue
+
+        if emb.numel() == 0:
+
+            continue
+
+        try:
+
+            similarity = (
+                torch.cosine_similarity(
+                    query_embedding.cpu().squeeze(0),
+                    emb.squeeze(0),
+                    dim=0
+                ).item()
+            )
+
+        except:
+
+            continue
         image_path = image_paths[i]
 
         image_name = (
@@ -507,7 +526,10 @@ def find_similar(
         key=lambda x: x[1],
         reverse=True
     )
-
+    st.write(
+        "VALID RESULTS:",
+        len(similarities)
+    )
     return similarities[:top_k]
 
 # -------------------------
