@@ -476,10 +476,20 @@ def find_similar(
             image_path
         ).replace(".jpg", "")
 
-        row = metadata[
+        matched_rows = metadata[
             metadata["image_id"]
-            == image_name
-        ].iloc[0]
+            .astype(str)
+            .str.strip()
+            ==
+            str(image_name)
+            .strip()
+        ]
+
+        if matched_rows.empty:
+
+            continue
+
+        row = matched_rows.iloc[0]
 
         # -------------------------
         # CATEGORY FILTER
@@ -562,6 +572,11 @@ def find_similar(
         image_name = os.path.basename(
             image_path
         ).replace(".jpg", "")
+        
+        st.write(
+            "SEARCHING:",
+            image_name
+        )
 
         row = metadata[
             metadata["image_id"]
