@@ -632,141 +632,134 @@ st.sidebar.markdown(
 
 st.sidebar.markdown("---")
 
-st.sidebar.subheader(
-    "Query Metadata"
-)
+with st.sidebar.expander(
+    "Attribute Preferences",
+    expanded=True
+):
 
-style_options = sorted(
-    metadata["style"]
-    .dropna()
-    .astype(str)
-    .str.strip()
-    .str.lower()
-    .unique()
-)
+    style_options = sorted(
+        metadata["style"]
+        .dropna()
+        .astype(str)
+        .str.strip()
+        .str.lower()
+        .unique()
+    )
 
-query_style = (
-    st.sidebar.selectbox(
+    query_style = (
+        st.selectbox(
+            "Style",
+            ["Auto"] + list(
+                style_options
+            )
+        )
+    )
+
+    silhouette_options = sorted(
+        metadata["silhouette"]
+        .dropna()
+        .astype(str)
+        .str.strip()
+        .str.lower()
+        .unique()
+    )
+
+    query_silhouette = (
+        st.selectbox(
+            "Silhouette",
+            ["Auto"] + list(
+                silhouette_options
+            )
+        )
+    )
+
+    neckline_options = sorted(
+        metadata["neckline"]
+        .dropna()
+        .astype(str)
+        .str.strip()
+        .str.lower()
+        .unique()
+    )
+
+    query_neckline = (
+        st.selectbox(
+            "Neckline",
+            ["Auto"] + list(
+                neckline_options
+            )
+        )
+    )
+
+    sleeve_options = sorted(
+        metadata["sleeve"]
+        .dropna()
+        .astype(str)
+        .str.strip()
+        .str.lower()
+        .unique()
+    )
+
+    query_sleeve = (
+        st.selectbox(
+            "Sleeve",
+            ["Auto"] + list(
+                sleeve_options
+            )
+        )
+    )
+
+    pattern_options = sorted(
+        metadata["pattern"]
+        .dropna()
+        .astype(str)
+        .str.strip()
+        .str.lower()
+        .unique()
+    )
+
+    query_pattern = (
+        st.selectbox(
+            "Pattern",
+            ["Auto"] + list(
+                pattern_options
+            )
+        )
+    )
+
+with st.sidebar.expander(
+    "Prioritize Attributes",
+    expanded=False
+):
+
+    use_style = st.checkbox(
         "Style",
-        ["Auto"] + list(style_options)
+        value=False
     )
-)
 
-silhouette_options = sorted(
-    metadata["silhouette"]
-    .dropna()
-    .astype(str)
-    .str.strip()
-    .str.lower()
-    .unique()
-)
-
-query_silhouette = (
-    st.sidebar.selectbox(
+    use_silhouette = st.checkbox(
         "Silhouette",
-        ["Auto"] + list(
-            silhouette_options
-        )
+        value=False
     )
-)
 
-neckline_options = sorted(
-    metadata["neckline"]
-    .dropna()
-    .astype(str)
-    .str.strip()
-    .str.lower()
-    .unique()
-)
-
-query_neckline = (
-    st.sidebar.selectbox(
+    use_neckline = st.checkbox(
         "Neckline",
-        ["Auto"] + list(
-            neckline_options
-        )
+        value=False
     )
-)
 
-sleeve_options = sorted(
-    metadata["sleeve"]
-    .dropna()
-    .astype(str)
-    .str.strip()
-    .str.lower()
-    .unique()
-)
-
-query_sleeve = (
-    st.sidebar.selectbox(
+    use_sleeve = st.checkbox(
         "Sleeve",
-        ["Auto"] + list(
-            sleeve_options
-        )
+        value=False
     )
-)
 
-pattern_options = sorted(
-    metadata["pattern"]
-    .dropna()
-    .astype(str)
-    .str.strip()
-    .str.lower()
-    .unique()
-)
-
-query_pattern = (
-    st.sidebar.selectbox(
+    use_pattern = st.checkbox(
         "Pattern",
-        ["Auto"] + list(
-            pattern_options
-        )
+        value=False
     )
-)
-
-use_style = st.sidebar.checkbox(
-    "Style Match",
-    value=True
-)
-
-use_silhouette = (
-    st.sidebar.checkbox(
-        "Silhouette Match",
-        value=True
-    )
-)
-
-use_neckline = (
-    st.sidebar.checkbox(
-        "Neckline Match",
-        value=True
-    )
-)
-
-use_sleeve = (
-    st.sidebar.checkbox(
-        "Sleeve Match",
-        value=True
-    )
-)
-
-use_pattern = (
-    st.sidebar.checkbox(
-        "Pattern Match",
-        value=True
-    )
-)
-
-top_k = st.sidebar.slider(
-    "Number of Results",
-    3,
-    10,
-    6
-)
 
 selected_category = (
     st.sidebar.selectbox(
-        "Category",
+        "Result Category",
         [
             "All",
             "Dress",
@@ -777,6 +770,14 @@ selected_category = (
         ]
     )
 )
+
+top_k = st.sidebar.slider(
+    "Number of Results",
+    3,
+    6,
+    6
+)
+
 
 # -------------------------
 # IMAGE UPLOAD
