@@ -10,59 +10,67 @@ from PIL import Image
 import zipfile
 import requests
 
-
 # -------------------------
 # DOWNLOAD IMAGES
 # -------------------------
+
+import shutil
 
 ZIP_URL = (
     "https://github.com/r-vansh/fashion-retrieval-app/releases/download/v2/images.zip"
 )
 
-if not os.path.exists(
+# TEMPORARY FORCE REFRESH
+if os.path.exists(
     "dataset/images"
 ):
 
-    st.info(
-        "Downloading images..."
+    shutil.rmtree(
+        "dataset/images"
     )
 
-    zip_path = "images.zip"
+st.info(
+    "Downloading images..."
+)
 
-    response = requests.get(
-        ZIP_URL,
-        stream=True
-    )
+zip_path = "images.zip"
 
-    response.raise_for_status()
+response = requests.get(
+    ZIP_URL,
+    stream=True
+)
 
-    with open(
-        zip_path,
-        "wb"
-    ) as f:
+response.raise_for_status()
 
-        for chunk in response.iter_content(
-            chunk_size=8192
-        ):
+with open(
+    zip_path,
+    "wb"
+) as f:
 
-            f.write(chunk)
-
-    with zipfile.ZipFile(
-        zip_path,
-        "r"
-    ) as zip_ref:
-
-        zip_ref.extractall(
-            "dataset"
-        )
-
-    if os.path.exists(
-        zip_path
+    for chunk in response.iter_content(
+        chunk_size=8192
     ):
 
-        os.remove(
-            zip_path
-        )
+        f.write(chunk)
+
+with zipfile.ZipFile(
+    zip_path,
+    "r"
+) as zip_ref:
+
+    zip_ref.extractall(
+        "dataset"
+    )
+
+if os.path.exists(
+    zip_path
+):
+
+    os.remove(
+        zip_path
+    )
+
+
 
 # Initialize loading state
 if "loading_complete" not in st.session_state:
