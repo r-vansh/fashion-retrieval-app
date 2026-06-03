@@ -511,9 +511,103 @@ def find_similar(
         # HYBRID SCORE
         # -------------------------
 
-        final_score = (
-            similarity * 0.90
-        )
+        # final_score = (
+        #     similarity * 0.90
+        # )
+
+        # if (
+        #     use_style
+        #     and query_style
+        #     != "Auto"
+        # ):
+
+        #     if (
+        #         str(
+        #             row["style"]
+        #         ).lower()
+        #         ==
+        #         query_style.lower()
+        #     ):
+
+        #         final_score += 0.04
+
+        # if (
+        #     use_silhouette
+        #     and query_silhouette
+        #     != "Auto"
+        # ):
+
+        #     if (
+        #         str(
+        #             row["silhouette"]
+        #         ).lower()
+        #         ==
+        #         query_silhouette.lower()
+        #     ):
+
+        #         final_score += 0.03
+
+        # if (
+        #     use_neckline
+        #     and query_neckline
+        #     != "Auto"
+        # ):
+
+        #     if (
+        #         str(
+        #             row["neckline"]
+        #         ).lower()
+        #         ==
+        #         query_neckline.lower()
+        #     ):
+
+        #         final_score += 0.015
+
+        # if (
+        #     use_sleeve
+        #     and query_sleeve
+        #     != "Auto"
+        # ):
+
+        #     if (
+        #         str(
+        #             row["sleeve"]
+        #         ).lower()
+        #         ==
+        #         query_sleeve.lower()
+        #     ):
+
+        #         final_score += 0.015
+
+        # if (
+        #     use_pattern
+        #     and query_pattern
+        #     != "Auto"
+        # ):
+
+        #     if (
+        #         str(
+        #             row["pattern"]
+        #         ).lower()
+        #         ==
+        #         query_pattern.lower()
+        #     ):
+
+        #         final_score += 0.015
+
+        # -------------------------
+        # HYBRID SCORE
+        # -------------------------
+
+        visual_score = similarity
+
+        metadata_score = 0
+        max_metadata_score = 0
+
+
+        # -------------------------
+        # STYLE
+        # -------------------------
 
         if (
             use_style
@@ -521,15 +615,21 @@ def find_similar(
             != "Auto"
         ):
 
+            weight = 0.08
+            max_metadata_score += weight
+
             if (
-                str(
-                    row["style"]
-                ).lower()
+                str(row["style"]).lower()
                 ==
                 query_style.lower()
             ):
 
-                final_score += 0.04
+                metadata_score += weight
+
+
+        # -------------------------
+        # SILHOUETTE
+        # -------------------------
 
         if (
             use_silhouette
@@ -537,15 +637,21 @@ def find_similar(
             != "Auto"
         ):
 
+            weight = 0.16
+            max_metadata_score += weight
+
             if (
-                str(
-                    row["silhouette"]
-                ).lower()
+                str(row["silhouette"]).lower()
                 ==
                 query_silhouette.lower()
             ):
 
-                final_score += 0.03
+                metadata_score += weight
+
+
+        # -------------------------
+        # NECKLINE
+        # -------------------------
 
         if (
             use_neckline
@@ -553,15 +659,21 @@ def find_similar(
             != "Auto"
         ):
 
+            weight = 0.05
+            max_metadata_score += weight
+
             if (
-                str(
-                    row["neckline"]
-                ).lower()
+                str(row["neckline"]).lower()
                 ==
                 query_neckline.lower()
             ):
 
-                final_score += 0.015
+                metadata_score += weight
+
+
+        # -------------------------
+        # SLEEVE
+        # -------------------------
 
         if (
             use_sleeve
@@ -569,15 +681,21 @@ def find_similar(
             != "Auto"
         ):
 
+            weight = 0.05
+            max_metadata_score += weight
+
             if (
-                str(
-                    row["sleeve"]
-                ).lower()
+                str(row["sleeve"]).lower()
                 ==
                 query_sleeve.lower()
             ):
 
-                final_score += 0.015
+                metadata_score += weight
+
+
+        # -------------------------
+        # PATTERN
+        # -------------------------
 
         if (
             use_pattern
@@ -585,16 +703,44 @@ def find_similar(
             != "Auto"
         ):
 
+            weight = 0.12
+            max_metadata_score += weight
+
             if (
-                str(
-                    row["pattern"]
-                ).lower()
+                str(row["pattern"]).lower()
                 ==
                 query_pattern.lower()
             ):
 
-                final_score += 0.015
+                metadata_score += weight
 
+
+        # -------------------------
+        # NORMALIZE METADATA SCORE
+        # -------------------------
+
+        if max_metadata_score > 0:
+
+            metadata_score = (
+                metadata_score
+                / max_metadata_score
+            )
+
+        else:
+
+            metadata_score = 0
+
+
+        # -------------------------
+        # FINAL SCORE
+        # -------------------------
+
+        final_score = (
+            visual_score * 0.80
+            +
+            metadata_score * 0.20
+        )
+        
         similarities.append(
             (
                 i,
@@ -757,17 +903,22 @@ with st.sidebar.expander(
         value=False
     )
 
+    category_options = sorted(
+        metadata["category"]
+        .dropna()
+        .astype(str)
+        .str.strip()
+        .str.lower()
+        .unique()
+    )
+
 selected_category = (
     st.sidebar.selectbox(
         "Result Category",
-        [
-            "All",
-            "Dress",
-            "Top",
-            "Skirt",
-            "Jacket",
-            "Pants"
-        ]
+            ["All"] + [
+                category.title()
+                for category in category_options
+            ]
     )
 )
 
