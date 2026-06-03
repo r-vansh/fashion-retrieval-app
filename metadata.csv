@@ -26,10 +26,10 @@ img_skt_a_024,img_skt_a_024.jpg,skirt,pleated,none,none,multicolor,glam,animal p
 img_skt_a_025,img_skt_a_025.jpg,skirt,straight,none,none,multicolor,glam,animal print,sequin work and twist effect
 img_skt_a_026,img_skt_a_026.jpg,skirt,straight,none,none,brown,glam,embellished,big sequin beaded
 img_skt_a_027,img_skt_a_027.jpg,skirt,straight,none,none,black,glam,embellished,sequins with glittering effect
-img_top_a_028,img_top_a_028.jpg,top,fitted,sleeveless,halter,multicolor,minimal,polka dots,neck tie at the back
+img_top_a_028,img_top_a_028.jpg,top,fitted,sleeveless,halter,multicolor,minimal,polka dot,neck tie at the back
 img_top_a_029,img_top_a_029.jpg,top,fitted,sleeveless,round neck,multicolor,casual,plain,
 img_top_a_030,img_top_a_030.jpg,t-shirt,regular fit,short sleeve,round neck,beige and red,casual,printed,
-img_top_a_031,img_top_a_031.jpg,top,fitted,sleeveless,square,lcream and black,casual,polka dots,
+img_top_a_031,img_top_a_031.jpg,top,fitted,sleeveless,square,lcream and black,casual,polka dot,
 img_top_a_032,img_top_a_032.jpg,top,fitted,sleeveless,square,yellow,modern,plain,
 img_top_a_033,img_top_a_033.jpg,top,fitted,sleeveless,square,yellow and white,casual,checkered,lemon printed at the centre
 img_top_a_034,img_top_a_034.jpg,top,cropped,off-shoulder,square,multicolor,cottagecore,checkered,shirring effect on the off-shoulder
@@ -65,7 +65,7 @@ img_drs_b_003,img_drs_b_003.jpg,dress,straight,short sleeve,round neck,green,mod
 img_drs_b_004,img_drs_b_004.jpg,dress,straight,long sleeve,square,white,bohemian,floral,
 img_drs_b_005,img_drs_b_005.jpg,dress,a-line,puff sleeve,square,blue,cottagecore,floral,peter pan collar
 img_drs_b_006,img_drs_b_006.jpg,dress,a-line,puff sleeve,square,white,cottagecore,floral,slit on the leg
-img_drs_b_007,img_drs_b_007.jpg,dress,a-line,sleeveless,v-neck,multicolar,romantic,floral,
+img_drs_b_007,img_drs_b_007.jpg,dress,a-line,sleeveless,v-neck,multicolor,romantic,floral,
 img_drs_b_008,img_drs_b_008.jpg,dress,bodycon,long sleeve,round neck,white,formal,plain,open back
 img_drs_b_009,img_drs_b_009.jpg,jumpsuit,straight,sleeveless,round neck,white,formal,plain,cape
 img_drs_b_010,img_drs_b_010.jpg,dress,a-line,puff sleeve,sweetheart,white,cottagecore,floral,off-shoulder sleeves
@@ -87,7 +87,7 @@ img_jkt_b_025,img_jkt_b_025.jpg,jacket,regular fit,long sleeve,collared,burgundy
 img_pnt_b_026,img_pnt_b_026.jpg,pants,wide-leg,none,none,black,avant garde,plain,overlay
 img_pnt_b_027,img_pnt_b_027.jpg,pants,wide-leg,none,none,blue,modern,textured,jeans
 img_pnt_b_028,img_pnt_b_028.jpg,pants,wide-leg,none,none,blue,modern,plain,jeans with strap-on waist
-img_pnt_b_029,img_pnt_b_029.jpg,skirt,a-line,none,none,gray,minimal,plain,
+img_pnt_b_029,img_pnt_b_029.jpg,skirt,a-line,none,none,grey,minimal,plain,
 img_pnt_b_030,img_pnt_b_030.jpg,pants,wide-leg,none,none,white,sporty,textured,waffle fabric
 img_pnt_b_031,img_pnt_b_031.jpg,pants,straight,none,none,white,tailored,plain,
 img_pnt_b_032,img_pnt_b_032.jpg,pants,straight,none,none,white,tailored,plain,
@@ -112,7 +112,7 @@ img_top_b_050,img_top_b_050.jpg,dress,straight,short sleeve,round neck,grey,casu
 img_top_b_051,img_top_b_051.jpg,top,fitted,sleeveless,v-neck,brown,tailored,plain,
 img_top_b_052,img_top_b_052.jpg,top,fitted,long sleeve,round neck,white,casual,plain,
 img_top_b_053,img_top_b_053.jpg,coat,oversized,long sleeve,v-neck,black,tailored,plain,oversized
-img_top_b_054,img_top_b_054.jpg,top,regular fit,puff sleeve,round neck,white,casual,polka dots,
+img_top_b_054,img_top_b_054.jpg,top,regular fit,puff sleeve,round neck,white,casual,polka dot,
 img_top_b_055,img_top_b_055.jpg,shirt,regular fit,long sleeve,collared,white,cottagecore,floral,peter pan collar
 img_top_b_056,img_top_b_056.jpg,coat,oversized,long sleeve,v-neck,red,tailored,plain,oversized
 img_top_b_057,img_top_b_057.jpg,coat,oversized,long sleeve,v-neck,pink,tailored,plain,
@@ -181,7 +181,7 @@ img_top_c_059,img_top_c_059.jpg,top,fitted,sleeveless,square,white,bohemian,grap
 img_top_c_060,img_top_c_060.jpg,sweater,cropped,long sleeve,round neck,pink white,casual,striped,two-piece crochet set including a micro-bralette and a matching shrug with crew neckline
 Embroidered_Lace-Paneled_Longline_Cardigan_img_00000010,Embroidered_Lace-Paneled_Longline_Cardigan_img_00000010.jpg,cardigan,regular fit,none,none,none,casual,lace,deepfashion
 Two-Pocket_Cardigan_img_00000010,Two-Pocket_Cardigan_img_00000010.jpg,cardigan,regular fit,none,none,none,casual,plain,deepfashion
-Tribal-Inspired_Open-Front_Cardigan_img_00000036,Tribal-Inspired_Open-Front_Cardigan_img_00000036.jpg,cardigan,oversized,none,none,none,casual,graphic print,deepfashion
+Tribal-Inspired_Open-Front_Cardigan_img_00000036,Tribal-Inspired_Open-Front_Cardigan_img_00000036.jpg,cardigan,oversized,none,none,none,casual,graphic,deepfashion
 V-Neck_Cardigan_img_00000066,V-Neck_Cardigan_img_00000066.jpg,cardigan,regular fit,none,v-neck,none,casual,plain,deepfashion
 Boxy_Button-Front_Cardigan_img_00000006,Boxy_Button-Front_Cardigan_img_00000006.jpg,cardigan,boxy,long sleeve,v-neck,none,casual,plain,deepfashion
 Essential_Draped_Cardigan_img_00000021,Essential_Draped_Cardigan_img_00000021.jpg,cardigan,regular fit,none,none,none,casual,plain,deepfashion
@@ -192,7 +192,7 @@ Open-Front_Pointelle_Cardigan_img_00000038,Open-Front_Pointelle_Cardigan_img_000
 Lace_Inset_Cardigan_img_00000027,Lace_Inset_Cardigan_img_00000027.jpg,cardigan,regular fit,none,none,none,casual,lace,deepfashion
 Oversized_Striped_Cardigan_img_00000039,Oversized_Striped_Cardigan_img_00000039.jpg,cardigan,oversized,none,none,none,casual,striped,deepfashion
 Lace_Back_Linen_Cardigan_img_00000053,Lace_Back_Linen_Cardigan_img_00000053.jpg,cardigan,regular fit,none,none,none,casual,lace,deepfashion
-Southwestern_Print_Cardigan_img_00000007,Southwestern_Print_Cardigan_img_00000007.jpg,cardigan,regular fit,none,none,none,casual,graphic print,deepfashion
+Southwestern_Print_Cardigan_img_00000007,Southwestern_Print_Cardigan_img_00000007.jpg,cardigan,regular fit,none,none,none,casual,graphic,deepfashion
 Everyday_Open-Knit_Cardigan_img_00000028,Everyday_Open-Knit_Cardigan_img_00000028.jpg,cardigan,regular fit,none,none,none,casual,textured,deepfashion
 Hooded_Cardigan_img_00000049,Hooded_Cardigan_img_00000049.jpg,cardigan,regular fit,none,none,none,casual,plain,deepfashion
 Hooded_Marled_Cardigan_img_00000001,Hooded_Marled_Cardigan_img_00000001.jpg,cardigan,regular fit,none,none,none,casual,plain,deepfashion
@@ -207,14 +207,14 @@ Asymmetric_Zip-Front_Cardigan_img_00000036,Asymmetric_Zip-Front_Cardigan_img_000
 Classic_Open-Front_Cardigan_img_00000055,Classic_Open-Front_Cardigan_img_00000055.jpg,cardigan,regular fit,long sleeve,none,none,classic,plain,deepfashion
 Marled_Knit_Cardigan_img_00000025,Marled_Knit_Cardigan_img_00000025.jpg,cardigan,regular fit,none,none,none,casual,textured,deepfashion
 Draped_Waffle_Knit_Cardigan_img_00000019,Draped_Waffle_Knit_Cardigan_img_00000019.jpg,cardigan,regular fit,none,none,none,casual,textured,deepfashion
-Heart_Print_Cardigan_img_00000012,Heart_Print_Cardigan_img_00000012.jpg,cardigan,regular fit,none,none,none,casual,graphic print,deepfashion
+Heart_Print_Cardigan_img_00000012,Heart_Print_Cardigan_img_00000012.jpg,cardigan,regular fit,none,none,none,casual,graphic,deepfashion
 Draped_Pocket_Kimono_Cardigan_img_00000030,Draped_Pocket_Kimono_Cardigan_img_00000030.jpg,cardigan,regular fit,none,none,none,casual,plain,deepfashion
 Prep_School_Varsity_Cardigan_img_00000013,Prep_School_Varsity_Cardigan_img_00000013.jpg,cardigan,regular fit,none,none,none,casual,plain,deepfashion
-Fringed_Shawl_Collar_Cardigan_img_00000001,Fringed_Shawl_Collar_Cardigan_img_00000001.jpg,cardigan,regular fit,none,collared,none,casual,graphic print,deepfashion
+Fringed_Shawl_Collar_Cardigan_img_00000001,Fringed_Shawl_Collar_Cardigan_img_00000001.jpg,cardigan,regular fit,none,collared,none,casual,graphic,deepfashion
 Popcorn_Knit_Cardigan_img_00000032,Popcorn_Knit_Cardigan_img_00000032.jpg,cardigan,regular fit,none,none,none,casual,textured,deepfashion
 Hooded_Marled_Cardigan_img_00000011,Hooded_Marled_Cardigan_img_00000011.jpg,cardigan,regular fit,none,none,none,casual,textured,deepfashion
 Marled-Stripe_V-Neck_Cardigan_img_00000006,Marled-Stripe_V-Neck_Cardigan_img_00000006.jpg,cardigan,regular fit,none,v-neck,none,casual,striped,deepfashion
-Southwestern_Print_Dolman_Cardigan_img_00000004,Southwestern_Print_Dolman_Cardigan_img_00000004.jpg,cardigan,regular fit,dolman sleeve,none,none,casual,graphic print,deepfashion
+Southwestern_Print_Dolman_Cardigan_img_00000004,Southwestern_Print_Dolman_Cardigan_img_00000004.jpg,cardigan,regular fit,dolman sleeve,none,none,casual,graphic,deepfashion
 Woven_Wrap_Cardigan_img_00000001,Woven_Wrap_Cardigan_img_00000001.jpg,cardigan,wrap,none,none,none,casual,textured,deepfashion
 Loose-Knit_Dolman_Cardigan_img_00000043,Loose-Knit_Dolman_Cardigan_img_00000043.jpg,cardigan,batwing,dolman sleeve,none,none,casual,textured,deepfashion
 Touch_Of_Glam_Cardigan_img_00000048,Touch_Of_Glam_Cardigan_img_00000048.jpg,cardigan,regular fit,none,none,none,casual,abstract,deepfashion
@@ -227,7 +227,7 @@ Heathered_Open-Front_Cardigan_img_00000016,Heathered_Open-Front_Cardigan_img_000
 Geo_Pattern_Fringe_Cardigan_img_00000011,Geo_Pattern_Fringe_Cardigan_img_00000011.jpg,cardigan,regular fit,none,none,none,casual,geometric,deepfashion
 Classic_Button-Down_Cardigan_img_00000054,Classic_Button-Down_Cardigan_img_00000054.jpg,cardigan,regular fit,none,none,none,classic,plain,deepfashion
 Lace_Back_Linen_Cardigan_img_00000007,Lace_Back_Linen_Cardigan_img_00000007.jpg,cardigan,regular fit,none,none,none,casual,lace,deepfashion
-Rose_Print_Cardigan_img_00000043,Rose_Print_Cardigan_img_00000043.jpg,cardigan,regular fit,none,none,none,casual,graphic print,deepfashion
+Rose_Print_Cardigan_img_00000043,Rose_Print_Cardigan_img_00000043.jpg,cardigan,regular fit,none,none,none,casual,graphic,deepfashion
 Boxy_Button-Front_Cardigan_img_00000043,Boxy_Button-Front_Cardigan_img_00000043.jpg,cardigan,boxy,none,none,none,casual,lace,deepfashion
 Ribbed_Knit_Cardigan_img_00000005,Ribbed_Knit_Cardigan_img_00000005.jpg,cardigan,regular fit,none,none,none,casual,textured,deepfashion
 Scalloped_Lace_Cardigan_img_00000050,Scalloped_Lace_Cardigan_img_00000050.jpg,cardigan,regular fit,none,collared,none,casual,lace,deepfashion
@@ -269,9 +269,9 @@ Heathered_Shawl_Collar_Cardigan_img_00000027,Heathered_Shawl_Collar_Cardigan_img
 Button-Down_Maxi_Cardigan_img_00000028,Button-Down_Maxi_Cardigan_img_00000028.jpg,cardigan,wrap,none,none,none,casual,plain,deepfashion
 Striped_Marled_Knit_Cardigan_img_00000007,Striped_Marled_Knit_Cardigan_img_00000007.jpg,cardigan,regular fit,none,none,none,casual,striped,deepfashion
 Longline_Batwing_Cardigan_img_00000023,Longline_Batwing_Cardigan_img_00000023.jpg,cardigan,batwing,batwing,none,none,casual,plain,deepfashion
-Southwestern_Print_Batwing_Cardigan_img_00000005,Southwestern_Print_Batwing_Cardigan_img_00000005.jpg,cardigan,batwing,dolman sleeve,none,none,casual,graphic print,deepfashion
+Southwestern_Print_Batwing_Cardigan_img_00000005,Southwestern_Print_Batwing_Cardigan_img_00000005.jpg,cardigan,batwing,dolman sleeve,none,none,casual,graphic,deepfashion
 Fringed_Open-Front_Cardigan_img_00000056,Fringed_Open-Front_Cardigan_img_00000056.jpg,cardigan,regular fit,sleeveless,none,none,casual,textured,deepfashion
-Tribal_Print_Woven_Cardigan_img_00000032,Tribal_Print_Woven_Cardigan_img_00000032.jpg,cardigan,regular fit,long sleeve,none,none,casual,graphic print,deepfashion
+Tribal_Print_Woven_Cardigan_img_00000032,Tribal_Print_Woven_Cardigan_img_00000032.jpg,cardigan,regular fit,long sleeve,none,none,casual,graphic,deepfashion
 Stripe_Fuzzy_Cardigan_img_00000049,Stripe_Fuzzy_Cardigan_img_00000049.jpg,cardigan,regular fit,none,none,none,casual,striped,deepfashion
 Lace_Inset_Cardigan_img_00000028,Lace_Inset_Cardigan_img_00000028.jpg,cardigan,regular fit,none,none,none,casual,lace,deepfashion
 Fitted_V-Neck_Cardigan_img_00000048,Fitted_V-Neck_Cardigan_img_00000048.jpg,cardigan,cropped,long sleeve,v-neck,none,casual,plain,deepfashion
@@ -333,14 +333,14 @@ Classic_One-Button_Blazer_img_00000061,Classic_One-Button_Blazer_img_00000061.jp
 Flat_Collar_Blazer_img_00000114,Flat_Collar_Blazer_img_00000114.jpg,coat,regular fit,none,collared,none,formal,lace,deepfashion
 Collarless_Faux_Shearling_Coat_img_00000003,Collarless_Faux_Shearling_Coat_img_00000003.jpg,coat,regular fit,none,collared,none,formal,plain,deepfashion
 Double-Breasted_Blazer_img_00000032,Double-Breasted_Blazer_img_00000032.jpg,coat,regular fit,none,none,none,formal,plain,deepfashion
-Round-Hem_Brushstroke_Print_Blazer_img_00000051,Round-Hem_Brushstroke_Print_Blazer_img_00000051.jpg,coat,regular fit,none,none,none,formal,graphic print,deepfashion
+Round-Hem_Brushstroke_Print_Blazer_img_00000051,Round-Hem_Brushstroke_Print_Blazer_img_00000051.jpg,coat,regular fit,none,none,none,formal,graphic,deepfashion
 Flat_Collar_Blazer_img_00000068,Flat_Collar_Blazer_img_00000068.jpg,coat,regular fit,none,collared,none,formal,plain,deepfashion
 Two-Button_Blazer_img_00000117,Two-Button_Blazer_img_00000117.jpg,coat,regular fit,none,none,none,formal,plain,deepfashion
 Classic_Denim_Blazer_img_00000118,Classic_Denim_Blazer_img_00000118.jpg,coat,regular fit,none,none,none,classic,denim,deepfashion
 Must-Have_Ruched_Blazer_img_00000034,Must-Have_Ruched_Blazer_img_00000034.jpg,coat,regular fit,none,none,none,formal,plain,deepfashion
 Notched_Open-Front_Textured_Blazer_img_00000055,Notched_Open-Front_Textured_Blazer_img_00000055.jpg,coat,regular fit,none,none,none,formal,textured,deepfashion
 Quilted_Open-Front_Blazer_img_00000087,Quilted_Open-Front_Blazer_img_00000087.jpg,coat,regular fit,none,none,none,formal,plain,deepfashion
-Round-Hem_Brushstroke_Print_Blazer_img_00000062,Round-Hem_Brushstroke_Print_Blazer_img_00000062.jpg,coat,regular fit,none,none,none,formal,graphic print,deepfashion
+Round-Hem_Brushstroke_Print_Blazer_img_00000062,Round-Hem_Brushstroke_Print_Blazer_img_00000062.jpg,coat,regular fit,none,none,none,formal,graphic,deepfashion
 Floral_Print_Blazer_img_00000094,Floral_Print_Blazer_img_00000094.jpg,coat,regular fit,none,none,none,formal,floral,deepfashion
 Cuffed-Sleeve_Boyfriend_Blazer_img_00000058,Cuffed-Sleeve_Boyfriend_Blazer_img_00000058.jpg,coat,regular fit,none,none,none,formal,plain,deepfashion
 Zippered_Single-Button_Blazer_img_00000095,Zippered_Single-Button_Blazer_img_00000095.jpg,coat,regular fit,none,none,none,formal,plain,deepfashion
@@ -419,18 +419,18 @@ Asymmetrical_Open-Front_Blazer_img_00000118,Asymmetrical_Open-Front_Blazer_img_0
 Quilted_Open-Front_Blazer_img_00000003,Quilted_Open-Front_Blazer_img_00000003.jpg,coat,regular fit,none,none,none,formal,plain,deepfashion
 Zippered_Single-Button_Blazer_img_00000052,Zippered_Single-Button_Blazer_img_00000052.jpg,coat,regular fit,long sleeve,collared,none,formal,plain,deepfashion
 Floral_Print_Blazer_img_00000061,Floral_Print_Blazer_img_00000061.jpg,coat,regular fit,none,none,none,formal,floral,deepfashion
-Palm_Print_Bodycon_Dress_img_00000025,Palm_Print_Bodycon_Dress_img_00000025.jpg,dress,bodycon,none,none,none,casual,graphic print,deepfashion
+Palm_Print_Bodycon_Dress_img_00000025,Palm_Print_Bodycon_Dress_img_00000025.jpg,dress,bodycon,none,none,none,casual,graphic,deepfashion
 Striped_Halter_Maxi_Dress_img_00000026,Striped_Halter_Maxi_Dress_img_00000026.jpg,dress,maxi,none,halter,none,casual,striped,deepfashion
 Abstract_Paisley_Fit_&_Flare_Dress_img_00000029,Abstract_Paisley_Fit_&_Flare_Dress_img_00000029.jpg,dress,fit and flare,none,none,none,casual,paisley,deepfashion
 Crocheted_Halter_Maxi_Dress_img_00000002,Crocheted_Halter_Maxi_Dress_img_00000002.jpg,dress,maxi,none,halter,none,casual,plain,deepfashion
 Curved_Hem_Pleat-Back_Dress_img_00000031,Curved_Hem_Pleat-Back_Dress_img_00000031.jpg,dress,straight,none,none,none,casual,plain,deepfashion
 Textured_Skater_Dress_img_00000077,Textured_Skater_Dress_img_00000077.jpg,dress,skater,none,none,none,casual,textured,deepfashion
-Rose_Print_Cami_Dress_img_00000004,Rose_Print_Cami_Dress_img_00000004.jpg,dress,straight,none,none,none,casual,graphic print,deepfashion
+Rose_Print_Cami_Dress_img_00000004,Rose_Print_Cami_Dress_img_00000004.jpg,dress,straight,none,none,none,casual,graphic,deepfashion
 Medallion_Print_Shift_Dress_img_00000015,Medallion_Print_Shift_Dress_img_00000015.jpg,dress,shift,none,none,none,romantic,lace,deepfashion
 Cutout_Layered_T-Shirt_Dress_img_00000017,Cutout_Layered_T-Shirt_Dress_img_00000017.jpg,dress,straight,long sleeve,none,none,casual,striped,deepfashion
 Midi_Tank_Dress_img_00000038,Midi_Tank_Dress_img_00000038.jpg,dress,midi,none,none,none,casual,plain,deepfashion
 Hooded_French_Terry_Dress_img_00000012,Hooded_French_Terry_Dress_img_00000012.jpg,dress,straight,none,none,none,casual,plain,deepfashion
-Faux-Wrap_Surplice_Printed_Dress_img_00000036,Faux-Wrap_Surplice_Printed_Dress_img_00000036.jpg,dress,wrap,none,none,none,casual,graphic print,deepfashion
+Faux-Wrap_Surplice_Printed_Dress_img_00000036,Faux-Wrap_Surplice_Printed_Dress_img_00000036.jpg,dress,wrap,none,none,none,casual,graphic,deepfashion
 Tweed-Paneled_Sheath_Dress_img_00000060,Tweed-Paneled_Sheath_Dress_img_00000060.jpg,dress,straight,none,none,none,casual,plain,deepfashion
 Gathered_Floral_Lace_Dress_img_00000007,Gathered_Floral_Lace_Dress_img_00000007.jpg,dress,straight,sleeveless,none,none,romantic,floral,deepfashion
 Crochet-Embroidered_Midi_Dress_img_00000026,Crochet-Embroidered_Midi_Dress_img_00000026.jpg,dress,midi,none,none,none,bohemian,embroidered,deepfashion
@@ -470,7 +470,7 @@ Hooded_Maxi_Dress_img_00000017,Hooded_Maxi_Dress_img_00000017.jpg,dress,maxi,non
 Ruffled_Mineral_Wash_Cami_Dress_img_00000009,Ruffled_Mineral_Wash_Cami_Dress_img_00000009.jpg,dress,straight,none,none,none,casual,plain,deepfashion
 Floral_Lace_Overlay_Dress_img_00000044,Floral_Lace_Overlay_Dress_img_00000044.jpg,dress,mini,none,none,none,romantic,floral,deepfashion
 Daisy_Shift_Dress_img_00000017,Daisy_Shift_Dress_img_00000017.jpg,dress,shift,none,none,none,casual,plain,deepfashion
-Tribal_Print_Fringe_Cami_Dress_img_00000006,Tribal_Print_Fringe_Cami_Dress_img_00000006.jpg,dress,straight,none,none,none,casual,graphic print,deepfashion
+Tribal_Print_Fringe_Cami_Dress_img_00000006,Tribal_Print_Fringe_Cami_Dress_img_00000006.jpg,dress,straight,none,none,none,casual,graphic,deepfashion
 Dropped-Hem_Lace_Sheath_Dress_img_00000034,Dropped-Hem_Lace_Sheath_Dress_img_00000034.jpg,dress,straight,none,none,none,romantic,lace,deepfashion
 Striped_Maxi_Tank_Dress_img_00000047,Striped_Maxi_Tank_Dress_img_00000047.jpg,dress,maxi,none,none,none,casual,striped,deepfashion
 Cutout_Crochet-Paneled_Dress_img_00000004,Cutout_Crochet-Paneled_Dress_img_00000004.jpg,dress,straight,none,none,none,casual,plain,deepfashion
@@ -484,9 +484,9 @@ Open-Shoulder_Eyelash_Lace_Dress_img_00000003,Open-Shoulder_Eyelash_Lace_Dress_i
 Layered_Cutout_Midi_Dress_img_00000030,Layered_Cutout_Midi_Dress_img_00000030.jpg,dress,midi,none,none,none,casual,plain,deepfashion
 Cutout-Front_Textured_Bodycon_Dress_img_00000046,Cutout-Front_Textured_Bodycon_Dress_img_00000046.jpg,dress,bodycon,none,none,none,casual,textured,deepfashion
 Lace_Shift_Dress_img_00000063,Lace_Shift_Dress_img_00000063.jpg,dress,shift,none,none,none,romantic,lace,deepfashion
-Tribal_Print_Dress_img_00000018,Tribal_Print_Dress_img_00000018.jpg,dress,straight,none,none,none,casual,graphic print,deepfashion
+Tribal_Print_Dress_img_00000018,Tribal_Print_Dress_img_00000018.jpg,dress,straight,none,none,none,casual,graphic,deepfashion
 Ribbed_Knit_Striped_Dress_img_00000042,Ribbed_Knit_Striped_Dress_img_00000042.jpg,dress,straight,none,strapless,none,casual,striped,deepfashion
-Daisy_Print_Shift_Dress_img_00000023,Daisy_Print_Shift_Dress_img_00000023.jpg,dress,shift,none,none,none,casual,graphic print,deepfashion
+Daisy_Print_Shift_Dress_img_00000023,Daisy_Print_Shift_Dress_img_00000023.jpg,dress,shift,none,none,none,casual,graphic,deepfashion
 Spotted_Rose_Bodycon_Dress_img_00000011,Spotted_Rose_Bodycon_Dress_img_00000011.jpg,dress,bodycon,none,none,none,casual,plain,deepfashion
 Flounce_Maxi_Dress_img_00000064,Flounce_Maxi_Dress_img_00000064.jpg,dress,maxi,none,none,none,casual,plain,deepfashion
 Turtleneck_Sweater_Dress_img_00000081,Turtleneck_Sweater_Dress_img_00000081.jpg,dress,midi,long sleeve,none,none,casual,plain,deepfashion
@@ -535,11 +535,11 @@ Heathered_High-Slit_Maxi_Dress_img_00000023,Heathered_High-Slit_Maxi_Dress_img_0
 Festive_Fit_&_Flare_Dress_img_00000063,Festive_Fit_&_Flare_Dress_img_00000063.jpg,dress,fit and flare,none,none,none,casual,plain,deepfashion
 Ribbed_Stripe-Trim_Dress_img_00000005,Ribbed_Stripe-Trim_Dress_img_00000005.jpg,dress,fit and flare,none,none,none,casual,striped,deepfashion
 Faux_Wrap_Stripe_Dress_img_00000040,Faux_Wrap_Stripe_Dress_img_00000040.jpg,dress,wrap,none,none,none,casual,striped,deepfashion
-Medallion_Print_Cami_Dress_img_00000025,Medallion_Print_Cami_Dress_img_00000025.jpg,dress,straight,none,none,none,casual,graphic print,deepfashion
+Medallion_Print_Cami_Dress_img_00000025,Medallion_Print_Cami_Dress_img_00000025.jpg,dress,straight,none,none,none,casual,graphic,deepfashion
 Baroque_Jacquard_Layered_Dress_img_00000060,Baroque_Jacquard_Layered_Dress_img_00000060.jpg,dress,straight,none,none,none,casual,plain,deepfashion
 Button-Down_Denim_Dress_img_00000027,Button-Down_Denim_Dress_img_00000027.jpg,dress,straight,none,none,none,casual,denim,deepfashion
 Strapless_Paisley_Dress_img_00000037,Strapless_Paisley_Dress_img_00000037.jpg,dress,maxi,none,strapless,none,bohemian,paisley,deepfashion
-Zippered_Raglan_Hoodie_img_00000026,Zippered_Raglan_Hoodie_img_00000026.jpg,hoodie,regular fit,raglan sleeve,none,none,casual,graphic print,deepfashion
+Zippered_Raglan_Hoodie_img_00000026,Zippered_Raglan_Hoodie_img_00000026.jpg,hoodie,regular fit,raglan sleeve,none,none,casual,graphic,deepfashion
 Sleeveless_Hoodie_img_00000041,Sleeveless_Hoodie_img_00000041.jpg,hoodie,regular fit,sleeveless,none,none,casual,plain,deepfashion
 Paris_France_Sleeveless_Hoodie_img_00000021,Paris_France_Sleeveless_Hoodie_img_00000021.jpg,hoodie,regular fit,sleeveless,none,none,casual,plain,deepfashion
 Mesh_Pullover_Hoodie_img_00000041,Mesh_Pullover_Hoodie_img_00000041.jpg,hoodie,regular fit,none,none,none,casual,plain,deepfashion
@@ -621,7 +621,7 @@ Slub_Knit_Drawstring_Hoodie_img_00000048,Slub_Knit_Drawstring_Hoodie_img_0000004
 Heathered_Double-Drawstring_Hoodie_img_00000011,Heathered_Double-Drawstring_Hoodie_img_00000011.jpg,hoodie,regular fit,none,none,none,casual,textured,deepfashion
 Miami_Heat_Logo_Hoodie_img_00000059,Miami_Heat_Logo_Hoodie_img_00000059.jpg,hoodie,regular fit,none,none,none,casual,plain,deepfashion
 Zip-Front_Hoodie_img_00000030,Zip-Front_Hoodie_img_00000030.jpg,hoodie,regular fit,none,none,none,casual,plain,deepfashion
-Simba_Graphic_Hoodie_img_00000006,Simba_Graphic_Hoodie_img_00000006.jpg,hoodie,regular fit,none,none,none,casual,graphic print,deepfashion
+Simba_Graphic_Hoodie_img_00000006,Simba_Graphic_Hoodie_img_00000006.jpg,hoodie,regular fit,none,none,none,casual,graphic,deepfashion
 Zippered_Raglan_Hoodie_img_00000005,Zippered_Raglan_Hoodie_img_00000005.jpg,hoodie,regular fit,raglan sleeve,none,none,casual,plain,deepfashion
 French_Terry_Hoodie_img_00000039,French_Terry_Hoodie_img_00000039.jpg,hoodie,regular fit,none,none,none,casual,plain,deepfashion
 Marled_Zip-Up_Hoodie_img_00000008,Marled_Zip-Up_Hoodie_img_00000008.jpg,hoodie,regular fit,none,none,none,casual,plain,deepfashion
@@ -645,7 +645,7 @@ Heathered_Knit_Batwing_Hoodie_img_00000029,Heathered_Knit_Batwing_Hoodie_img_000
 Zippered_Raglan_Hoodie_img_00000040,Zippered_Raglan_Hoodie_img_00000040.jpg,hoodie,regular fit,raglan sleeve,collared,none,casual,plain,deepfashion
 Zip-Front_Hoodie_img_00000069,Zip-Front_Hoodie_img_00000069.jpg,hoodie,regular fit,none,none,none,casual,plain,deepfashion
 Miami_Heat_Logo_Hoodie_img_00000027,Miami_Heat_Logo_Hoodie_img_00000027.jpg,hoodie,regular fit,none,none,none,casual,plain,deepfashion
-Faded_Zippered_Sleeveless_Hoodie_img_00000026,Faded_Zippered_Sleeveless_Hoodie_img_00000026.jpg,hoodie,regular fit,sleeveless,none,none,casual,graphic print,deepfashion
+Faded_Zippered_Sleeveless_Hoodie_img_00000026,Faded_Zippered_Sleeveless_Hoodie_img_00000026.jpg,hoodie,regular fit,sleeveless,none,none,casual,graphic,deepfashion
 Sleeveless_Hoodie_img_00000076,Sleeveless_Hoodie_img_00000076.jpg,hoodie,regular fit,sleeveless,none,none,casual,plain,deepfashion
 Textured_Knit_Hoodie_img_00000020,Textured_Knit_Hoodie_img_00000020.jpg,hoodie,regular fit,none,none,none,casual,textured,deepfashion
 Marled_Zip-Up_Hoodie_img_00000003,Marled_Zip-Up_Hoodie_img_00000003.jpg,hoodie,regular fit,sleeveless,none,none,casual,plain,deepfashion
@@ -672,7 +672,7 @@ Fringed_Chantilly_Lace_Kimono_img_00000025,Fringed_Chantilly_Lace_Kimono_img_000
 Cherry_Blossom_Chiffon_Kimono_img_00000012,Cherry_Blossom_Chiffon_Kimono_img_00000012.jpg,jacket,regular fit,none,none,none,casual,plain,deepfashion
 Colorblocked_Faux_Leather_Varsity_Jacket_img_00000054,Colorblocked_Faux_Leather_Varsity_Jacket_img_00000054.jpg,jacket,regular fit,none,none,none,casual,plain,deepfashion
 Hooded_Varsity_Stripe_Jacket_img_00000021,Hooded_Varsity_Stripe_Jacket_img_00000021.jpg,jacket,regular fit,none,none,none,casual,striped,deepfashion
-Tropical_Print_Fringe_Kimono_img_00000004,Tropical_Print_Fringe_Kimono_img_00000004.jpg,jacket,regular fit,none,none,none,casual,graphic print,deepfashion
+Tropical_Print_Fringe_Kimono_img_00000004,Tropical_Print_Fringe_Kimono_img_00000004.jpg,jacket,regular fit,none,none,none,casual,graphic,deepfashion
 Varsity-Striped_Baseball_Jacket_img_00000056,Varsity-Striped_Baseball_Jacket_img_00000056.jpg,jacket,regular fit,none,none,none,casual,striped,deepfashion
 Floral_Print_Robe_Kimono_img_00000021,Floral_Print_Robe_Kimono_img_00000021.jpg,jacket,regular fit,none,none,none,casual,floral,deepfashion
 Multi-Stripe_Open-Front_Jacket_img_00000011,Multi-Stripe_Open-Front_Jacket_img_00000011.jpg,jacket,regular fit,none,none,none,minimal,striped,deepfashion
@@ -690,7 +690,7 @@ Scuba_Knit_Bomber_Jacket_img_00000033,Scuba_Knit_Bomber_Jacket_img_00000033.jpg,
 Quilted_Faux_Leather_Bomber_img_00000094,Quilted_Faux_Leather_Bomber_img_00000094.jpg,jacket,regular fit,none,none,none,casual,plain,deepfashion
 Faux_Leather_&_Mesh_Jacket_img_00000014,Faux_Leather_&_Mesh_Jacket_img_00000014.jpg,jacket,regular fit,none,none,none,casual,plain,deepfashion
 Draped_Chiffon_Jacket_img_00000009,Draped_Chiffon_Jacket_img_00000009.jpg,jacket,wrap,none,none,none,casual,plain,deepfashion
-Velveteen_Damask_Pattern_Kimono_img_00000013,Velveteen_Damask_Pattern_Kimono_img_00000013.jpg,jacket,wrap,none,none,none,casual,graphic print,deepfashion
+Velveteen_Damask_Pattern_Kimono_img_00000013,Velveteen_Damask_Pattern_Kimono_img_00000013.jpg,jacket,wrap,none,none,none,casual,graphic,deepfashion
 Faux_Leather_Biker_Jacket_img_00000004,Faux_Leather_Biker_Jacket_img_00000004.jpg,jacket,regular fit,none,collared,none,casual,plain,deepfashion
 Nylon_Raglan_Bomber_Jacket_img_00000008,Nylon_Raglan_Bomber_Jacket_img_00000008.jpg,jacket,regular fit,raglan sleeve,none,none,casual,plain,deepfashion
 Hooded_Cotton_Canvas_Anorak_img_00000023,Hooded_Cotton_Canvas_Anorak_img_00000023.jpg,jacket,regular fit,none,none,none,casual,plain,deepfashion
@@ -713,12 +713,12 @@ Embroidered_Fringe-Trim_Kimono_img_00000006,Embroidered_Fringe-Trim_Kimono_img_0
 Floral_Print_Chambray_Kimono_img_00000011,Floral_Print_Chambray_Kimono_img_00000011.jpg,jacket,wrap,none,none,none,casual,floral,deepfashion
 Embroidered_Cutout_Bomber_Jacket_img_00000013,Embroidered_Cutout_Bomber_Jacket_img_00000013.jpg,jacket,regular fit,none,none,none,casual,embroidered,deepfashion
 Fringed_Lace_Kimono_img_00000005,Fringed_Lace_Kimono_img_00000005.jpg,jacket,regular fit,none,none,none,casual,lace,deepfashion
-Fringed_Bandana_Print_Kimono_img_00000021,Fringed_Bandana_Print_Kimono_img_00000021.jpg,jacket,regular fit,none,none,none,bohemian,graphic print,deepfashion
+Fringed_Bandana_Print_Kimono_img_00000021,Fringed_Bandana_Print_Kimono_img_00000021.jpg,jacket,regular fit,none,none,none,bohemian,graphic,deepfashion
 Quilted_Moto_Jacket_img_00000012,Quilted_Moto_Jacket_img_00000012.jpg,jacket,regular fit,none,none,none,casual,plain,deepfashion
 Cherry_Blossom_Chiffon_Kimono_img_00000018,Cherry_Blossom_Chiffon_Kimono_img_00000018.jpg,jacket,regular fit,none,none,none,casual,plain,deepfashion
 Embroidered_Chiffon_Kimono_img_00000017,Embroidered_Chiffon_Kimono_img_00000017.jpg,jacket,regular fit,none,none,none,casual,embroidered,deepfashion
 Tweed_Cutaway_Jacket_img_00000055,Tweed_Cutaway_Jacket_img_00000055.jpg,jacket,regular fit,none,none,none,casual,plain,deepfashion
-Hooded_Leaf_Print_Utility_Jacket_img_00000032,Hooded_Leaf_Print_Utility_Jacket_img_00000032.jpg,jacket,regular fit,none,none,none,casual,graphic print,deepfashion
+Hooded_Leaf_Print_Utility_Jacket_img_00000032,Hooded_Leaf_Print_Utility_Jacket_img_00000032.jpg,jacket,regular fit,none,none,none,casual,graphic,deepfashion
 Hooded_Canvas_Utility_Jacket_img_00000042,Hooded_Canvas_Utility_Jacket_img_00000042.jpg,jacket,regular fit,none,none,none,casual,plain,deepfashion
 Quilted_Faux_Leather_Bomber_img_00000048,Quilted_Faux_Leather_Bomber_img_00000048.jpg,jacket,regular fit,none,none,none,classic,plain,deepfashion
 Slouchy_Twill_Utility_Jacket_img_00000019,Slouchy_Twill_Utility_Jacket_img_00000019.jpg,jacket,regular fit,none,none,none,casual,plain,deepfashion
@@ -765,7 +765,7 @@ Faux_Leather_&_Mesh_Jacket_img_00000015,Faux_Leather_&_Mesh_Jacket_img_00000015.
 Embroidered_Chiffon_Kimono_img_00000004,Embroidered_Chiffon_Kimono_img_00000004.jpg,jacket,regular fit,none,none,none,casual,embroidered,deepfashion
 Abstract_Tile_Fringe-Trimmed_Kimono_img_00000018,Abstract_Tile_Fringe-Trimmed_Kimono_img_00000018.jpg,jacket,regular fit,none,none,none,casual,abstract,deepfashion
 Fringed_Lace_Kimono_img_00000038,Fringed_Lace_Kimono_img_00000038.jpg,jacket,regular fit,none,none,none,casual,lace,deepfashion
-Hooded_Leaf_Print_Utility_Jacket_img_00000037,Hooded_Leaf_Print_Utility_Jacket_img_00000037.jpg,jacket,regular fit,none,none,none,casual,graphic print,deepfashion
+Hooded_Leaf_Print_Utility_Jacket_img_00000037,Hooded_Leaf_Print_Utility_Jacket_img_00000037.jpg,jacket,regular fit,none,none,none,casual,graphic,deepfashion
 Hooded_Canvas_Utility_Jacket_img_00000050,Hooded_Canvas_Utility_Jacket_img_00000050.jpg,jacket,regular fit,none,none,none,classic,plain,deepfashion
 Varsity-Striped_Piqu&eacute;_Track_Jacket_img_00000016,Varsity-Striped_Piqu&eacute;_Track_Jacket_img_00000016.jpg,jacket,regular fit,none,none,none,casual,striped,deepfashion
 Faux_Shearling_Bomber_Jacket_img_00000026,Faux_Shearling_Bomber_Jacket_img_00000026.jpg,jacket,regular fit,none,none,none,casual,plain,deepfashion
@@ -780,14 +780,14 @@ Hooded_High-Neck_Jacket_img_00000033,Hooded_High-Neck_Jacket_img_00000033.jpg,ja
 Belted_Drapey_Crepe_Jacket_img_00000024,Belted_Drapey_Crepe_Jacket_img_00000024.jpg,jacket,regular fit,sleeveless,none,none,casual,plain,deepfashion
 Drapey_Woven_Jacket_img_00000038,Drapey_Woven_Jacket_img_00000038.jpg,jacket,regular fit,none,none,none,casual,plain,deepfashion
 Cutout_Sleeveless_Jumpsuit_img_00000055,Cutout_Sleeveless_Jumpsuit_img_00000055.jpg,jumpsuit,straight,sleeveless,none,none,casual,plain,deepfashion
-Chevron_Print_Surplice_Jumpsuit_img_00000004,Chevron_Print_Surplice_Jumpsuit_img_00000004.jpg,jumpsuit,straight,none,strapless,none,casual,graphic print,deepfashion
+Chevron_Print_Surplice_Jumpsuit_img_00000004,Chevron_Print_Surplice_Jumpsuit_img_00000004.jpg,jumpsuit,straight,none,strapless,none,casual,graphic,deepfashion
 Heathered_Knit_Drawstring_Jumpsuit_img_00000010,Heathered_Knit_Drawstring_Jumpsuit_img_00000010.jpg,jumpsuit,straight,none,none,none,casual,textured,deepfashion
 Crisscross_Back_Jumpsuit_img_00000024,Crisscross_Back_Jumpsuit_img_00000024.jpg,jumpsuit,straight,none,none,none,casual,lace,deepfashion
 Patchwork_Printed_Long_Jumpsuit_img_00000012,Patchwork_Printed_Long_Jumpsuit_img_00000012.jpg,jumpsuit,straight,long sleeve,v-neck,none,casual,lace,deepfashion
 Abstract_Stripe_Print_Jumpsuit_img_00000028,Abstract_Stripe_Print_Jumpsuit_img_00000028.jpg,jumpsuit,straight,none,none,none,casual,striped,deepfashion
 Free_to_Be_Draped_Jumpsuit_img_00000024,Free_to_Be_Draped_Jumpsuit_img_00000024.jpg,jumpsuit,straight,none,none,none,casual,plain,deepfashion
 Strapless_Wide-Leg_Jumpsuit_img_00000052,Strapless_Wide-Leg_Jumpsuit_img_00000052.jpg,jumpsuit,straight,none,strapless,none,casual,plain,deepfashion
-Drawstring_Tribal_Print_Jumpsuit_img_00000011,Drawstring_Tribal_Print_Jumpsuit_img_00000011.jpg,jumpsuit,straight,none,none,none,casual,graphic print,deepfashion
+Drawstring_Tribal_Print_Jumpsuit_img_00000011,Drawstring_Tribal_Print_Jumpsuit_img_00000011.jpg,jumpsuit,straight,none,none,none,casual,graphic,deepfashion
 V-Neck_Cami_Jumpsuit_img_00000055,V-Neck_Cami_Jumpsuit_img_00000055.jpg,jumpsuit,straight,none,v-neck,none,casual,plain,deepfashion
 Chiffon_Pleated_Jumpsuit_img_00000007,Chiffon_Pleated_Jumpsuit_img_00000007.jpg,jumpsuit,pleated,none,none,none,casual,plain,deepfashion
 Chiffon-Trimmed_Jumpsuit_img_00000013,Chiffon-Trimmed_Jumpsuit_img_00000013.jpg,jumpsuit,straight,none,none,none,casual,lace,deepfashion
@@ -807,14 +807,14 @@ Crochet-Paneled_Jumpsuit_img_00000030,Crochet-Paneled_Jumpsuit_img_00000030.jpg,
 Life_in_Progress_Drawstring_Denim_Jumpsuit_img_00000007,Life_in_Progress_Drawstring_Denim_Jumpsuit_img_00000007.jpg,jumpsuit,straight,none,none,none,casual,denim,deepfashion
 Faux_Leather_Combo_Jumpsuit_img_00000002,Faux_Leather_Combo_Jumpsuit_img_00000002.jpg,jumpsuit,straight,none,none,none,casual,plain,deepfashion
 Crochet-Trimmed_Flounce_Jumpsuit_img_00000021,Crochet-Trimmed_Flounce_Jumpsuit_img_00000021.jpg,jumpsuit,straight,none,none,none,casual,plain,deepfashion
-Drawstring_Tribal_Print_Jumpsuit_img_00000034,Drawstring_Tribal_Print_Jumpsuit_img_00000034.jpg,jumpsuit,straight,none,strapless,none,casual,graphic print,deepfashion
+Drawstring_Tribal_Print_Jumpsuit_img_00000034,Drawstring_Tribal_Print_Jumpsuit_img_00000034.jpg,jumpsuit,straight,none,strapless,none,casual,graphic,deepfashion
 Smocked_Wide-Leg_Jumpsuit_img_00000044,Smocked_Wide-Leg_Jumpsuit_img_00000044.jpg,jumpsuit,straight,sleeveless,none,none,casual,plain,deepfashion
 Dotted_Surplice_Combo_Jumpsuit_img_00000026,Dotted_Surplice_Combo_Jumpsuit_img_00000026.jpg,jumpsuit,straight,sleeveless,none,none,casual,plain,deepfashion
 Drawstring_Cami_Jumpsuit_img_00000032,Drawstring_Cami_Jumpsuit_img_00000032.jpg,jumpsuit,straight,none,none,none,casual,plain,deepfashion
 Crisscross_Back_Jumpsuit_img_00000042,Crisscross_Back_Jumpsuit_img_00000042.jpg,jumpsuit,straight,none,none,none,casual,plain,deepfashion
 Buttoned_Geo_Jumpsuit_img_00000003,Buttoned_Geo_Jumpsuit_img_00000003.jpg,jumpsuit,straight,none,none,none,casual,geometric,deepfashion
 Sleeveless_Combo_Jumpsuit_img_00000033,Sleeveless_Combo_Jumpsuit_img_00000033.jpg,jumpsuit,wrap,sleeveless,none,none,casual,plain,deepfashion
-Collared_Surplice_Jumpsuit_img_00000004,Collared_Surplice_Jumpsuit_img_00000004.jpg,jumpsuit,maxi,none,collared,none,casual,graphic print,deepfashion
+Collared_Surplice_Jumpsuit_img_00000004,Collared_Surplice_Jumpsuit_img_00000004.jpg,jumpsuit,maxi,none,collared,none,casual,graphic,deepfashion
 Surplice_Woven_Jumpsuit_img_00000021,Surplice_Woven_Jumpsuit_img_00000021.jpg,jumpsuit,straight,none,none,none,casual,plain,deepfashion
 Crossback_Surplice_Jumpsuit_img_00000004,Crossback_Surplice_Jumpsuit_img_00000004.jpg,jumpsuit,straight,none,none,none,casual,plain,deepfashion
 Crossback_Jumpsuit_img_00000003,Crossback_Jumpsuit_img_00000003.jpg,jumpsuit,straight,none,none,none,casual,plain,deepfashion
@@ -824,13 +824,13 @@ Floral_Mosaic_Print_Jumpsuit_img_00000039,Floral_Mosaic_Print_Jumpsuit_img_00000
 Retro_Floral_Jumpsuit_img_00000024,Retro_Floral_Jumpsuit_img_00000024.jpg,jumpsuit,maxi,none,none,none,bohemian,floral,deepfashion
 Crochet-Trimmed_Flounce_Jumpsuit_img_00000019,Crochet-Trimmed_Flounce_Jumpsuit_img_00000019.jpg,jumpsuit,straight,none,none,none,casual,geometric,deepfashion
 Patchwork_Printed_Long_Jumpsuit_img_00000035,Patchwork_Printed_Long_Jumpsuit_img_00000035.jpg,jumpsuit,straight,sleeveless,none,none,casual,floral,deepfashion
-Grid_Print_Jumpsuit_img_00000001,Grid_Print_Jumpsuit_img_00000001.jpg,jumpsuit,straight,none,none,none,casual,graphic print,deepfashion
+Grid_Print_Jumpsuit_img_00000001,Grid_Print_Jumpsuit_img_00000001.jpg,jumpsuit,straight,none,none,none,casual,graphic,deepfashion
 Belted_Wide-Leg_Jumpsuit_img_00000033,Belted_Wide-Leg_Jumpsuit_img_00000033.jpg,jumpsuit,straight,sleeveless,none,none,casual,plain,deepfashion
 Abstract_Print_Halter_Jumpsuit_img_00000014,Abstract_Print_Halter_Jumpsuit_img_00000014.jpg,jumpsuit,straight,none,halter,none,casual,abstract,deepfashion
 Self-Tie_Knotted_Floral_Jumpsuit_img_00000003,Self-Tie_Knotted_Floral_Jumpsuit_img_00000003.jpg,jumpsuit,straight,none,none,none,casual,floral,deepfashion
 Lace-Paneled_Woven_Jumpsuit_img_00000028,Lace-Paneled_Woven_Jumpsuit_img_00000028.jpg,jumpsuit,straight,none,none,none,casual,lace,deepfashion
 Abstract_Print_Halter_Jumpsuit_img_00000036,Abstract_Print_Halter_Jumpsuit_img_00000036.jpg,jumpsuit,straight,none,halter,none,casual,abstract,deepfashion
-Tile_Print_Strapless_Jumpsuit_img_00000003,Tile_Print_Strapless_Jumpsuit_img_00000003.jpg,jumpsuit,straight,none,strapless,none,casual,graphic print,deepfashion
+Tile_Print_Strapless_Jumpsuit_img_00000003,Tile_Print_Strapless_Jumpsuit_img_00000003.jpg,jumpsuit,straight,none,strapless,none,casual,graphic,deepfashion
 Abstract_Stripe_Print_Jumpsuit_img_00000033,Abstract_Stripe_Print_Jumpsuit_img_00000033.jpg,jumpsuit,straight,none,none,none,casual,striped,deepfashion
 Diamond_Print_Cami_Jumpsuit_img_00000016,Diamond_Print_Cami_Jumpsuit_img_00000016.jpg,jumpsuit,straight,none,none,none,casual,floral,deepfashion
 Wide-Leg_Surplice_Jumpsuit_img_00000060,Wide-Leg_Surplice_Jumpsuit_img_00000060.jpg,jumpsuit,straight,none,none,none,casual,lace,deepfashion
@@ -842,26 +842,26 @@ Ruched_V-Neck_Jumpsuit_img_00000056,Ruched_V-Neck_Jumpsuit_img_00000056.jpg,jump
 Floral_Mosaic_Print_Jumpsuit_img_00000037,Floral_Mosaic_Print_Jumpsuit_img_00000037.jpg,jumpsuit,straight,none,none,none,casual,floral,deepfashion
 Textured_Cutout_Jumpsuit_img_00000040,Textured_Cutout_Jumpsuit_img_00000040.jpg,jumpsuit,straight,none,none,none,casual,textured,deepfashion
 Crossback_Jumpsuit_img_00000038,Crossback_Jumpsuit_img_00000038.jpg,jumpsuit,straight,none,none,none,casual,plain,deepfashion
-Life_In_Progress_Pixelated_Print_Chambray_Jumpsuit_img_00000017,Life_In_Progress_Pixelated_Print_Chambray_Jumpsuit_img_00000017.jpg,jumpsuit,straight,none,none,none,casual,graphic print,deepfashion
-Sunflower_Print_Jumpsuit_img_00000047,Sunflower_Print_Jumpsuit_img_00000047.jpg,jumpsuit,straight,long sleeve,none,none,casual,graphic print,deepfashion
+Life_In_Progress_Pixelated_Print_Chambray_Jumpsuit_img_00000017,Life_In_Progress_Pixelated_Print_Chambray_Jumpsuit_img_00000017.jpg,jumpsuit,straight,none,none,none,casual,graphic,deepfashion
+Sunflower_Print_Jumpsuit_img_00000047,Sunflower_Print_Jumpsuit_img_00000047.jpg,jumpsuit,straight,long sleeve,none,none,casual,graphic,deepfashion
 Abstract_Print_Halter_Jumpsuit_img_00000003,Abstract_Print_Halter_Jumpsuit_img_00000003.jpg,jumpsuit,straight,none,halter,none,casual,abstract,deepfashion
 Strapless_Jumpsuit_img_00000032,Strapless_Jumpsuit_img_00000032.jpg,jumpsuit,straight,none,strapless,none,casual,plain,deepfashion
 Abstract_Geo_Print_Jumpsuit_img_00000014,Abstract_Geo_Print_Jumpsuit_img_00000014.jpg,jumpsuit,straight,none,none,none,casual,abstract,deepfashion
 Open-Back_Jumpsuit_img_00000081,Open-Back_Jumpsuit_img_00000081.jpg,jumpsuit,straight,none,none,none,casual,plain,deepfashion
-Tribal_Print_Jumpsuit_img_00000033,Tribal_Print_Jumpsuit_img_00000033.jpg,jumpsuit,straight,none,none,none,casual,graphic print,deepfashion
+Tribal_Print_Jumpsuit_img_00000033,Tribal_Print_Jumpsuit_img_00000033.jpg,jumpsuit,straight,none,none,none,casual,graphic,deepfashion
 Sleeveless_Combo_Jumpsuit_img_00000031,Sleeveless_Combo_Jumpsuit_img_00000031.jpg,jumpsuit,straight,sleeveless,none,none,casual,plain,deepfashion
 Wide-Leg_Jumpsuit_img_00000070,Wide-Leg_Jumpsuit_img_00000070.jpg,jumpsuit,straight,none,none,none,casual,plain,deepfashion
 Woven_Ruffle_Cami_Jumpsuit_img_00000024,Woven_Ruffle_Cami_Jumpsuit_img_00000024.jpg,jumpsuit,straight,none,strapless,none,casual,plain,deepfashion
 Crochet-Trimmed_Flounce_Jumpsuit_img_00000040,Crochet-Trimmed_Flounce_Jumpsuit_img_00000040.jpg,jumpsuit,maxi,none,none,none,casual,plain,deepfashion
 Smocked_Wide-Leg_Jumpsuit_img_00000053,Smocked_Wide-Leg_Jumpsuit_img_00000053.jpg,jumpsuit,straight,none,none,none,casual,plain,deepfashion
-Patchwork_Printed_Long_Jumpsuit_img_00000025,Patchwork_Printed_Long_Jumpsuit_img_00000025.jpg,jumpsuit,straight,none,none,none,casual,graphic print,deepfashion
+Patchwork_Printed_Long_Jumpsuit_img_00000025,Patchwork_Printed_Long_Jumpsuit_img_00000025.jpg,jumpsuit,straight,none,none,none,casual,graphic,deepfashion
 Tribal_Print_Crisscross_Jumpsuit_img_00000033,Tribal_Print_Crisscross_Jumpsuit_img_00000033.jpg,jumpsuit,straight,none,none,none,casual,lace,deepfashion
 Strappy_V-Neck_Jumpsuit_img_00000062,Strappy_V-Neck_Jumpsuit_img_00000062.jpg,jumpsuit,straight,none,v-neck,none,casual,plain,deepfashion
 Crochet-Paneled_Jumpsuit_img_00000023,Crochet-Paneled_Jumpsuit_img_00000023.jpg,jumpsuit,maxi,none,none,none,casual,plain,deepfashion
-Tribal_Print_Surplice_Jumpsuit_img_00000004,Tribal_Print_Surplice_Jumpsuit_img_00000004.jpg,jumpsuit,straight,none,none,none,casual,graphic print,deepfashion
+Tribal_Print_Surplice_Jumpsuit_img_00000004,Tribal_Print_Surplice_Jumpsuit_img_00000004.jpg,jumpsuit,straight,none,none,none,casual,graphic,deepfashion
 Stripe_Midi_Jumpsuit_img_00000028,Stripe_Midi_Jumpsuit_img_00000028.jpg,jumpsuit,midi,none,none,none,casual,striped,deepfashion
 Floral_Foulard_Print_Jumpsuit_img_00000028,Floral_Foulard_Print_Jumpsuit_img_00000028.jpg,jumpsuit,straight,none,none,none,casual,floral,deepfashion
-Southwestern_Print_Surplice_Jumpsuit_img_00000002,Southwestern_Print_Surplice_Jumpsuit_img_00000002.jpg,jumpsuit,straight,none,none,none,casual,graphic print,deepfashion
+Southwestern_Print_Surplice_Jumpsuit_img_00000002,Southwestern_Print_Surplice_Jumpsuit_img_00000002.jpg,jumpsuit,straight,none,none,none,casual,graphic,deepfashion
 Abstract_Print_Halter_Jumpsuit_img_00000031,Abstract_Print_Halter_Jumpsuit_img_00000031.jpg,jumpsuit,straight,sleeveless,halter,none,casual,abstract,deepfashion
 Tropical_Floral_Wide-Leg_Jumpsuit_img_00000018,Tropical_Floral_Wide-Leg_Jumpsuit_img_00000018.jpg,jumpsuit,straight,none,none,none,casual,floral,deepfashion
 Abstract_Stripe_Print_Jumpsuit_img_00000007,Abstract_Stripe_Print_Jumpsuit_img_00000007.jpg,jumpsuit,straight,none,none,none,casual,striped,deepfashion
@@ -880,7 +880,7 @@ Belted_Abstract_Print_Jumpsuit_img_00000039,Belted_Abstract_Print_Jumpsuit_img_0
 Denim_Culotte_Jumpsuit_img_00000039,Denim_Culotte_Jumpsuit_img_00000039.jpg,jumpsuit,straight,none,none,none,casual,denim,deepfashion
 Strappy_V-Neck_Jumpsuit_img_00000037,Strappy_V-Neck_Jumpsuit_img_00000037.jpg,jumpsuit,straight,short sleeve,v-neck,none,casual,plain,deepfashion
 Paisley_Print_Halter_Jumpsuit_img_00000023,Paisley_Print_Halter_Jumpsuit_img_00000023.jpg,jumpsuit,maxi,none,halter,none,casual,paisley,deepfashion
-Ornate_Print_Harem_Jumpsuit_img_00000013,Ornate_Print_Harem_Jumpsuit_img_00000013.jpg,jumpsuit,straight,none,none,none,casual,graphic print,deepfashion
+Ornate_Print_Harem_Jumpsuit_img_00000013,Ornate_Print_Harem_Jumpsuit_img_00000013.jpg,jumpsuit,straight,none,none,none,casual,graphic,deepfashion
 Tonal_Feather-Patterned_Cami_Jumpsuit_img_00000029,Tonal_Feather-Patterned_Cami_Jumpsuit_img_00000029.jpg,jumpsuit,straight,none,none,none,casual,textured,deepfashion
 Strapless_Wide-Leg_Jumpsuit_img_00000013,Strapless_Wide-Leg_Jumpsuit_img_00000013.jpg,jumpsuit,straight,none,strapless,none,casual,plain,deepfashion
 Abstract_Printed_Jumpsuit_img_00000019,Abstract_Printed_Jumpsuit_img_00000019.jpg,jumpsuit,straight,none,strapless,none,casual,abstract,deepfashion
@@ -888,9 +888,9 @@ Caged_Back_Jumpsuit_img_00000058,Caged_Back_Jumpsuit_img_00000058.jpg,jumpsuit,s
 Belted_Wide-Leg_Jumpsuit_img_00000049,Belted_Wide-Leg_Jumpsuit_img_00000049.jpg,jumpsuit,straight,none,none,none,casual,plain,deepfashion
 Cutout-Back_Denim_Jumpsuit_img_00000046,Cutout-Back_Denim_Jumpsuit_img_00000046.jpg,jumpsuit,straight,long sleeve,none,none,casual,denim,deepfashion
 Blurred_Floral_Cami_Jumpsuit_img_00000029,Blurred_Floral_Cami_Jumpsuit_img_00000029.jpg,jumpsuit,bodycon,none,none,none,casual,floral,deepfashion
-Ornate_Print_Harem_Jumpsuit_img_00000018,Ornate_Print_Harem_Jumpsuit_img_00000018.jpg,jumpsuit,straight,none,none,none,casual,graphic print,deepfashion
+Ornate_Print_Harem_Jumpsuit_img_00000018,Ornate_Print_Harem_Jumpsuit_img_00000018.jpg,jumpsuit,straight,none,none,none,casual,graphic,deepfashion
 Floral_Foulard_Print_Jumpsuit_img_00000032,Floral_Foulard_Print_Jumpsuit_img_00000032.jpg,jumpsuit,straight,none,none,none,casual,floral,deepfashion
-Drawstring_Tribal_Print_Jumpsuit_img_00000012,Drawstring_Tribal_Print_Jumpsuit_img_00000012.jpg,jumpsuit,straight,none,none,none,casual,graphic print,deepfashion
+Drawstring_Tribal_Print_Jumpsuit_img_00000012,Drawstring_Tribal_Print_Jumpsuit_img_00000012.jpg,jumpsuit,straight,none,none,none,casual,graphic,deepfashion
 Paisley_Print_Jumpsuit_img_00000039,Paisley_Print_Jumpsuit_img_00000039.jpg,jumpsuit,straight,none,none,none,casual,paisley,deepfashion
 Denim_Utility_Jumpsuit_img_00000026,Denim_Utility_Jumpsuit_img_00000026.jpg,jumpsuit,straight,none,none,none,casual,denim,deepfashion
 Utility_Jumpsuit_img_00000019,Utility_Jumpsuit_img_00000019.jpg,jumpsuit,straight,none,none,none,casual,plain,deepfashion
@@ -901,17 +901,17 @@ Abstract_Tribal_Print_Halter_Jumpsuit_img_00000011,Abstract_Tribal_Print_Halter_
 Paisley_Print_Denim_Jumpsuit_img_00000011,Paisley_Print_Denim_Jumpsuit_img_00000011.jpg,jumpsuit,straight,none,none,none,casual,denim,deepfashion
 High-Waisted_Leggings_img_00000002,High-Waisted_Leggings_img_00000002.jpg,leggings,straight,none,none,none,casual,plain,deepfashion
 Yoga_Capri_Leggings_img_00000074,Yoga_Capri_Leggings_img_00000074.jpg,leggings,straight,none,none,none,casual,plain,deepfashion
-Luxe-Printed_Workout_Leggings_img_00000046,Luxe-Printed_Workout_Leggings_img_00000046.jpg,leggings,straight,none,none,none,casual,graphic print,deepfashion
+Luxe-Printed_Workout_Leggings_img_00000046,Luxe-Printed_Workout_Leggings_img_00000046.jpg,leggings,straight,none,none,none,casual,graphic,deepfashion
 High-Waisted_Lounge_Leggings_img_00000010,High-Waisted_Lounge_Leggings_img_00000010.jpg,leggings,straight,none,none,none,casual,plain,deepfashion
 Acid_Wash_Jeggings_img_00000012,Acid_Wash_Jeggings_img_00000012.jpg,leggings,straight,none,none,none,casual,denim,deepfashion
-Ombre-Paneled_Workout_Leggings_img_00000003,Ombre-Paneled_Workout_Leggings_img_00000003.jpg,leggings,straight,none,none,none,casual,graphic print,deepfashion
+Ombre-Paneled_Workout_Leggings_img_00000003,Ombre-Paneled_Workout_Leggings_img_00000003.jpg,leggings,straight,none,none,none,casual,graphic,deepfashion
 Colorblock_Yoga_Leggings_img_00000019,Colorblock_Yoga_Leggings_img_00000019.jpg,leggings,straight,none,none,none,casual,plain,deepfashion
 Colorblock_Yoga_Capri_Leggings_img_00000065,Colorblock_Yoga_Capri_Leggings_img_00000065.jpg,leggings,straight,none,none,none,casual,plain,deepfashion
 Colorblock_Mesh-Paneled_Leggings_img_00000001,Colorblock_Mesh-Paneled_Leggings_img_00000001.jpg,leggings,straight,none,none,none,casual,plain,deepfashion
 Tropical_Floral_Leggings_img_00000012,Tropical_Floral_Leggings_img_00000012.jpg,leggings,straight,none,none,none,casual,floral,deepfashion
 Space_Dye_Capri_Leggings_img_00000034,Space_Dye_Capri_Leggings_img_00000034.jpg,leggings,straight,none,none,none,casual,plain,deepfashion
 Seamless_Studio_Capri_Leggings_img_00000004,Seamless_Studio_Capri_Leggings_img_00000004.jpg,leggings,straight,none,none,none,casual,textured,deepfashion
-Luxe-Printed_Workout_Leggings_img_00000019,Luxe-Printed_Workout_Leggings_img_00000019.jpg,leggings,straight,none,none,none,casual,graphic print,deepfashion
+Luxe-Printed_Workout_Leggings_img_00000019,Luxe-Printed_Workout_Leggings_img_00000019.jpg,leggings,straight,none,none,none,casual,graphic,deepfashion
 Yoga_Capri_Leggings_img_00000072,Yoga_Capri_Leggings_img_00000072.jpg,leggings,straight,none,none,none,casual,plain,deepfashion
 Dark_Wash_Jeggings_img_00000041,Dark_Wash_Jeggings_img_00000041.jpg,leggings,straight,none,none,none,casual,plain,deepfashion
 Pocketed_Leggings_img_00000003,Pocketed_Leggings_img_00000003.jpg,leggings,straight,none,none,none,casual,plain,deepfashion
@@ -939,7 +939,7 @@ Abstract_Print_Capri_Leggings_img_00000005,Abstract_Print_Capri_Leggings_img_000
 Reflective-Piped_Heathered_Run_Leggings_img_00000009,Reflective-Piped_Heathered_Run_Leggings_img_00000009.jpg,leggings,skinny,none,none,none,casual,plain,deepfashion
 Performance_Capri_Leggings_img_00000050,Performance_Capri_Leggings_img_00000050.jpg,leggings,straight,none,none,none,casual,plain,deepfashion
 Color_Striped_Performance_Leggings_img_00000010,Color_Striped_Performance_Leggings_img_00000010.jpg,leggings,straight,none,none,none,casual,striped,deepfashion
-Rose_Print_Leggings_img_00000006,Rose_Print_Leggings_img_00000006.jpg,leggings,straight,none,none,none,casual,graphic print,deepfashion
+Rose_Print_Leggings_img_00000006,Rose_Print_Leggings_img_00000006.jpg,leggings,straight,none,none,none,casual,graphic,deepfashion
 Colorblock_Yoga_Capri_Leggings_img_00000051,Colorblock_Yoga_Capri_Leggings_img_00000051.jpg,leggings,straight,none,none,none,classic,plain,deepfashion
 Tropical_Floral_Leggings_img_00000054,Tropical_Floral_Leggings_img_00000054.jpg,leggings,straight,none,none,none,casual,floral,deepfashion
 Paisley_Print_Leggings_img_00000066,Paisley_Print_Leggings_img_00000066.jpg,leggings,straight,none,none,none,casual,paisley,deepfashion
@@ -978,46 +978,46 @@ Southwestern-Inspired_Knit_Leggings_img_00000015,Southwestern-Inspired_Knit_Legg
 Southwestern-Inspired_Knit_Leggings_img_00000002,Southwestern-Inspired_Knit_Leggings_img_00000002.jpg,leggings,straight,none,none,none,casual,textured,deepfashion
 Colorblock_Side_Pocket_Leggings_img_00000038,Colorblock_Side_Pocket_Leggings_img_00000038.jpg,leggings,skinny,none,none,none,casual,plain,deepfashion
 Heathered_Seamless_Workout_Leggings_img_00000002,Heathered_Seamless_Workout_Leggings_img_00000002.jpg,leggings,straight,none,none,none,casual,plain,deepfashion
-Rainbow_Print_Workout_Leggings_img_00000018,Rainbow_Print_Workout_Leggings_img_00000018.jpg,leggings,straight,none,none,none,casual,graphic print,deepfashion
-Sunburst_Printed_Athletic_Leggings_img_00000014,Sunburst_Printed_Athletic_Leggings_img_00000014.jpg,leggings,straight,none,none,none,sporty,graphic print,deepfashion
+Rainbow_Print_Workout_Leggings_img_00000018,Rainbow_Print_Workout_Leggings_img_00000018.jpg,leggings,straight,none,none,none,casual,graphic,deepfashion
+Sunburst_Printed_Athletic_Leggings_img_00000014,Sunburst_Printed_Athletic_Leggings_img_00000014.jpg,leggings,straight,none,none,none,sporty,graphic,deepfashion
 Chic_High-Waisted_Jeggings_img_00000029,Chic_High-Waisted_Jeggings_img_00000029.jpg,leggings,straight,none,none,none,casual,plain,deepfashion
 Studio_Stirrup_Leggings_img_00000055,Studio_Stirrup_Leggings_img_00000055.jpg,leggings,straight,none,none,none,casual,plain,deepfashion
 Marled_Colorblock_Capri_Leggings_img_00000020,Marled_Colorblock_Capri_Leggings_img_00000020.jpg,leggings,straight,none,none,none,casual,plain,deepfashion
-Perfomance_Leggings_img_00000040,Perfomance_Leggings_img_00000040.jpg,leggings,straight,none,none,none,casual,graphic print,deepfashion
+Perfomance_Leggings_img_00000040,Perfomance_Leggings_img_00000040.jpg,leggings,straight,none,none,none,casual,graphic,deepfashion
 Cutout_Workout_Leggings_img_00000017,Cutout_Workout_Leggings_img_00000017.jpg,leggings,straight,none,none,none,casual,plain,deepfashion
 High_Intensity_Running_Leggings_img_00000024,High_Intensity_Running_Leggings_img_00000024.jpg,leggings,straight,none,none,none,casual,plain,deepfashion
 Ditsy_Floral_Print_Leggings_img_00000015,Ditsy_Floral_Print_Leggings_img_00000015.jpg,leggings,straight,none,none,none,casual,floral,deepfashion
 Side_Pocket_Yoga_Leggings_img_00000020,Side_Pocket_Yoga_Leggings_img_00000020.jpg,leggings,straight,none,none,none,casual,plain,deepfashion
 High_Waist-_Quilted_Moto_Jeggings_img_00000003,High_Waist-_Quilted_Moto_Jeggings_img_00000003.jpg,leggings,straight,none,none,none,casual,plain,deepfashion
 Studio_Stirrup_Leggings_img_00000007,Studio_Stirrup_Leggings_img_00000007.jpg,leggings,straight,none,none,none,casual,plain,deepfashion
-Ikat_Print_Leggings_img_00000026,Ikat_Print_Leggings_img_00000026.jpg,leggings,straight,none,none,none,casual,graphic print,deepfashion
+Ikat_Print_Leggings_img_00000026,Ikat_Print_Leggings_img_00000026.jpg,leggings,straight,none,none,none,casual,graphic,deepfashion
 Favorite_Ankle_Leggings_img_00000029,Favorite_Ankle_Leggings_img_00000029.jpg,leggings,skinny,none,none,none,casual,plain,deepfashion
 Fold-Over_Yoga_Leggings_img_00000007,Fold-Over_Yoga_Leggings_img_00000007.jpg,leggings,straight,none,none,none,casual,plain,deepfashion
 Classic_Soft_Jeggings_img_00000024,Classic_Soft_Jeggings_img_00000024.jpg,leggings,straight,none,none,none,classic,denim,deepfashion
-Wildflower_Print_Leggings_img_00000027,Wildflower_Print_Leggings_img_00000027.jpg,leggings,straight,none,none,none,casual,graphic print,deepfashion
+Wildflower_Print_Leggings_img_00000027,Wildflower_Print_Leggings_img_00000027.jpg,leggings,straight,none,none,none,casual,graphic,deepfashion
 Performance_Capri_Leggings_img_00000037,Performance_Capri_Leggings_img_00000037.jpg,leggings,straight,none,none,none,casual,plain,deepfashion
 Classic_Faded_Jeggings_img_00000009,Classic_Faded_Jeggings_img_00000009.jpg,leggings,straight,none,none,none,classic,plain,deepfashion
 Clean_Wash_Jeggings_img_00000028,Clean_Wash_Jeggings_img_00000028.jpg,leggings,straight,none,none,none,casual,denim,deepfashion
 Paisley_Print_Leggings_img_00000012,Paisley_Print_Leggings_img_00000012.jpg,leggings,straight,none,none,none,bohemian,paisley,deepfashion
 Colorblocked_Foldover_Leggings_img_00000024,Colorblocked_Foldover_Leggings_img_00000024.jpg,leggings,straight,none,none,none,casual,plain,deepfashion
-Damask_Print_Leggings_img_00000011,Damask_Print_Leggings_img_00000011.jpg,leggings,straight,none,none,none,casual,graphic print,deepfashion
+Damask_Print_Leggings_img_00000011,Damask_Print_Leggings_img_00000011.jpg,leggings,straight,none,none,none,casual,graphic,deepfashion
 Studio_Stirrup_Leggings_img_00000021,Studio_Stirrup_Leggings_img_00000021.jpg,leggings,straight,none,none,none,casual,plain,deepfashion
 Soft_Knit_Leggings_img_00000003,Soft_Knit_Leggings_img_00000003.jpg,leggings,straight,none,none,none,casual,textured,deepfashion
 Faux_Leather-Paneled_Leggings_img_00000046,Faux_Leather-Paneled_Leggings_img_00000046.jpg,leggings,straight,none,none,none,casual,plain,deepfashion
 Zip-Front_Leggings_img_00000017,Zip-Front_Leggings_img_00000017.jpg,leggings,straight,none,none,none,casual,plain,deepfashion
 Heathered_Yoga_Capri_Leggings_img_00000005,Heathered_Yoga_Capri_Leggings_img_00000005.jpg,leggings,straight,none,none,none,casual,plain,deepfashion
-Performance_Capri_Leggings_img_00000023,Performance_Capri_Leggings_img_00000023.jpg,leggings,straight,none,none,none,casual,graphic print,deepfashion
+Performance_Capri_Leggings_img_00000023,Performance_Capri_Leggings_img_00000023.jpg,leggings,straight,none,none,none,casual,graphic,deepfashion
 High-Waisted_Lounge_Leggings_img_00000041,High-Waisted_Lounge_Leggings_img_00000041.jpg,leggings,skinny,none,none,none,casual,plain,deepfashion
-High_Intensity_Running_Leggings_img_00000019,High_Intensity_Running_Leggings_img_00000019.jpg,leggings,straight,none,none,none,casual,graphic print,deepfashion
+High_Intensity_Running_Leggings_img_00000019,High_Intensity_Running_Leggings_img_00000019.jpg,leggings,straight,none,none,none,casual,graphic,deepfashion
 Colorblock_Capri_Leggings_img_00000019,Colorblock_Capri_Leggings_img_00000019.jpg,leggings,straight,none,none,none,casual,plain,deepfashion
 Space_Dye_Yoga_Leggings_img_00000003,Space_Dye_Yoga_Leggings_img_00000003.jpg,leggings,cropped,none,none,none,casual,plain,deepfashion
 Abstract-Printed_Capri_Leggings_img_00000017,Abstract-Printed_Capri_Leggings_img_00000017.jpg,leggings,straight,none,none,none,casual,abstract,deepfashion
 Colorblocked_Foldover_Leggings_img_00000013,Colorblocked_Foldover_Leggings_img_00000013.jpg,leggings,straight,none,none,none,casual,plain,deepfashion
 Colorblock_Heathered_Capri_Leggings_img_00000013,Colorblock_Heathered_Capri_Leggings_img_00000013.jpg,leggings,straight,none,none,none,casual,plain,deepfashion
-Space_Dye_Capri_Leggings_img_00000008,Space_Dye_Capri_Leggings_img_00000008.jpg,leggings,straight,none,none,none,casual,graphic print,deepfashion
+Space_Dye_Capri_Leggings_img_00000008,Space_Dye_Capri_Leggings_img_00000008.jpg,leggings,straight,none,none,none,casual,graphic,deepfashion
 Cutout_Workout_Leggings_img_00000015,Cutout_Workout_Leggings_img_00000015.jpg,leggings,straight,none,none,none,casual,plain,deepfashion
-Sunburst_Printed_Athletic_Leggings_img_00000011,Sunburst_Printed_Athletic_Leggings_img_00000011.jpg,leggings,straight,none,none,none,sporty,graphic print,deepfashion
-Luxe-Printed_Workout_Leggings_img_00000025,Luxe-Printed_Workout_Leggings_img_00000025.jpg,leggings,straight,none,none,none,casual,graphic print,deepfashion
+Sunburst_Printed_Athletic_Leggings_img_00000011,Sunburst_Printed_Athletic_Leggings_img_00000011.jpg,leggings,straight,none,none,none,sporty,graphic,deepfashion
+Luxe-Printed_Workout_Leggings_img_00000025,Luxe-Printed_Workout_Leggings_img_00000025.jpg,leggings,straight,none,none,none,casual,graphic,deepfashion
 Classic_Soft_Jeggings_img_00000063,Classic_Soft_Jeggings_img_00000063.jpg,leggings,straight,none,none,none,classic,plain,deepfashion
 Super-Soft_Skinny_Jeans_img_00000045,Super-Soft_Skinny_Jeans_img_00000045.jpg,pants,skinny,none,none,none,casual,plain,deepfashion
 Clean_Dark_Wash_-_Slim_Fit_Jeans_img_00000005,Clean_Dark_Wash_-_Slim_Fit_Jeans_img_00000005.jpg,pants,skinny,none,none,none,casual,denim,deepfashion
@@ -1026,7 +1026,7 @@ Varsity_Stripe_Chino_Joggers_img_00000016,Varsity_Stripe_Chino_Joggers_img_00000
 Mineral_Wash_Drawstring_Joggers_img_00000011,Mineral_Wash_Drawstring_Joggers_img_00000011.jpg,pants,straight,none,none,none,casual,denim,deepfashion
 Skinny_Ankle_Jeans_img_00000067,Skinny_Ankle_Jeans_img_00000067.jpg,pants,skinny,none,none,none,casual,plain,deepfashion
 Drop-Crotch_Denim_Joggers_img_00000002,Drop-Crotch_Denim_Joggers_img_00000002.jpg,pants,straight,none,none,none,casual,denim,deepfashion
-Tropical_Print_Sweatpants_img_00000026,Tropical_Print_Sweatpants_img_00000026.jpg,pants,straight,none,none,none,casual,graphic print,deepfashion
+Tropical_Print_Sweatpants_img_00000026,Tropical_Print_Sweatpants_img_00000026.jpg,pants,straight,none,none,none,casual,graphic,deepfashion
 Velvet_Floral_Sweatpants_img_00000041,Velvet_Floral_Sweatpants_img_00000041.jpg,pants,straight,none,none,none,casual,floral,deepfashion
 Marled_Knit_Sweatpants_img_00000013,Marled_Knit_Sweatpants_img_00000013.jpg,pants,straight,none,none,none,casual,textured,deepfashion
 Slub_Knit_Sweatpants_img_00000015,Slub_Knit_Sweatpants_img_00000015.jpg,pants,straight,none,none,none,casual,textured,deepfashion
@@ -1106,13 +1106,13 @@ Mid-Rise_-_Acid_Wash_Skinny_Jeans_img_00000064,Mid-Rise_-_Acid_Wash_Skinny_Jeans
 Quilted_Sweatpants_img_00000073,Quilted_Sweatpants_img_00000073.jpg,pants,straight,none,none,none,casual,plain,deepfashion
 Americana_Skinny_Jeans_img_00000022,Americana_Skinny_Jeans_img_00000022.jpg,pants,skinny,none,none,none,casual,plain,deepfashion
 Fresh_City_Sweatpants_img_00000014,Fresh_City_Sweatpants_img_00000014.jpg,pants,straight,none,none,none,casual,plain,deepfashion
-Tropical_Print_Sweatpants_img_00000027,Tropical_Print_Sweatpants_img_00000027.jpg,pants,straight,none,none,none,casual,graphic print,deepfashion
+Tropical_Print_Sweatpants_img_00000027,Tropical_Print_Sweatpants_img_00000027.jpg,pants,straight,none,none,none,casual,graphic,deepfashion
 Classic_Solid_Skinny_Jeans_img_00000029,Classic_Solid_Skinny_Jeans_img_00000029.jpg,pants,skinny,none,none,none,classic,plain,deepfashion
 Stretch_Fit_Classic_Skinny_Jeans_img_00000022,Stretch_Fit_Classic_Skinny_Jeans_img_00000022.jpg,pants,skinny,none,none,none,classic,denim,deepfashion
 Stretch_Denim_Joggers_img_00000034,Stretch_Denim_Joggers_img_00000034.jpg,pants,straight,none,none,none,casual,denim,deepfashion
-Tribal_Print_Joggers_img_00000071,Tribal_Print_Joggers_img_00000071.jpg,pants,straight,none,none,none,casual,graphic print,deepfashion
+Tribal_Print_Joggers_img_00000071,Tribal_Print_Joggers_img_00000071.jpg,pants,straight,none,none,none,casual,graphic,deepfashion
 Marled_Knit_Drawstring_Joggers_img_00000019,Marled_Knit_Drawstring_Joggers_img_00000019.jpg,pants,straight,none,none,none,casual,textured,deepfashion
-Tribal_Print_Drawstring_Joggers_img_00000012,Tribal_Print_Drawstring_Joggers_img_00000012.jpg,pants,skinny,none,none,none,casual,graphic print,deepfashion
+Tribal_Print_Drawstring_Joggers_img_00000012,Tribal_Print_Drawstring_Joggers_img_00000012.jpg,pants,skinny,none,none,none,casual,graphic,deepfashion
 Acid_Wash_Joggers_img_00000040,Acid_Wash_Joggers_img_00000040.jpg,pants,straight,none,none,none,casual,plain,deepfashion
 Woven_Cargo_Joggers_img_00000019,Woven_Cargo_Joggers_img_00000019.jpg,pants,straight,none,none,none,casual,plain,deepfashion
 Mineral_Wash_High-Rise_Skinny_Jeans_img_00000005,Mineral_Wash_High-Rise_Skinny_Jeans_img_00000005.jpg,pants,skinny,none,none,none,casual,denim,deepfashion
@@ -1125,13 +1125,13 @@ Civil_Graphic_Sweatpants_img_00000007,Civil_Graphic_Sweatpants_img_00000007.jpg,
 Medium_Wash_-_Straight-Leg_Jeans_img_00000032,Medium_Wash_-_Straight-Leg_Jeans_img_00000032.jpg,pants,straight,none,none,none,casual,plain,deepfashion
 Low_Rise-_Ankle_Skinny_Jeans_img_00000002,Low_Rise-_Ankle_Skinny_Jeans_img_00000002.jpg,pants,skinny,none,none,none,casual,plain,deepfashion
 Slim_Cotton_Chinos_img_00000049,Slim_Cotton_Chinos_img_00000049.jpg,pants,slim,none,none,none,casual,plain,deepfashion
-Tribal_Print_Sweatpants_img_00000016,Tribal_Print_Sweatpants_img_00000016.jpg,pants,straight,none,none,none,casual,graphic print,deepfashion
+Tribal_Print_Sweatpants_img_00000016,Tribal_Print_Sweatpants_img_00000016.jpg,pants,straight,none,none,none,casual,graphic,deepfashion
 Flared_Jeans_img_00000033,Flared_Jeans_img_00000033.jpg,pants,slim,none,none,none,casual,plain,deepfashion
 Crochet-Patch_Boyfriend_Jeans_img_00000003,Crochet-Patch_Boyfriend_Jeans_img_00000003.jpg,pants,straight,none,none,none,casual,plain,deepfashion
 Tribal-Inspired_Woven_Joggers_img_00000003,Tribal-Inspired_Woven_Joggers_img_00000003.jpg,pants,straight,none,none,none,casual,plain,deepfashion
 Pleated_Drawstring_Chinos_img_00000031,Pleated_Drawstring_Chinos_img_00000031.jpg,pants,straight,none,none,none,casual,plain,deepfashion
 Cinched_Ankle_Jeans_img_00000028,Cinched_Ankle_Jeans_img_00000028.jpg,pants,skinny,none,none,none,casual,plain,deepfashion
-Brushstroke_Print_Sweatpants_img_00000037,Brushstroke_Print_Sweatpants_img_00000037.jpg,pants,straight,none,none,none,casual,graphic print,deepfashion
+Brushstroke_Print_Sweatpants_img_00000037,Brushstroke_Print_Sweatpants_img_00000037.jpg,pants,straight,none,none,none,casual,graphic,deepfashion
 Heathered_Joggers_img_00000029,Heathered_Joggers_img_00000029.jpg,pants,straight,none,none,none,casual,textured,deepfashion
 Reason_Zip_Pocket_Joggers_img_00000020,Reason_Zip_Pocket_Joggers_img_00000020.jpg,pants,straight,none,none,none,casual,plain,deepfashion
 Clean_Wash_High-Rise_Skinny_Jeans_img_00000006,Clean_Wash_High-Rise_Skinny_Jeans_img_00000006.jpg,pants,skinny,none,none,none,casual,plain,deepfashion
@@ -1139,20 +1139,20 @@ Distressed_Boyfriend_Jeans_img_00000005,Distressed_Boyfriend_Jeans_img_00000005.
 High-Rise_Mom_Jeans_img_00000023,High-Rise_Mom_Jeans_img_00000023.jpg,pants,straight,none,none,none,casual,plain,deepfashion
 High-Rise_Mom_Jeans_img_00000022,High-Rise_Mom_Jeans_img_00000022.jpg,pants,straight,none,none,none,casual,denim,deepfashion
 Leopard_Print_Sweatpants_img_00000059,Leopard_Print_Sweatpants_img_00000059.jpg,pants,straight,none,none,none,casual,animal print,deepfashion
-Drawstring_Strapless_Romper_img_00000014,Drawstring_Strapless_Romper_img_00000014.jpg,romper,straight,none,strapless,none,casual,graphic print,deepfashion
+Drawstring_Strapless_Romper_img_00000014,Drawstring_Strapless_Romper_img_00000014.jpg,romper,straight,none,strapless,none,casual,graphic,deepfashion
 Faux_Gem-Embellished_Woven_Romper_img_00000027,Faux_Gem-Embellished_Woven_Romper_img_00000027.jpg,romper,straight,none,none,none,casual,plain,deepfashion
 Crochet-Trimmed_Geo_Print_Romper_img_00000034,Crochet-Trimmed_Geo_Print_Romper_img_00000034.jpg,romper,straight,bell sleeve,none,none,bohemian,geometric,deepfashion
 Crochet-Trimmed_PJ_Romper_img_00000025,Crochet-Trimmed_PJ_Romper_img_00000025.jpg,romper,wrap,none,none,none,casual,floral,deepfashion
 Buttoned_Floral_Romper_img_00000021,Buttoned_Floral_Romper_img_00000021.jpg,romper,pleated,none,none,none,casual,floral,deepfashion
 Textured_Floral_Lace_Romper_img_00000068,Textured_Floral_Lace_Romper_img_00000068.jpg,romper,straight,none,none,none,casual,floral,deepfashion
-Bandana_Print_Flounce_Romper_img_00000012,Bandana_Print_Flounce_Romper_img_00000012.jpg,romper,straight,none,none,none,casual,graphic print,deepfashion
+Bandana_Print_Flounce_Romper_img_00000012,Bandana_Print_Flounce_Romper_img_00000012.jpg,romper,straight,none,none,none,casual,graphic,deepfashion
 Flounced_Sateen_Romper_img_00000011,Flounced_Sateen_Romper_img_00000011.jpg,romper,straight,none,none,none,casual,plain,deepfashion
 Floral_Print_Trapeze_Romper_img_00000024,Floral_Print_Trapeze_Romper_img_00000024.jpg,romper,straight,none,none,none,casual,floral,deepfashion
 Caged-Side_Cami_Romper_img_00000008,Caged-Side_Cami_Romper_img_00000008.jpg,romper,straight,none,none,none,casual,plain,deepfashion
 Crochet-Trimmed_Abstract_Floral_Romper_img_00000016,Crochet-Trimmed_Abstract_Floral_Romper_img_00000016.jpg,romper,straight,none,none,none,casual,floral,deepfashion
 Floral_Print_V-Neck_Romper_img_00000071,Floral_Print_V-Neck_Romper_img_00000071.jpg,romper,straight,none,v-neck,none,casual,floral,deepfashion
 Retro_Renegade_Romper_img_00000022,Retro_Renegade_Romper_img_00000022.jpg,romper,straight,none,strapless,none,casual,plain,deepfashion
-Tribal_Print_V-Neck_Romper_img_00000002,Tribal_Print_V-Neck_Romper_img_00000002.jpg,romper,straight,none,v-neck,none,casual,graphic print,deepfashion
+Tribal_Print_V-Neck_Romper_img_00000002,Tribal_Print_V-Neck_Romper_img_00000002.jpg,romper,straight,none,v-neck,none,casual,graphic,deepfashion
 Abstract_Print_Combo_Romper_img_00000015,Abstract_Print_Combo_Romper_img_00000015.jpg,romper,straight,none,none,none,casual,abstract,deepfashion
 Pleated_Chiffon_Romper_img_00000014,Pleated_Chiffon_Romper_img_00000014.jpg,romper,pleated,none,none,none,casual,plain,deepfashion
 Baroque-Embossed_Romper_img_00000007,Baroque-Embossed_Romper_img_00000007.jpg,romper,straight,none,none,none,casual,plain,deepfashion
@@ -1166,40 +1166,40 @@ Floral-Embroidered_Romper_img_00000023,Floral-Embroidered_Romper_img_00000023.jp
 Ruffle_Trim_Romper_img_00000002,Ruffle_Trim_Romper_img_00000002.jpg,romper,straight,sleeveless,none,none,casual,lace,deepfashion
 Draped-Front_Sleeveless_Romper_img_00000005,Draped-Front_Sleeveless_Romper_img_00000005.jpg,romper,straight,sleeveless,none,none,casual,plain,deepfashion
 Floral_PJ_Romper_img_00000038,Floral_PJ_Romper_img_00000038.jpg,romper,straight,none,v-neck,none,casual,floral,deepfashion
-Zigzag_Print_Surplice_Romper_img_00000034,Zigzag_Print_Surplice_Romper_img_00000034.jpg,romper,straight,none,none,none,casual,graphic print,deepfashion
+Zigzag_Print_Surplice_Romper_img_00000034,Zigzag_Print_Surplice_Romper_img_00000034.jpg,romper,straight,none,none,none,casual,graphic,deepfashion
 Lace-Trimmed_Cutout_Halter_Romper_img_00000005,Lace-Trimmed_Cutout_Halter_Romper_img_00000005.jpg,romper,bodycon,none,halter,none,casual,lace,deepfashion
 Strappy_Daisy_Print_Romper_img_00000017,Strappy_Daisy_Print_Romper_img_00000017.jpg,romper,straight,none,none,none,casual,floral,deepfashion
 Delicate_Details_Lace_Romper_img_00000024,Delicate_Details_Lace_Romper_img_00000024.jpg,romper,straight,none,none,none,casual,lace,deepfashion
 Botanical_Floral_Cutout_Romper_img_00000022,Botanical_Floral_Cutout_Romper_img_00000022.jpg,romper,straight,none,none,none,casual,floral,deepfashion
 Button-Front_Drawstring_Romper_img_00000001,Button-Front_Drawstring_Romper_img_00000001.jpg,romper,straight,none,none,none,casual,plain,deepfashion
 Lace_Inset_Minimalist_Romper_img_00000028,Lace_Inset_Minimalist_Romper_img_00000028.jpg,romper,mini,none,none,none,casual,lace,deepfashion
-Tie-Dye_Print_Romper_img_00000001,Tie-Dye_Print_Romper_img_00000001.jpg,romper,straight,none,none,none,casual,graphic print,deepfashion
+Tie-Dye_Print_Romper_img_00000001,Tie-Dye_Print_Romper_img_00000001.jpg,romper,straight,none,none,none,casual,graphic,deepfashion
 Crochet-Trimmed_Geo_Print_Romper_img_00000027,Crochet-Trimmed_Geo_Print_Romper_img_00000027.jpg,romper,straight,none,none,none,bohemian,lace,deepfashion
 Bell-Sleeved_Floral_Print_Romper_img_00000050,Bell-Sleeved_Floral_Print_Romper_img_00000050.jpg,romper,mini,bell sleeve,none,none,casual,floral,deepfashion
 Bell-Sleeved_Floral_Print_Romper_img_00000054,Bell-Sleeved_Floral_Print_Romper_img_00000054.jpg,romper,straight,bell sleeve,none,none,casual,floral,deepfashion
-Caged-Side_Cami_Romper_img_00000033,Caged-Side_Cami_Romper_img_00000033.jpg,romper,straight,none,none,none,casual,graphic print,deepfashion
+Caged-Side_Cami_Romper_img_00000033,Caged-Side_Cami_Romper_img_00000033.jpg,romper,straight,none,none,none,casual,graphic,deepfashion
 Mineral_Wash_Romper_img_00000008,Mineral_Wash_Romper_img_00000008.jpg,romper,straight,none,none,none,casual,lace,deepfashion
 Ruffle_Trim_Romper_img_00000017,Ruffle_Trim_Romper_img_00000017.jpg,romper,straight,long sleeve,none,none,casual,checkered,deepfashion
 Striped_Paisley_Print_Romper_img_00000023,Striped_Paisley_Print_Romper_img_00000023.jpg,romper,straight,none,none,none,casual,striped,deepfashion
 Crisscross_Back_PJ_Romper_img_00000004,Crisscross_Back_PJ_Romper_img_00000004.jpg,romper,straight,none,none,none,casual,plain,deepfashion
-Strapless_Tile_Print_Romper_img_00000005,Strapless_Tile_Print_Romper_img_00000005.jpg,romper,straight,none,strapless,none,casual,graphic print,deepfashion
+Strapless_Tile_Print_Romper_img_00000005,Strapless_Tile_Print_Romper_img_00000005.jpg,romper,straight,none,strapless,none,casual,graphic,deepfashion
 Crochet-Trimmed_Geo_Print_Romper_img_00000020,Crochet-Trimmed_Geo_Print_Romper_img_00000020.jpg,romper,straight,none,none,none,casual,geometric,deepfashion
 Drawstring_Strapless_Romper_img_00000044,Drawstring_Strapless_Romper_img_00000044.jpg,romper,straight,none,strapless,none,casual,plain,deepfashion
 Lace-Trimmed_PJ_Romper_img_00000009,Lace-Trimmed_PJ_Romper_img_00000009.jpg,romper,straight,none,none,none,casual,lace,deepfashion
 Southwestern_Print_Crochet_Romper_img_00000003,Southwestern_Print_Crochet_Romper_img_00000003.jpg,romper,straight,none,none,none,casual,textured,deepfashion
-Cubist_Print_V-Back_Romper_img_00000012,Cubist_Print_V-Back_Romper_img_00000012.jpg,romper,straight,none,none,none,casual,graphic print,deepfashion
+Cubist_Print_V-Back_Romper_img_00000012,Cubist_Print_V-Back_Romper_img_00000012.jpg,romper,straight,none,none,none,casual,graphic,deepfashion
 Lace-Paneled_Yoke_Romper_img_00000004,Lace-Paneled_Yoke_Romper_img_00000004.jpg,romper,straight,none,none,none,casual,lace,deepfashion
-Tropical_Print_Halter_Romper_img_00000034,Tropical_Print_Halter_Romper_img_00000034.jpg,romper,straight,none,halter,none,casual,graphic print,deepfashion
+Tropical_Print_Halter_Romper_img_00000034,Tropical_Print_Halter_Romper_img_00000034.jpg,romper,straight,none,halter,none,casual,graphic,deepfashion
 Embroidered_Drawstring_Romper_img_00000005,Embroidered_Drawstring_Romper_img_00000005.jpg,romper,straight,none,none,none,casual,embroidered,deepfashion
-Tribal_Print_Romper_img_00000027,Tribal_Print_Romper_img_00000027.jpg,romper,straight,none,none,none,casual,graphic print,deepfashion
+Tribal_Print_Romper_img_00000027,Tribal_Print_Romper_img_00000027.jpg,romper,straight,none,none,none,casual,graphic,deepfashion
 Elephant_Print_Strapless_Romper_img_00000043,Elephant_Print_Strapless_Romper_img_00000043.jpg,romper,straight,none,strapless,none,casual,animal print,deepfashion
 Abstract_Print_Surplice_Romper_img_00000025,Abstract_Print_Surplice_Romper_img_00000025.jpg,romper,straight,none,none,none,casual,abstract,deepfashion
 Abstract_Geo_Print_Romper_img_00000016,Abstract_Geo_Print_Romper_img_00000016.jpg,romper,straight,sleeveless,none,none,casual,abstract,deepfashion
 Crochet_Trim_Peasant_Romper_img_00000007,Crochet_Trim_Peasant_Romper_img_00000007.jpg,romper,straight,none,none,none,casual,plain,deepfashion
 Flounced_Sateen_Romper_img_00000005,Flounced_Sateen_Romper_img_00000005.jpg,romper,straight,none,none,none,casual,textured,deepfashion
-Tribal_Print_Cami_Romper_img_00000001,Tribal_Print_Cami_Romper_img_00000001.jpg,romper,straight,none,none,none,casual,graphic print,deepfashion
+Tribal_Print_Cami_Romper_img_00000001,Tribal_Print_Cami_Romper_img_00000001.jpg,romper,straight,none,none,none,casual,graphic,deepfashion
 Panda-Hood_Pajama_Onesie_img_00000068,Panda-Hood_Pajama_Onesie_img_00000068.jpg,romper,straight,none,none,none,casual,plain,deepfashion
-Tribal_Print_Romper_img_00000053,Tribal_Print_Romper_img_00000053.jpg,romper,straight,none,none,none,casual,graphic print,deepfashion
+Tribal_Print_Romper_img_00000053,Tribal_Print_Romper_img_00000053.jpg,romper,straight,none,none,none,casual,graphic,deepfashion
 Abstract_Open-Back_Romper_img_00000001,Abstract_Open-Back_Romper_img_00000001.jpg,romper,straight,none,none,none,casual,abstract,deepfashion
 Faded_Chambray_Romper_img_00000003,Faded_Chambray_Romper_img_00000003.jpg,romper,straight,none,none,none,casual,plain,deepfashion
 Crochet-Trimmed_Geo_Print_Romper_img_00000009,Crochet-Trimmed_Geo_Print_Romper_img_00000009.jpg,romper,straight,none,none,none,casual,geometric,deepfashion
@@ -1215,13 +1215,13 @@ V-Cut_Back_Romper_img_00000033,V-Cut_Back_Romper_img_00000033.jpg,romper,straigh
 Paint_It_Red_Floral_Print_Romper_img_00000006,Paint_It_Red_Floral_Print_Romper_img_00000006.jpg,romper,pleated,none,none,none,casual,floral,deepfashion
 V-Cut_Back_Romper_img_00000022,V-Cut_Back_Romper_img_00000022.jpg,romper,straight,none,none,none,casual,plain,deepfashion
 Strapless_Skort_Romper_img_00000026,Strapless_Skort_Romper_img_00000026.jpg,romper,straight,none,strapless,none,casual,plain,deepfashion
-Rose_Print_Romper_img_00000025,Rose_Print_Romper_img_00000025.jpg,romper,straight,none,none,none,casual,graphic print,deepfashion
+Rose_Print_Romper_img_00000025,Rose_Print_Romper_img_00000025.jpg,romper,straight,none,none,none,casual,graphic,deepfashion
 Denim_Utility_Romper_img_00000039,Denim_Utility_Romper_img_00000039.jpg,romper,straight,none,none,none,casual,denim,deepfashion
 Cami_Crochet_Romper_img_00000048,Cami_Crochet_Romper_img_00000048.jpg,romper,straight,none,none,none,casual,textured,deepfashion
 Lace_Trim_Cami_Romper_img_00000008,Lace_Trim_Cami_Romper_img_00000008.jpg,romper,straight,none,none,none,casual,lace,deepfashion
-Tie-Dye_Print_Romper_img_00000003,Tie-Dye_Print_Romper_img_00000003.jpg,romper,straight,none,none,none,casual,graphic print,deepfashion
+Tie-Dye_Print_Romper_img_00000003,Tie-Dye_Print_Romper_img_00000003.jpg,romper,straight,none,none,none,casual,graphic,deepfashion
 Ornate_Lace_Romper_img_00000004,Ornate_Lace_Romper_img_00000004.jpg,romper,straight,none,none,none,casual,lace,deepfashion
-Mandala_Print_Surplice_Romper_img_00000011,Mandala_Print_Surplice_Romper_img_00000011.jpg,romper,straight,none,none,none,casual,graphic print,deepfashion
+Mandala_Print_Surplice_Romper_img_00000011,Mandala_Print_Surplice_Romper_img_00000011.jpg,romper,straight,none,none,none,casual,graphic,deepfashion
 Button-Front_Drawstring_Romper_img_00000011,Button-Front_Drawstring_Romper_img_00000011.jpg,romper,straight,none,v-neck,none,casual,textured,deepfashion
 Striped_Tie-Front_Buttoned_Romper_img_00000018,Striped_Tie-Front_Buttoned_Romper_img_00000018.jpg,romper,straight,none,none,none,casual,striped,deepfashion
 Watercolor_Floral_Print_Romper_img_00000016,Watercolor_Floral_Print_Romper_img_00000016.jpg,romper,straight,none,none,none,casual,floral,deepfashion
@@ -1237,20 +1237,20 @@ Denim_Utility_Romper_img_00000006,Denim_Utility_Romper_img_00000006.jpg,romper,s
 Botanical_Print_V-Neck_Romper_img_00000042,Botanical_Print_V-Neck_Romper_img_00000042.jpg,romper,bodycon,sleeveless,v-neck,none,casual,lace,deepfashion
 Belted_Floral_Print_Romper_img_00000002,Belted_Floral_Print_Romper_img_00000002.jpg,romper,straight,none,none,none,casual,floral,deepfashion
 Striped_Lace-Up_Cami_Romper_img_00000010,Striped_Lace-Up_Cami_Romper_img_00000010.jpg,romper,straight,none,strapless,none,casual,striped,deepfashion
-Strappy_Daisy_Print_Romper_img_00000032,Strappy_Daisy_Print_Romper_img_00000032.jpg,romper,straight,none,none,none,casual,graphic print,deepfashion
+Strappy_Daisy_Print_Romper_img_00000032,Strappy_Daisy_Print_Romper_img_00000032.jpg,romper,straight,none,none,none,casual,graphic,deepfashion
 Heathered_Stripe_Romper_img_00000010,Heathered_Stripe_Romper_img_00000010.jpg,romper,straight,none,none,none,casual,striped,deepfashion
 Crochet_Trim_Belted_Romper_img_00000046,Crochet_Trim_Belted_Romper_img_00000046.jpg,romper,straight,none,none,none,casual,plain,deepfashion
 Tie-Dye_Cami_Romper_img_00000044,Tie-Dye_Cami_Romper_img_00000044.jpg,romper,straight,none,none,none,casual,abstract,deepfashion
-Sunburst_Print_Romper_img_00000012,Sunburst_Print_Romper_img_00000012.jpg,romper,straight,none,none,none,casual,graphic print,deepfashion
+Sunburst_Print_Romper_img_00000012,Sunburst_Print_Romper_img_00000012.jpg,romper,straight,none,none,none,casual,graphic,deepfashion
 Floral_Crochet_Racerback_Romper_img_00000004,Floral_Crochet_Racerback_Romper_img_00000004.jpg,romper,straight,none,none,none,casual,floral,deepfashion
 Puff-Sleeve_Surplice_Romper_img_00000026,Puff-Sleeve_Surplice_Romper_img_00000026.jpg,romper,straight,short sleeve,none,none,casual,lace,deepfashion
-Crochet_Cami_Romper_img_00000007,Crochet_Cami_Romper_img_00000007.jpg,romper,straight,none,none,none,casual,graphic print,deepfashion
-Tribal_Print_Halter_Romper_img_00000027,Tribal_Print_Halter_Romper_img_00000027.jpg,romper,straight,none,halter,none,casual,graphic print,deepfashion
+Crochet_Cami_Romper_img_00000007,Crochet_Cami_Romper_img_00000007.jpg,romper,straight,none,none,none,casual,graphic,deepfashion
+Tribal_Print_Halter_Romper_img_00000027,Tribal_Print_Halter_Romper_img_00000027.jpg,romper,straight,none,halter,none,casual,graphic,deepfashion
 Paisley_Print_Strapless_Romper_img_00000007,Paisley_Print_Strapless_Romper_img_00000007.jpg,romper,straight,none,strapless,none,casual,paisley,deepfashion
 Strappy_Daisy_Print_Romper_img_00000013,Strappy_Daisy_Print_Romper_img_00000013.jpg,romper,straight,none,none,none,casual,floral,deepfashion
 Strapless_Skort_Romper_img_00000014,Strapless_Skort_Romper_img_00000014.jpg,romper,straight,sleeveless,strapless,none,casual,plain,deepfashion
 Open-Back_Woven_Romper_img_00000038,Open-Back_Woven_Romper_img_00000038.jpg,romper,straight,none,none,none,casual,plain,deepfashion
-Open-Back_Woven_Romper_img_00000062,Open-Back_Woven_Romper_img_00000062.jpg,romper,straight,none,none,none,casual,graphic print,deepfashion
+Open-Back_Woven_Romper_img_00000062,Open-Back_Woven_Romper_img_00000062.jpg,romper,straight,none,none,none,casual,graphic,deepfashion
 Crisscross_Back_PJ_Romper_img_00000009,Crisscross_Back_PJ_Romper_img_00000009.jpg,romper,straight,none,none,none,casual,lace,deepfashion
 V-Cut_Back_Romper_img_00000037,V-Cut_Back_Romper_img_00000037.jpg,romper,straight,none,none,none,casual,lace,deepfashion
 Lace-Trimmed_PJ_Romper_img_00000003,Lace-Trimmed_PJ_Romper_img_00000003.jpg,romper,straight,none,none,none,casual,lace,deepfashion
@@ -1389,7 +1389,7 @@ Ombre_Denim_Shorts_img_00000047,Ombre_Denim_Shorts_img_00000047.jpg,shorts,regul
 By_The_Sea_Matelot_Shorts_img_00000018,By_The_Sea_Matelot_Shorts_img_00000018.jpg,shorts,regular fit,none,none,none,casual,striped,deepfashion
 French_Terry_Drawstring_Shorts_img_00000043,French_Terry_Drawstring_Shorts_img_00000043.jpg,shorts,regular fit,none,none,none,casual,plain,deepfashion
 Polka_Dot_Swim_Trunks_img_00000049,Polka_Dot_Swim_Trunks_img_00000049.jpg,shorts,regular fit,none,none,none,casual,polka dot,deepfashion
-Tropical_Print_Chino_Shorts_img_00000014,Tropical_Print_Chino_Shorts_img_00000014.jpg,shorts,regular fit,none,none,none,casual,graphic print,deepfashion
+Tropical_Print_Chino_Shorts_img_00000014,Tropical_Print_Chino_Shorts_img_00000014.jpg,shorts,regular fit,none,none,none,casual,graphic,deepfashion
 Lace-Hem_Floral_PJ_Shorts_img_00000006,Lace-Hem_Floral_PJ_Shorts_img_00000006.jpg,shorts,regular fit,none,none,none,casual,floral,deepfashion
 Heart_Print_Denim_Shorts_img_00000038,Heart_Print_Denim_Shorts_img_00000038.jpg,shorts,regular fit,none,none,none,casual,denim,deepfashion
 Belted_Stripe_Print_Shorts_img_00000022,Belted_Stripe_Print_Shorts_img_00000022.jpg,shorts,regular fit,none,none,none,casual,striped,deepfashion
@@ -1426,8 +1426,8 @@ Cinched_Training_Shorts_img_00000006,Cinched_Training_Shorts_img_00000006.jpg,sh
 Distressed_Bleach_Wash_Cutoffs_img_00000017,Distressed_Bleach_Wash_Cutoffs_img_00000017.jpg,shorts,regular fit,none,none,none,casual,denim,deepfashion
 Colorblock_High_Performance_Shorts_img_00000027,Colorblock_High_Performance_Shorts_img_00000027.jpg,shorts,regular fit,none,none,none,casual,plain,deepfashion
 Pleated_Floral_Print_Shorts_img_00000036,Pleated_Floral_Print_Shorts_img_00000036.jpg,shorts,regular fit,none,none,none,casual,floral,deepfashion
-Tribal_Print_Shorts_img_00000033,Tribal_Print_Shorts_img_00000033.jpg,shorts,regular fit,none,none,none,casual,graphic print,deepfashion
-Daisy_Print_Shorts_img_00000052,Daisy_Print_Shorts_img_00000052.jpg,shorts,regular fit,none,none,none,casual,graphic print,deepfashion
+Tribal_Print_Shorts_img_00000033,Tribal_Print_Shorts_img_00000033.jpg,shorts,regular fit,none,none,none,casual,graphic,deepfashion
+Daisy_Print_Shorts_img_00000052,Daisy_Print_Shorts_img_00000052.jpg,shorts,regular fit,none,none,none,casual,graphic,deepfashion
 Tartan_Plaid_PJ_Shorts_img_00000017,Tartan_Plaid_PJ_Shorts_img_00000017.jpg,shorts,regular fit,none,none,none,casual,checkered,deepfashion
 Mesh-Paneled_Colorblock_Workout_Shorts_img_00000010,Mesh-Paneled_Colorblock_Workout_Shorts_img_00000010.jpg,shorts,regular fit,none,none,none,sporty,plain,deepfashion
 Rose_Print_Shorts_img_00000037,Rose_Print_Shorts_img_00000037.jpg,shorts,regular fit,none,none,none,casual,floral,deepfashion
@@ -1447,11 +1447,11 @@ High-Waisted_Knit_Shorts_img_00000055,High-Waisted_Knit_Shorts_img_00000055.jpg,
 Miami_Heat_Athletic_Shorts_img_00000019,Miami_Heat_Athletic_Shorts_img_00000019.jpg,shorts,regular fit,none,none,none,sporty,plain,deepfashion
 Smocked_Ruffle-Trim_Shorts_img_00000001,Smocked_Ruffle-Trim_Shorts_img_00000001.jpg,shorts,regular fit,none,none,none,casual,plain,deepfashion
 Lace-Trimmed_Floral_Shorts_img_00000016,Lace-Trimmed_Floral_Shorts_img_00000016.jpg,shorts,regular fit,none,none,none,casual,floral,deepfashion
-Rose_Print_High-Waisted_Shorts_img_00000009,Rose_Print_High-Waisted_Shorts_img_00000009.jpg,shorts,regular fit,none,none,none,casual,graphic print,deepfashion
+Rose_Print_High-Waisted_Shorts_img_00000009,Rose_Print_High-Waisted_Shorts_img_00000009.jpg,shorts,regular fit,none,none,none,casual,graphic,deepfashion
 Denim_Daze_Ripped_Shorts_img_00000023,Denim_Daze_Ripped_Shorts_img_00000023.jpg,shorts,regular fit,none,none,none,casual,denim,deepfashion
 By_The_Sea_Matelot_Shorts_img_00000010,By_The_Sea_Matelot_Shorts_img_00000010.jpg,shorts,regular fit,none,none,none,casual,plain,deepfashion
 Paisley_Print_Shorts_img_00000015,Paisley_Print_Shorts_img_00000015.jpg,shorts,regular fit,none,none,none,casual,paisley,deepfashion
-Tassel-Trimmed_Shorts_img_00000034,Tassel-Trimmed_Shorts_img_00000034.jpg,shorts,regular fit,none,none,none,casual,graphic print,deepfashion
+Tassel-Trimmed_Shorts_img_00000034,Tassel-Trimmed_Shorts_img_00000034.jpg,shorts,regular fit,none,none,none,casual,graphic,deepfashion
 Textured_Geo-Striped_Cuffed_Sweatshorts_img_00000002,Textured_Geo-Striped_Cuffed_Sweatshorts_img_00000002.jpg,shorts,regular fit,none,none,none,casual,striped,deepfashion
 Pleated_Linen-Blend_Shorts_img_00000003,Pleated_Linen-Blend_Shorts_img_00000003.jpg,shorts,regular fit,none,none,none,casual,plain,deepfashion
 Cotton_Canvas_Shorts_img_00000002,Cotton_Canvas_Shorts_img_00000002.jpg,shorts,regular fit,none,none,none,casual,plain,deepfashion
@@ -1469,27 +1469,27 @@ Heathered_Colorblock_Performance_Shorts_img_00000006,Heathered_Colorblock_Perfor
 Classic_Crepe_Shorts_img_00000020,Classic_Crepe_Shorts_img_00000020.jpg,shorts,regular fit,none,none,none,classic,plain,deepfashion
 Textured_Geo-Striped_Cuffed_Sweatshorts_img_00000011,Textured_Geo-Striped_Cuffed_Sweatshorts_img_00000011.jpg,shorts,regular fit,none,none,none,casual,striped,deepfashion
 L.A.T.H.C._Graphic_Drawstring_Shorts_img_00000006,L.A.T.H.C._Graphic_Drawstring_Shorts_img_00000006.jpg,shorts,regular fit,none,none,none,casual,plain,deepfashion
-Palm_Tree_Print_Shorts_img_00000036,Palm_Tree_Print_Shorts_img_00000036.jpg,shorts,regular fit,none,none,none,casual,graphic print,deepfashion
+Palm_Tree_Print_Shorts_img_00000036,Palm_Tree_Print_Shorts_img_00000036.jpg,shorts,regular fit,none,none,none,casual,graphic,deepfashion
 French_Terry_Drawstring_Shorts_img_00000037,French_Terry_Drawstring_Shorts_img_00000037.jpg,shorts,regular fit,none,none,none,casual,plain,deepfashion
 Woven_Running_Shorts_img_00000017,Woven_Running_Shorts_img_00000017.jpg,shorts,regular fit,none,none,none,casual,plain,deepfashion
 Layered_Running_Shorts_img_00000002,Layered_Running_Shorts_img_00000002.jpg,shorts,regular fit,none,none,none,casual,plain,deepfashion
 Abstract_Geo-Embroidered_Shorts_img_00000029,Abstract_Geo-Embroidered_Shorts_img_00000029.jpg,shorts,regular fit,none,none,none,casual,abstract,deepfashion
 Abstract_Print-Trimmed_Shorts_img_00000029,Abstract_Print-Trimmed_Shorts_img_00000029.jpg,shorts,regular fit,none,none,none,casual,abstract,deepfashion
 Textured_Flat-Front_Shorts_img_00000022,Textured_Flat-Front_Shorts_img_00000022.jpg,shorts,regular fit,none,none,none,casual,textured,deepfashion
-Butterfly_Print_PJ_Shorts_img_00000056,Butterfly_Print_PJ_Shorts_img_00000056.jpg,shorts,regular fit,none,none,none,casual,graphic print,deepfashion
+Butterfly_Print_PJ_Shorts_img_00000056,Butterfly_Print_PJ_Shorts_img_00000056.jpg,shorts,regular fit,none,none,none,casual,graphic,deepfashion
 Lace-Hemmed_Denim_Cutoffs_img_00000028,Lace-Hemmed_Denim_Cutoffs_img_00000028.jpg,shorts,regular fit,none,none,none,casual,denim,deepfashion
 High-Waisted_Denim_Shorts_img_00000026,High-Waisted_Denim_Shorts_img_00000026.jpg,shorts,regular fit,none,none,none,casual,denim,deepfashion
-Zippered_Sweatshorts_img_00000020,Zippered_Sweatshorts_img_00000020.jpg,shorts,regular fit,none,none,none,casual,graphic print,deepfashion
+Zippered_Sweatshorts_img_00000020,Zippered_Sweatshorts_img_00000020.jpg,shorts,regular fit,none,none,none,casual,graphic,deepfashion
 Mineral_Wash_Cutoffs_img_00000007,Mineral_Wash_Cutoffs_img_00000007.jpg,shorts,regular fit,none,none,none,classic,denim,deepfashion
 Darling_Dots_Denim_Shorts_img_00000017,Darling_Dots_Denim_Shorts_img_00000017.jpg,shorts,regular fit,none,none,none,casual,denim,deepfashion
 Heathered_High-Waisted_Shorts_img_00000019,Heathered_High-Waisted_Shorts_img_00000019.jpg,shorts,regular fit,none,none,none,casual,plain,deepfashion
-Tribal_Print_Crepe_Shorts_img_00000016,Tribal_Print_Crepe_Shorts_img_00000016.jpg,shorts,regular fit,none,none,none,casual,graphic print,deepfashion
+Tribal_Print_Crepe_Shorts_img_00000016,Tribal_Print_Crepe_Shorts_img_00000016.jpg,shorts,regular fit,none,none,none,casual,graphic,deepfashion
 Butterfly_Print_PJ_Shorts_img_00000061,Butterfly_Print_PJ_Shorts_img_00000061.jpg,shorts,regular fit,none,none,none,casual,floral,deepfashion
 Space_Dye_Shorts_img_00000032,Space_Dye_Shorts_img_00000032.jpg,shorts,regular fit,none,none,none,casual,plain,deepfashion
 Giraffe_Print_Shorts_img_00000029,Giraffe_Print_Shorts_img_00000029.jpg,shorts,regular fit,none,none,none,casual,animal print,deepfashion
 Distressed_Paint-Flecked_Denim_Shorts_img_00000020,Distressed_Paint-Flecked_Denim_Shorts_img_00000020.jpg,shorts,regular fit,none,none,none,casual,denim,deepfashion
 Smocked_Floral_Print_Shorts_img_00000020,Smocked_Floral_Print_Shorts_img_00000020.jpg,shorts,regular fit,none,none,none,casual,floral,deepfashion
-Crochet-Trimmed_Daisy_Print_Shorts_img_00000015,Crochet-Trimmed_Daisy_Print_Shorts_img_00000015.jpg,shorts,regular fit,none,none,none,casual,graphic print,deepfashion
+Crochet-Trimmed_Daisy_Print_Shorts_img_00000015,Crochet-Trimmed_Daisy_Print_Shorts_img_00000015.jpg,shorts,regular fit,none,none,none,casual,graphic,deepfashion
 Cotton_&_Linen_Pleated_Shorts_img_00000022,Cotton_&_Linen_Pleated_Shorts_img_00000022.jpg,shorts,regular fit,none,none,none,casual,plain,deepfashion
 Reverse_Abstract_Print_Sweatshorts_img_00000010,Reverse_Abstract_Print_Sweatshorts_img_00000010.jpg,shorts,regular fit,none,none,none,casual,abstract,deepfashion
 Crochet_Daisy-Paneled_Cutoffs_img_00000006,Crochet_Daisy-Paneled_Cutoffs_img_00000006.jpg,shorts,regular fit,none,none,none,casual,plain,deepfashion
@@ -1516,7 +1516,7 @@ Contrast_Mesh_Pencil_Skirt_img_00000029,Contrast_Mesh_Pencil_Skirt_img_00000029.
 Abstract_Print_Maxi_Skirt_img_00000012,Abstract_Print_Maxi_Skirt_img_00000012.jpg,skirt,maxi,none,none,none,casual,abstract,deepfashion
 Floral_Lace_Pencil_Skirt_img_00000016,Floral_Lace_Pencil_Skirt_img_00000016.jpg,skirt,straight,none,none,none,casual,floral,deepfashion
 Cable-Knit_Pencil_Skirt_img_00000067,Cable-Knit_Pencil_Skirt_img_00000067.jpg,skirt,straight,none,none,none,casual,textured,deepfashion
-Sequined_Chevron-Pattern_Skirt_img_00000017,Sequined_Chevron-Pattern_Skirt_img_00000017.jpg,skirt,mini,none,none,none,casual,graphic print,deepfashion
+Sequined_Chevron-Pattern_Skirt_img_00000017,Sequined_Chevron-Pattern_Skirt_img_00000017.jpg,skirt,mini,none,none,none,casual,graphic,deepfashion
 Pleated_Metallic_Skirt_img_00000030,Pleated_Metallic_Skirt_img_00000030.jpg,skirt,pleated,none,none,none,casual,plain,deepfashion
 Gauze_Skater_Skirt_img_00000045,Gauze_Skater_Skirt_img_00000045.jpg,skirt,skater,none,none,none,casual,plain,deepfashion
 Fluted_Faux_Leather-Trimmed_Skirt_img_00000025,Fluted_Faux_Leather-Trimmed_Skirt_img_00000025.jpg,skirt,straight,none,none,none,casual,lace,deepfashion
@@ -1537,7 +1537,7 @@ Mineral_Wash_Mini_Skirt_img_00000022,Mineral_Wash_Mini_Skirt_img_00000022.jpg,sk
 Pleated_Maxi_Skirt_img_00000032,Pleated_Maxi_Skirt_img_00000032.jpg,skirt,pleated,none,none,none,casual,plain,deepfashion
 Pleated_Skater_Skirt_img_00000025,Pleated_Skater_Skirt_img_00000025.jpg,skirt,skater,none,none,none,casual,plain,deepfashion
 Pleated_Faux_Leather_Skirt_img_00000077,Pleated_Faux_Leather_Skirt_img_00000077.jpg,skirt,pleated,none,none,none,casual,plain,deepfashion
-Woven_Pencil_Skirt_img_00000050,Woven_Pencil_Skirt_img_00000050.jpg,skirt,straight,none,none,none,casual,graphic print,deepfashion
+Woven_Pencil_Skirt_img_00000050,Woven_Pencil_Skirt_img_00000050.jpg,skirt,straight,none,none,none,casual,graphic,deepfashion
 Tulle_Overlay_Maxi_Skirt_img_00000008,Tulle_Overlay_Maxi_Skirt_img_00000008.jpg,skirt,maxi,none,none,none,casual,plain,deepfashion
 Striped_Bodycon_Skirt_img_00000015,Striped_Bodycon_Skirt_img_00000015.jpg,skirt,bodycon,none,none,none,casual,striped,deepfashion
 Lace_Mini_Skirt_img_00000010,Lace_Mini_Skirt_img_00000010.jpg,skirt,mini,none,none,none,casual,lace,deepfashion
@@ -1579,7 +1579,7 @@ M-Slit_Maxi_Skirt_img_00000068,M-Slit_Maxi_Skirt_img_00000068.jpg,skirt,maxi,non
 Pleated_Woven_Mini_Skirt_img_00000020,Pleated_Woven_Mini_Skirt_img_00000020.jpg,skirt,pleated,none,none,none,minimal,textured,deepfashion
 Distressed_Denim_Mini_Skirt_img_00000065,Distressed_Denim_Mini_Skirt_img_00000065.jpg,skirt,mini,none,none,none,casual,denim,deepfashion
 Cable-Knit_Pencil_Skirt_img_00000066,Cable-Knit_Pencil_Skirt_img_00000066.jpg,skirt,straight,none,none,none,casual,textured,deepfashion
-Tie-Dye_Cover-Up_Skirt_img_00000005,Tie-Dye_Cover-Up_Skirt_img_00000005.jpg,skirt,straight,none,none,none,bohemian,graphic print,deepfashion
+Tie-Dye_Cover-Up_Skirt_img_00000005,Tie-Dye_Cover-Up_Skirt_img_00000005.jpg,skirt,straight,none,none,none,bohemian,graphic,deepfashion
 Polka_Dot_Knit_Pencil_Skirt_img_00000048,Polka_Dot_Knit_Pencil_Skirt_img_00000048.jpg,skirt,straight,none,none,none,casual,polka dot,deepfashion
 Basic_Striped_Mini_Skirt_img_00000066,Basic_Striped_Mini_Skirt_img_00000066.jpg,skirt,mini,none,none,none,minimal,striped,deepfashion
 Faux_Leather_A-Line_Skirt_img_00000039,Faux_Leather_A-Line_Skirt_img_00000039.jpg,skirt,a-line,none,none,none,casual,plain,deepfashion
@@ -1599,7 +1599,7 @@ Faux_Leather_Skater_Skirt_img_00000006,Faux_Leather_Skater_Skirt_img_00000006.jp
 Shirred_Waist_Mini_Skirt_img_00000053,Shirred_Waist_Mini_Skirt_img_00000053.jpg,skirt,mini,none,none,none,casual,plain,deepfashion
 Pleated_A-Line_Skirt_img_00000002,Pleated_A-Line_Skirt_img_00000002.jpg,skirt,a-line,none,none,none,casual,plain,deepfashion
 Ditsy_Floral_Skater_Skirt_img_00000040,Ditsy_Floral_Skater_Skirt_img_00000040.jpg,skirt,skater,none,none,none,casual,floral,deepfashion
-Windowpane_Print_Skater_Skirt_img_00000001,Windowpane_Print_Skater_Skirt_img_00000001.jpg,skirt,skater,none,none,none,casual,graphic print,deepfashion
+Windowpane_Print_Skater_Skirt_img_00000001,Windowpane_Print_Skater_Skirt_img_00000001.jpg,skirt,skater,none,none,none,casual,graphic,deepfashion
 Fluted_Polka_Dot_Skirt_img_00000006,Fluted_Polka_Dot_Skirt_img_00000006.jpg,skirt,straight,none,none,none,casual,polka dot,deepfashion
 Crochet_Lace_Midi_Skirt_img_00000036,Crochet_Lace_Midi_Skirt_img_00000036.jpg,skirt,bodycon,none,none,none,casual,lace,deepfashion
 Ditsy_Floral_Skater_Skirt_img_00000003,Ditsy_Floral_Skater_Skirt_img_00000003.jpg,skirt,skater,none,none,none,casual,floral,deepfashion
@@ -1684,7 +1684,7 @@ Cropped_Open-Knit_Sweater_img_00000018,Cropped_Open-Knit_Sweater_img_00000018.jp
 Classic_Knit_Turtleneck_img_00000024,Classic_Knit_Turtleneck_img_00000024.jpg,sweater,regular fit,none,none,none,classic,lace,deepfashion
 Forget-Me-Not_Sweater_img_00000046,Forget-Me-Not_Sweater_img_00000046.jpg,sweater,regular fit,none,none,none,casual,textured,deepfashion
 Turtleneck_Dolman_Sweater_img_00000012,Turtleneck_Dolman_Sweater_img_00000012.jpg,sweater,regular fit,dolman sleeve,none,none,casual,plain,deepfashion
-Internet_Graphic_Sweater_img_00000010,Internet_Graphic_Sweater_img_00000010.jpg,sweater,regular fit,none,none,none,casual,graphic print,deepfashion
+Internet_Graphic_Sweater_img_00000010,Internet_Graphic_Sweater_img_00000010.jpg,sweater,regular fit,none,none,none,casual,graphic,deepfashion
 Metallic-Threaded_Pointelle_Sweater_img_00000009,Metallic-Threaded_Pointelle_Sweater_img_00000009.jpg,sweater,regular fit,none,none,none,classic,textured,deepfashion
 Contrast-Front_Knit_Sweater_img_00000042,Contrast-Front_Knit_Sweater_img_00000042.jpg,sweater,regular fit,none,none,none,casual,textured,deepfashion
 Peter_Pan_Collar_Sweater_img_00000079,Peter_Pan_Collar_Sweater_img_00000079.jpg,sweater,regular fit,none,collared,none,casual,plain,deepfashion
@@ -1751,8 +1751,8 @@ The_Rolling_Stones_Graphic_Tee_img_00000039,The_Rolling_Stones_Graphic_Tee_img_0
 Striped_Ringer_Pocket_Tee_img_00000044,Striped_Ringer_Pocket_Tee_img_00000044.jpg,t-shirt,regular fit,none,none,none,casual,striped,deepfashion
 Chambray-Trim_Pocket_Tee_img_00000050,Chambray-Trim_Pocket_Tee_img_00000050.jpg,t-shirt,regular fit,short sleeve,none,none,casual,plain,deepfashion
 Zippered_Linen_Tee_img_00000005,Zippered_Linen_Tee_img_00000005.jpg,t-shirt,regular fit,short sleeve,none,none,casual,plain,deepfashion
-Cacti_Print_Tee_img_00000037,Cacti_Print_Tee_img_00000037.jpg,t-shirt,regular fit,none,none,none,casual,graphic print,deepfashion
-Bandana_Print_Muscle_Tee_img_00000004,Bandana_Print_Muscle_Tee_img_00000004.jpg,t-shirt,regular fit,none,none,none,casual,graphic print,deepfashion
+Cacti_Print_Tee_img_00000037,Cacti_Print_Tee_img_00000037.jpg,t-shirt,regular fit,none,none,none,casual,graphic,deepfashion
+Bandana_Print_Muscle_Tee_img_00000004,Bandana_Print_Muscle_Tee_img_00000004.jpg,t-shirt,regular fit,none,none,none,casual,graphic,deepfashion
 Front_Row_Graphic_Tee_img_00000022,Front_Row_Graphic_Tee_img_00000022.jpg,t-shirt,regular fit,none,none,none,casual,plain,deepfashion
 Long_Crew_Neck_Tee_img_00000021,Long_Crew_Neck_Tee_img_00000021.jpg,t-shirt,regular fit,long sleeve,crew neck,none,minimal,plain,deepfashion
 You_Post_Too_Much_Tee_img_00000018,You_Post_Too_Much_Tee_img_00000018.jpg,t-shirt,regular fit,none,none,none,casual,plain,deepfashion
@@ -1767,7 +1767,7 @@ Chambray-Trim_Pocket_Tee_img_00000013,Chambray-Trim_Pocket_Tee_img_00000013.jpg,
 Micro-Stripe_Pocket_Tee_img_00000032,Micro-Stripe_Pocket_Tee_img_00000032.jpg,t-shirt,regular fit,none,none,none,casual,striped,deepfashion
 Striped-Sleeve_Tee_img_00000051,Striped-Sleeve_Tee_img_00000051.jpg,t-shirt,regular fit,short sleeve,none,none,casual,striped,deepfashion
 Boxy_Cotton_Muscle_Tee_img_00000012,Boxy_Cotton_Muscle_Tee_img_00000012.jpg,t-shirt,boxy,none,none,none,casual,plain,deepfashion
-Do_Tell_Tee_img_00000051,Do_Tell_Tee_img_00000051.jpg,t-shirt,regular fit,none,none,none,casual,graphic print,deepfashion
+Do_Tell_Tee_img_00000051,Do_Tell_Tee_img_00000051.jpg,t-shirt,regular fit,none,none,none,casual,graphic,deepfashion
 Perfect_is_Boring_Graphic_Tee_img_00000007,Perfect_is_Boring_Graphic_Tee_img_00000007.jpg,t-shirt,regular fit,none,none,none,casual,plain,deepfashion
 Favorite_V-Neck_Tee_img_00000013,Favorite_V-Neck_Tee_img_00000013.jpg,t-shirt,regular fit,none,v-neck,none,casual,lace,deepfashion
 Boxy_Pocket_Tee_img_00000009,Boxy_Pocket_Tee_img_00000009.jpg,t-shirt,boxy,none,none,none,casual,plain,deepfashion
@@ -1784,8 +1784,8 @@ Led_Zeppelin_Graphic_Tee_img_00000034,Led_Zeppelin_Graphic_Tee_img_00000034.jpg,
 Abstract_Print_Tee_img_00000066,Abstract_Print_Tee_img_00000066.jpg,t-shirt,regular fit,none,none,none,casual,abstract,deepfashion
 Drop-Sleeve_Knit_Tee_img_00000018,Drop-Sleeve_Knit_Tee_img_00000018.jpg,t-shirt,regular fit,drop sleeve,none,none,casual,textured,deepfashion
 Longline_Baseball_Jersey_img_00000046,Longline_Baseball_Jersey_img_00000046.jpg,t-shirt,regular fit,long sleeve,none,none,casual,plain,deepfashion
-Glasses_Print_Tee_img_00000016,Glasses_Print_Tee_img_00000016.jpg,t-shirt,regular fit,none,none,none,casual,graphic print,deepfashion
-Cacti_Print_Tee_img_00000029,Cacti_Print_Tee_img_00000029.jpg,t-shirt,regular fit,none,none,none,casual,graphic print,deepfashion
+Glasses_Print_Tee_img_00000016,Glasses_Print_Tee_img_00000016.jpg,t-shirt,regular fit,none,none,none,casual,graphic,deepfashion
+Cacti_Print_Tee_img_00000029,Cacti_Print_Tee_img_00000029.jpg,t-shirt,regular fit,none,none,none,casual,graphic,deepfashion
 Colorblocked_Pocket_Striped_Tee_img_00000006,Colorblocked_Pocket_Striped_Tee_img_00000006.jpg,t-shirt,oversized,none,none,none,casual,striped,deepfashion
 Basquiat_Graphic_Baseball_Tee_img_00000019,Basquiat_Graphic_Baseball_Tee_img_00000019.jpg,t-shirt,regular fit,none,none,none,casual,plain,deepfashion
 Rolling_Stones_Graphic_Tee_img_00000025,Rolling_Stones_Graphic_Tee_img_00000025.jpg,t-shirt,regular fit,none,none,none,casual,plain,deepfashion
@@ -1798,7 +1798,7 @@ Mickey_Mouse_Ringer_Tee_img_00000034,Mickey_Mouse_Ringer_Tee_img_00000034.jpg,t-
 Colorblock-Striped_Muscle_Tee_img_00000005,Colorblock-Striped_Muscle_Tee_img_00000005.jpg,t-shirt,regular fit,none,none,none,casual,striped,deepfashion
 I_Am_The_Boss_Tee_img_00000063,I_Am_The_Boss_Tee_img_00000063.jpg,t-shirt,regular fit,none,none,none,casual,plain,deepfashion
 Faux_Leather_Jersey_img_00000022,Faux_Leather_Jersey_img_00000022.jpg,t-shirt,regular fit,none,none,none,casual,plain,deepfashion
-Wave_Print_Tee_img_00000002,Wave_Print_Tee_img_00000002.jpg,t-shirt,regular fit,none,none,none,casual,graphic print,deepfashion
+Wave_Print_Tee_img_00000002,Wave_Print_Tee_img_00000002.jpg,t-shirt,regular fit,none,none,none,casual,graphic,deepfashion
 Nacho_Friend_Muscle_Tee_img_00000002,Nacho_Friend_Muscle_Tee_img_00000002.jpg,t-shirt,regular fit,none,none,none,casual,plain,deepfashion
 Barbie_Perfect_Tee_img_00000042,Barbie_Perfect_Tee_img_00000042.jpg,t-shirt,regular fit,none,none,none,casual,plain,deepfashion
 Toucan_Print_Tee_img_00000049,Toucan_Print_Tee_img_00000049.jpg,t-shirt,regular fit,none,none,none,casual,floral,deepfashion
@@ -1828,7 +1828,7 @@ Get_Over_Graphic_Tee_img_00000043,Get_Over_Graphic_Tee_img_00000043.jpg,t-shirt,
 BRKLN_Colorblock_Tee_img_00000003,BRKLN_Colorblock_Tee_img_00000003.jpg,t-shirt,regular fit,none,none,none,casual,plain,deepfashion
 Los_Angeles_Lakers_Baseball_Tee_img_00000024,Los_Angeles_Lakers_Baseball_Tee_img_00000024.jpg,t-shirt,regular fit,none,none,none,casual,plain,deepfashion
 Broad_Stripe_Knit_Tee_img_00000027,Broad_Stripe_Knit_Tee_img_00000027.jpg,t-shirt,regular fit,none,none,none,casual,striped,deepfashion
-Distressed_Paris_Muscle_Tee_img_00000006,Distressed_Paris_Muscle_Tee_img_00000006.jpg,t-shirt,regular fit,none,none,none,casual,graphic print,deepfashion
+Distressed_Paris_Muscle_Tee_img_00000006,Distressed_Paris_Muscle_Tee_img_00000006.jpg,t-shirt,regular fit,none,none,none,casual,graphic,deepfashion
 Designer_Bags_Graphic_Tee_img_00000039,Designer_Bags_Graphic_Tee_img_00000039.jpg,t-shirt,regular fit,none,none,none,casual,plain,deepfashion
 Trust_Nobody_Muscle_Tee_img_00000010,Trust_Nobody_Muscle_Tee_img_00000010.jpg,t-shirt,regular fit,none,none,none,casual,plain,deepfashion
 To_Get_Likes_Tee_img_00000009,To_Get_Likes_Tee_img_00000009.jpg,t-shirt,regular fit,none,none,none,minimal,plain,deepfashion
@@ -1839,11 +1839,11 @@ Striped_V-Neck_Tee_img_00000001,Striped_V-Neck_Tee_img_00000001.jpg,t-shirt,regu
 Striped_Burger_Tee_img_00000030,Striped_Burger_Tee_img_00000030.jpg,t-shirt,regular fit,none,none,none,casual,striped,deepfashion
 Striped-Sleeve_Tee_img_00000026,Striped-Sleeve_Tee_img_00000026.jpg,t-shirt,regular fit,short sleeve,none,none,casual,striped,deepfashion
 NYC_Tee_img_00000035,NYC_Tee_img_00000035.jpg,t-shirt,regular fit,none,none,none,casual,plain,deepfashion
-Menagerie_Print_Tee_img_00000016,Menagerie_Print_Tee_img_00000016.jpg,t-shirt,regular fit,none,none,none,casual,graphic print,deepfashion
+Menagerie_Print_Tee_img_00000016,Menagerie_Print_Tee_img_00000016.jpg,t-shirt,regular fit,none,none,none,casual,graphic,deepfashion
 Raglan_Sleeve_Tee_img_00000035,Raglan_Sleeve_Tee_img_00000035.jpg,t-shirt,regular fit,raglan sleeve,none,none,casual,plain,deepfashion
 V-Neck_Pocket_Tee_img_00000049,V-Neck_Pocket_Tee_img_00000049.jpg,t-shirt,regular fit,none,v-neck,none,casual,plain,deepfashion
 Rad_Graphic_Tee_img_00000018,Rad_Graphic_Tee_img_00000018.jpg,t-shirt,regular fit,none,none,none,casual,plain,deepfashion
-Watercolor_Print_Linen_Tee_img_00000029,Watercolor_Print_Linen_Tee_img_00000029.jpg,t-shirt,regular fit,none,none,none,casual,graphic print,deepfashion
+Watercolor_Print_Linen_Tee_img_00000029,Watercolor_Print_Linen_Tee_img_00000029.jpg,t-shirt,regular fit,none,none,none,casual,graphic,deepfashion
 Distressed_Pocket_Tee_img_00000043,Distressed_Pocket_Tee_img_00000043.jpg,t-shirt,regular fit,none,none,none,casual,textured,deepfashion
 Striped_Cap-Sleeve_Tee_img_00000019,Striped_Cap-Sleeve_Tee_img_00000019.jpg,t-shirt,regular fit,none,none,none,casual,striped,deepfashion
 Marilyn_Monroe_V-Neck_Tee_img_00000047,Marilyn_Monroe_V-Neck_Tee_img_00000047.jpg,t-shirt,regular fit,none,v-neck,none,casual,plain,deepfashion
@@ -1857,20 +1857,20 @@ Plaid_Pocket_Tee_img_00000012,Plaid_Pocket_Tee_img_00000012.jpg,t-shirt,regular 
 Heathered_Muscle_Tee_img_00000038,Heathered_Muscle_Tee_img_00000038.jpg,t-shirt,regular fit,none,none,none,casual,plain,deepfashion
 Control_Sector_Geo_Colorblocked_Tee_img_00000018,Control_Sector_Geo_Colorblocked_Tee_img_00000018.jpg,t-shirt,regular fit,none,none,none,casual,geometric,deepfashion
 Hooded_Slub_Knit_Henley_img_00000014,Hooded_Slub_Knit_Henley_img_00000014.jpg,t-shirt,regular fit,none,none,none,casual,textured,deepfashion
-Iguana_Print_Tee_img_00000066,Iguana_Print_Tee_img_00000066.jpg,t-shirt,regular fit,none,none,none,casual,graphic print,deepfashion
+Iguana_Print_Tee_img_00000066,Iguana_Print_Tee_img_00000066.jpg,t-shirt,regular fit,none,none,none,casual,graphic,deepfashion
 EPTM._Striped_Round-Hem_Tee_img_00000027,EPTM._Striped_Round-Hem_Tee_img_00000027.jpg,t-shirt,regular fit,none,none,none,casual,striped,deepfashion
 Embroidered_Bead_Keyhole_Blouse_img_00000064,Embroidered_Bead_Keyhole_Blouse_img_00000064.jpg,top,regular fit,sleeveless,none,none,casual,embroidered,deepfashion
-Mandarin_Collar_Blouse_img_00000071,Mandarin_Collar_Blouse_img_00000071.jpg,top,regular fit,none,collared,none,casual,graphic print,deepfashion
-Woven_Open-Back_Blouse_img_00000059,Woven_Open-Back_Blouse_img_00000059.jpg,top,regular fit,none,none,none,casual,graphic print,deepfashion
+Mandarin_Collar_Blouse_img_00000071,Mandarin_Collar_Blouse_img_00000071.jpg,top,regular fit,none,collared,none,casual,graphic,deepfashion
+Woven_Open-Back_Blouse_img_00000059,Woven_Open-Back_Blouse_img_00000059.jpg,top,regular fit,none,none,none,casual,graphic,deepfashion
 Pleated_Chiffon_Blouse_img_00000037,Pleated_Chiffon_Blouse_img_00000037.jpg,top,regular fit,none,collared,none,casual,lace,deepfashion
 Embroidered_Mesh_Gauze_Blouse_img_00000085,Embroidered_Mesh_Gauze_Blouse_img_00000085.jpg,top,regular fit,none,none,none,casual,embroidered,deepfashion
 Cheetah_Print_High-Neck_Blouse_img_00000044,Cheetah_Print_High-Neck_Blouse_img_00000044.jpg,top,regular fit,none,high neck,none,casual,animal print,deepfashion
 Beaded_Laser-Cut_Blouse_img_00000057,Beaded_Laser-Cut_Blouse_img_00000057.jpg,top,peplum,none,none,none,casual,plain,deepfashion
 Dotted_Lace-Paneled_Blouse_img_00000040,Dotted_Lace-Paneled_Blouse_img_00000040.jpg,top,regular fit,none,none,none,casual,lace,deepfashion
-Tribal_Print_Boxy_Tank_img_00000008,Tribal_Print_Boxy_Tank_img_00000008.jpg,top,boxy,none,none,none,casual,graphic print,deepfashion
+Tribal_Print_Boxy_Tank_img_00000008,Tribal_Print_Boxy_Tank_img_00000008.jpg,top,boxy,none,none,none,casual,graphic,deepfashion
 Sheer_Pleated-Front_Blouse_img_00000145,Sheer_Pleated-Front_Blouse_img_00000145.jpg,top,regular fit,none,none,none,casual,plain,deepfashion
-Beaded_Tribal_Print_Blouse_img_00000043,Beaded_Tribal_Print_Blouse_img_00000043.jpg,top,regular fit,none,none,none,casual,graphic print,deepfashion
-Tribal_Print_Tank_img_00000002,Tribal_Print_Tank_img_00000002.jpg,top,regular fit,none,none,none,casual,graphic print,deepfashion
+Beaded_Tribal_Print_Blouse_img_00000043,Beaded_Tribal_Print_Blouse_img_00000043.jpg,top,regular fit,none,none,none,casual,graphic,deepfashion
+Tribal_Print_Tank_img_00000002,Tribal_Print_Tank_img_00000002.jpg,top,regular fit,none,none,none,casual,graphic,deepfashion
 Cotton_Modal-Blend_Tank_img_00000033,Cotton_Modal-Blend_Tank_img_00000033.jpg,top,regular fit,none,none,none,casual,plain,deepfashion
 Striped_Tribal_Print_Blouse_img_00000024,Striped_Tribal_Print_Blouse_img_00000024.jpg,top,regular fit,none,none,none,casual,striped,deepfashion
 Retro_Floral_Blouse_img_00000083,Retro_Floral_Blouse_img_00000083.jpg,top,regular fit,short sleeve,none,none,casual,floral,deepfashion
@@ -1893,7 +1893,7 @@ Stretch-Knit_Racerback_Tank_img_00000036,Stretch-Knit_Racerback_Tank_img_0000003
 Striped_Open-Front_Fringed_Poncho_img_00000008,Striped_Open-Front_Fringed_Poncho_img_00000008.jpg,top,regular fit,none,none,none,casual,striped,deepfashion
 Trimmed_Pocket_Tank_img_00000033,Trimmed_Pocket_Tank_img_00000033.jpg,top,regular fit,none,none,none,casual,plain,deepfashion
 Sheer_Woven_Blouse_img_00000068,Sheer_Woven_Blouse_img_00000068.jpg,top,regular fit,none,none,none,casual,plain,deepfashion
-Leaf_Print_Blouse_img_00000103,Leaf_Print_Blouse_img_00000103.jpg,top,regular fit,none,none,none,casual,graphic print,deepfashion
+Leaf_Print_Blouse_img_00000103,Leaf_Print_Blouse_img_00000103.jpg,top,regular fit,none,none,none,casual,graphic,deepfashion
 Buttoned_Collarless_Blouse_img_00000073,Buttoned_Collarless_Blouse_img_00000073.jpg,top,regular fit,none,collared,none,casual,plain,deepfashion
 Draped_Surplice_Blouse_img_00000107,Draped_Surplice_Blouse_img_00000107.jpg,top,regular fit,none,none,none,casual,plain,deepfashion
 Tie-Front_Chiffon_Blouse_img_00000145,Tie-Front_Chiffon_Blouse_img_00000145.jpg,top,regular fit,none,none,none,casual,plain,deepfashion
@@ -1907,16 +1907,16 @@ Split-Neck_Dolman_Blouse_img_00000013,Split-Neck_Dolman_Blouse_img_00000013.jpg,
 Botanical_Ringer_Tank_img_00000041,Botanical_Ringer_Tank_img_00000041.jpg,top,regular fit,none,none,none,casual,plain,deepfashion
 Dotted_Ruffle_Blouse_img_00000096,Dotted_Ruffle_Blouse_img_00000096.jpg,top,regular fit,none,none,none,casual,polka dot,deepfashion
 Floral_Print_Peasant_Blouse_img_00000035,Floral_Print_Peasant_Blouse_img_00000035.jpg,top,regular fit,none,none,none,casual,floral,deepfashion
-Daisy_Print_Blouse_img_00000096,Daisy_Print_Blouse_img_00000096.jpg,top,regular fit,long sleeve,none,none,casual,graphic print,deepfashion
-Tile_Print_Blouse_img_00000033,Tile_Print_Blouse_img_00000033.jpg,top,regular fit,none,none,none,casual,graphic print,deepfashion
+Daisy_Print_Blouse_img_00000096,Daisy_Print_Blouse_img_00000096.jpg,top,regular fit,long sleeve,none,none,casual,graphic,deepfashion
+Tile_Print_Blouse_img_00000033,Tile_Print_Blouse_img_00000033.jpg,top,regular fit,none,none,none,casual,graphic,deepfashion
 Trimmed_Pocket_Tank_img_00000011,Trimmed_Pocket_Tank_img_00000011.jpg,top,regular fit,none,none,none,casual,plain,deepfashion
-Diamond_Print_Pocket_Tank_img_00000027,Diamond_Print_Pocket_Tank_img_00000027.jpg,top,regular fit,none,none,none,casual,graphic print,deepfashion
-Boxy_Southwestern_Print_Tank_img_00000018,Boxy_Southwestern_Print_Tank_img_00000018.jpg,top,boxy,none,none,none,casual,graphic print,deepfashion
+Diamond_Print_Pocket_Tank_img_00000027,Diamond_Print_Pocket_Tank_img_00000027.jpg,top,regular fit,none,none,none,casual,graphic,deepfashion
+Boxy_Southwestern_Print_Tank_img_00000018,Boxy_Southwestern_Print_Tank_img_00000018.jpg,top,boxy,none,none,none,casual,graphic,deepfashion
 Contrast-Trimmed_Heathered_Tank_img_00000032,Contrast-Trimmed_Heathered_Tank_img_00000032.jpg,top,regular fit,none,none,none,casual,plain,deepfashion
 Crepe_Popover_Blouse_img_00000071,Crepe_Popover_Blouse_img_00000071.jpg,top,regular fit,none,none,none,casual,plain,deepfashion
 Open-Back_Blouse_img_00000104,Open-Back_Blouse_img_00000104.jpg,top,regular fit,none,none,none,casual,plain,deepfashion
 Floral_Crochet_Tank_img_00000038,Floral_Crochet_Tank_img_00000038.jpg,top,regular fit,none,none,none,casual,floral,deepfashion
-Eagle_Graphic_Self-Tie_Tank_img_00000008,Eagle_Graphic_Self-Tie_Tank_img_00000008.jpg,top,regular fit,none,none,none,casual,graphic print,deepfashion
+Eagle_Graphic_Self-Tie_Tank_img_00000008,Eagle_Graphic_Self-Tie_Tank_img_00000008.jpg,top,regular fit,none,none,none,casual,graphic,deepfashion
 Braided_T-Back_Tank_img_00000060,Braided_T-Back_Tank_img_00000060.jpg,top,regular fit,none,none,none,casual,plain,deepfashion
 Crochet_Lace_Tank_img_00000070,Crochet_Lace_Tank_img_00000070.jpg,top,regular fit,sleeveless,none,none,casual,lace,deepfashion
 Pintuck-Paneled_Blouse_img_00000023,Pintuck-Paneled_Blouse_img_00000023.jpg,top,regular fit,none,none,none,casual,floral,deepfashion
@@ -1943,7 +1943,7 @@ Mandarin_Collar_Pocket_Blouse_img_00000003,Mandarin_Collar_Pocket_Blouse_img_000
 Fair_Isle_V-Neck_Poncho_img_00000040,Fair_Isle_V-Neck_Poncho_img_00000040.jpg,top,regular fit,none,v-neck,none,casual,plain,deepfashion
 LA_Clippers_Graphic_Tank_img_00000014,LA_Clippers_Graphic_Tank_img_00000014.jpg,top,regular fit,none,none,none,casual,plain,deepfashion
 Pintuck_Pleated_Chiffon_Blouse_img_00000038,Pintuck_Pleated_Chiffon_Blouse_img_00000038.jpg,top,regular fit,none,none,none,casual,plain,deepfashion
-Pineapple_Print_Tank_img_00000067,Pineapple_Print_Tank_img_00000067.jpg,top,regular fit,none,none,none,casual,graphic print,deepfashion
+Pineapple_Print_Tank_img_00000067,Pineapple_Print_Tank_img_00000067.jpg,top,regular fit,none,none,none,casual,graphic,deepfashion
 Oh_Graphic_Tank_img_00000007,Oh_Graphic_Tank_img_00000007.jpg,top,regular fit,none,none,none,casual,plain,deepfashion
 Ruffled_Lace-Up_Blouse_img_00000064,Ruffled_Lace-Up_Blouse_img_00000064.jpg,top,regular fit,none,none,none,casual,lace,deepfashion
 Classic_Woven_Blouse_img_00000033,Classic_Woven_Blouse_img_00000033.jpg,top,regular fit,none,none,none,classic,plain,deepfashion
@@ -1978,4 +1978,4 @@ Twisted_Racerback_Tank_img_00000009,Twisted_Racerback_Tank_img_00000009.jpg,top,
 Pintuck-Paneled_Blouse_img_00000001,Pintuck-Paneled_Blouse_img_00000001.jpg,top,regular fit,none,none,none,casual,plain,deepfashion
 Ribbed_Trapeze_Tank_img_00000005,Ribbed_Trapeze_Tank_img_00000005.jpg,top,regular fit,none,none,none,casual,lace,deepfashion
 Unicorns_Graphic_Cutout_Tank_img_00000022,Unicorns_Graphic_Cutout_Tank_img_00000022.jpg,top,regular fit,none,none,none,casual,plain,deepfashion
-Collarless_V-Neck_Blouse_img_00000006,Collarless_V-Neck_Blouse_img_00000006.jpg,top,regular fit,none,v-neck,none,casual,graphic print,deepfashion
+Collarless_V-Neck_Blouse_img_00000006,Collarless_V-Neck_Blouse_img_00000006.jpg,top,regular fit,none,v-neck,none,casual,graphic,deepfashion
