@@ -16,61 +16,111 @@ import requests
 
 import shutil
 
+DATASET_VERSION = "v2"
+
 ZIP_URL = (
     "https://github.com/r-vansh/fashion-retrieval-app/releases/download/v2/images.zip"
 )
 
-# TEMPORARY FORCE REFRESH
-if os.path.exists(
+DATASET_FOLDER = (
     "dataset/images"
-):
-
-    shutil.rmtree(
-        "dataset/images"
-    )
-
-st.info(
-    "Downloading images..."
 )
 
-zip_path = "images.zip"
-
-response = requests.get(
-    ZIP_URL,
-    stream=True
+VERSION_FILE = (
+    "dataset/version.txt"
 )
 
-response.raise_for_status()
 
-with open(
-    zip_path,
-    "wb"
-) as f:
+def download_dataset():
 
-    for chunk in response.iter_content(
-        chunk_size=8192
-    ):
-
-        f.write(chunk)
-
-with zipfile.ZipFile(
-    zip_path,
-    "r"
-) as zip_ref:
-
-    zip_ref.extractall(
-        "dataset"
+    st.info(
+        f"Downloading dataset ({DATASET_VERSION})..."
     )
 
-if os.path.exists(
-    zip_path
-):
+    zip_path = "images.zip"
+
+    response = requests.get(
+        ZIP_URL,
+        stream=True
+    )
+
+    response.raise_for_status()
+
+    with open(
+        zip_path,
+        "wb"
+    ) as f:
+
+        for chunk in response.iter_content(
+            chunk_size=8192
+        ):
+
+            f.write(chunk)
+
+    with zipfile.ZipFile(
+        zip_path,
+        "r"
+    ) as zip_ref:
+
+        zip_ref.extractall(
+            "dataset"
+        )
 
     os.remove(
         zip_path
     )
 
+    with open(
+        VERSION_FILE,
+        "w"
+    ) as f:
 
+        f.write(
+            DATASET_VERSION
+        )
+
+
+needs_download = True
+
+if os.path.exists(
+    VERSION_FILE
+):
+
+    with open(
+        VERSION_FILE,
+        "r"
+    ) as f:
+
+        installed_version = (
+            f.read()
+            .strip()
+        )
+
+    if (
+        installed_version
+        ==
+        DATASET_VERSION
+    ):
+
+        needs_download = False
+
+
+if needs_download:
+
+    if os.path.exists(
+        DATASET_FOLDER
+    ):
+
+        shutil.rmtree(
+            DATASET_FOLDER
+        )
+
+    os.makedirs(
+        "dataset",
+        exist_ok=True
+    )
+
+    download_dataset()
 
 # Initialize loading state
 if "loading_complete" not in st.session_state:
