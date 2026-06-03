@@ -6,6 +6,9 @@ Usage examples:
     python -m scripts.dataset_tools enrich-metadata
 """
 
+import os
+import json
+
 import argparse
 import csv
 import random
@@ -36,6 +39,76 @@ DEFAULT_METADATA_V2 = PROJECT_ROOT / "metadata_v2.csv"
 
 DEFAULT_IMAGES_DIR = PROJECT_ROOT / "dataset" / "images"
 DEFAULT_AUDIT_DIR = Path("C:/tmp/custom-metadata-audit")
+
+
+def sync_taxonomy(
+    metadata_path="metadata.csv",
+    taxonomy_path="taxonomy.json"
+):
+    """
+    Extract unique labels from metadata.csv
+    and save them into taxonomy.json
+    """
+
+    print("Reading metadata...")
+
+    df = pd.read_csv(metadata_path)
+
+    taxonomy_columns = [
+        "category",
+        "silhouette",
+        "sleeve",
+        "neckline",
+        "color",
+        "style",
+        "pattern"
+    ]
+
+    taxonomy = {}
+
+    for column in taxonomy_columns:
+
+        if column not in df.columns:
+            print(f"Skipping missing column: {column}")
+            continue
+
+        values = (
+            df[column]
+            .dropna()
+            .astype(str)
+            .str.strip()
+        )
+
+        unique_values = sorted(
+            [
+                value
+                for value in values.unique()
+                if value.lower() != "none"
+                and value != ""
+            ]
+        )
+
+        taxonomy[column] = unique_values
+
+    # Add unknown as fallback
+    for key in taxonomy:
+        taxonomy[key].append("none")
+
+    with open(
+        taxonomy_path,
+        "w",
+        encoding="utf-8"
+    ) as f:
+        json.dump(
+            taxonomy,
+            f,
+            indent=4,
+            ensure_ascii=False
+        )
+
+    print(
+        f"Taxonomy saved to {taxonomy_path}"
+    )
 
 
 CATEGORY_MAP = {
@@ -1212,6 +1285,10 @@ def build_parser():
         "--csv-output",
         default=str(DEFAULT_REVIEW_CSV),
     )
+    subparsers.add_parser(
+        "sync-taxonomy",
+        help="Generate taxonomy.json from metadata.csv"
+    )
 
     keywords_parser = subparsers.add_parser(
         "discover-keywords",
@@ -1314,6 +1391,9 @@ def main():
             output_dir=Path(args.output_dir),
             csv_output=Path(args.csv_output),
         )
+    
+    elif args.command == "sync-taxonomy":
+        sync_taxonomy()
 
     elif args.command == "discover-keywords":
         discover_keywords(args.min_freq)
@@ -1353,5 +1433,6 @@ def main():
         )
 
 
+    
 if __name__ == "__main__":
     main()
