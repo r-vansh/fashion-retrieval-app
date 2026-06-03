@@ -7,13 +7,15 @@ import torch
 
 
 METADATA_WEIGHTS = {
-    "style": 0.04,
-    "silhouette": 0.03,
-    "neckline": 0.015,
-    "sleeve": 0.015,
-    "pattern": 0.015,
+    "style": 0.08,
+    "silhouette": 0.16,
+    "neckline": 0.05,
+    "sleeve": 0.05,
+    "pattern": 0.12,
 }
-SIMILARITY_WEIGHT = 0.90
+
+SIMILARITY_WEIGHT = 0.80
+METADATA_INFLUENCE = 0.20
 
 
 def normalize(value):
@@ -81,21 +83,83 @@ def is_relevant(query_row, candidate_row):
     )
 
 
-def hybrid_score(similarity, query_row, candidate_row, visual_only):
-    score = similarity * SIMILARITY_WEIGHT
+def hybrid_score(
+    similarity,
+    query_row,
+    candidate_row,
+    visual_only
+):
+
+    visual_score = (
+        similarity
+    )
 
     if visual_only:
-        return score
 
-    for attribute, weight in METADATA_WEIGHTS.items():
+        return (
+            visual_score
+            * SIMILARITY_WEIGHT
+        )
+
+    metadata_score = 0
+    max_metadata_score = 0
+
+    for (
+        attribute,
+        weight
+    ) in METADATA_WEIGHTS.items():
+
+        max_metadata_score += (
+            weight
+        )
+
         if (
-            normalize(query_row[attribute])
-            == normalize(candidate_row[attribute])
+            normalize(
+                query_row[
+                    attribute
+                ]
+            )
+            ==
+            normalize(
+                candidate_row[
+                    attribute
+                ]
+            )
         ):
-            score += weight
 
-    return score
+            metadata_score += (
+                weight
+            )
 
+    if (
+        max_metadata_score
+        > 0
+    ):
+
+        metadata_score = (
+            metadata_score
+            /
+            max_metadata_score
+        )
+
+    else:
+
+        metadata_score = 0
+
+    final_score = (
+
+        visual_score
+        *
+        SIMILARITY_WEIGHT
+
+        +
+
+        metadata_score
+        *
+        METADATA_INFLUENCE
+    )
+
+    return final_score
 
 def evaluate(catalog, recall_at, visual_only):
     embeddings = torch.stack(
@@ -254,7 +318,7 @@ def main():
 
     print(f"Mode: {mode}")
     print(
-        "Relevant: same category and at least 3 matching metadata "
+        "Relevant: same category and at least 2 matching metadata "
         f"attributes ({', '.join(METADATA_WEIGHTS)})"
     )
     print(f"Catalog images: {results['catalog_size']}")
