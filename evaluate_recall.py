@@ -77,7 +77,7 @@ def is_relevant(query_row, candidate_row):
     return (
         normalize_category(query_row["category"])
         == normalize_category(candidate_row["category"])
-        and count_matching_attributes(query_row, candidate_row) >= 3
+        and count_matching_attributes(query_row, candidate_row) >= 2
     )
 
 
