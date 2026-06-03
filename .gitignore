@@ -4,3 +4,9 @@ dataset/
 images/
 images.zip
 clip_cache/
+DeepFashion/
+deepfashion_review_dataset/
+
+*.npy
+*.pkl
+*.faiss
