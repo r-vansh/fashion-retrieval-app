@@ -16,7 +16,7 @@ import requests
 # -------------------------
 
 ZIP_URL = (
-    "https://github.com/r-vansh/fashion-retrieval-app/releases/download/v1/images.zip"
+    "https://github.com/r-vansh/fashion-retrieval-app/releases/download/v2/images.zip"
 )
 
 if not os.path.exists(
