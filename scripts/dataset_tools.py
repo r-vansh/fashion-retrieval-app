@@ -17,6 +17,7 @@ import textwrap
 from collections import Counter
 from io import StringIO
 from pathlib import Path
+from metadata_ai import auto_metadata
 
 import pandas as pd
 
@@ -1289,6 +1290,23 @@ def build_parser():
         "sync-taxonomy",
         help="Generate taxonomy.json from metadata.csv"
     )
+    subparsers.add_parser(
+        "auto-metadata",
+        help=(
+            "Generate AI metadata "
+            "review CSV "
+            "for new images"
+        )
+    )
+    subparsers.add_parser(
+        "merge-ai-metadata",
+        help=(
+            "Merge approved "
+            "AI metadata "
+            "into metadata.csv"
+        )
+    )
+    
 
     keywords_parser = subparsers.add_parser(
         "discover-keywords",
@@ -1430,6 +1448,14 @@ def main():
         apply_refined_labels(
             input_csv=Path(args.input_csv),
             output_csv=Path(args.output_csv),
+        )
+        
+    elif args.command == "auto-metadata":
+        auto_metadata()
+
+    elif args.command == "merge-ai-metadata":
+        print(
+            "Coming soon."
         )
 
 
