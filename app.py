@@ -455,6 +455,47 @@ def classify_uploaded_image(uploaded_image, _model, _preprocess, _device):
     return results
 
 
+def resolve_query_metadata(uploaded_image, file_name):
+    query_image_name = (
+        os.path.basename(file_name)
+        .replace(".jpg", "")
+        .replace(".png", "")
+        .replace(".jpeg", "")
+        .strip()
+    )
+    query_matched_rows = metadata[
+        metadata["image_id"]
+        .astype(str)
+        .str.strip()
+        ==
+        query_image_name
+    ]
+
+    if not query_matched_rows.empty:
+        query_row = query_matched_rows.iloc[0]
+        query_row = query_row.fillna("Unknown")
+        return {
+            "category": str(query_row.get("category", "Unknown")).lower(),
+            "style": str(query_row.get("style", "Unknown")).lower(),
+            "silhouette": str(query_row.get("silhouette", "Unknown")).lower(),
+            "neckline": str(query_row.get("neckline", "Unknown")).lower(),
+            "sleeve": str(query_row.get("sleeve", "Unknown")).lower(),
+            "pattern": str(query_row.get("pattern", "Unknown")).lower(),
+            "color": str(query_row.get("color", "Unknown")).lower()
+        }
+    else:
+        predicted = classify_uploaded_image(uploaded_image, model, preprocess, device)
+        return {
+            "category": str(predicted.get("category", "Unknown")).lower(),
+            "style": str(predicted.get("style", "Unknown")).lower(),
+            "silhouette": str(predicted.get("silhouette", "Unknown")).lower(),
+            "neckline": str(predicted.get("neckline", "Unknown")).lower(),
+            "sleeve": str(predicted.get("sleeve", "Unknown")).lower(),
+            "pattern": str(predicted.get("pattern", "Unknown")).lower(),
+            "color": str(predicted.get("color", "Unknown")).lower()
+        }
+
+
 # -------------------------
 # LOAD EMBEDDINGS
 # -------------------------
@@ -675,8 +716,18 @@ def find_similar(
     query_pattern="Auto",
     query_color="Auto",
     selected_category="All",
-    sketch_mode=False
+    sketch_mode=False,
+    detected_metadata=None
 ):
+    if detected_metadata is None:
+        detected_metadata = {}
+
+    resolved_style = str(query_style if query_style != "Auto" else detected_metadata.get("style", "Unknown")).strip().lower()
+    resolved_silhouette = str(query_silhouette if query_silhouette != "Auto" else detected_metadata.get("silhouette", "Unknown")).strip().lower()
+    resolved_neckline = str(query_neckline if query_neckline != "Auto" else detected_metadata.get("neckline", "Unknown")).strip().lower()
+    resolved_sleeve = str(query_sleeve if query_sleeve != "Auto" else detected_metadata.get("sleeve", "Unknown")).strip().lower()
+    resolved_pattern = str(query_pattern if query_pattern != "Auto" else detected_metadata.get("pattern", "Unknown")).strip().lower()
+    resolved_color = str(query_color if query_color != "Auto" else detected_metadata.get("color", "Unknown")).strip().lower()
 
     if sketch_mode:
         processed_img = preprocess_query_sketch(uploaded_image)
@@ -908,169 +959,53 @@ def find_similar(
         # -------------------------
 
         visual_score = similarity
-
-        metadata_score = 0
-        max_metadata_score = 0
-
-
-        # -------------------------
-        # STYLE
-        # -------------------------
+        metadata_boost = 0.0
 
         if (
-            use_style
-            and query_style
-            != "Auto"
+            float(use_style) > 0.0
+            and resolved_style not in ["auto", "unknown", ""]
         ):
-
-            weight = 0.25
-            max_metadata_score += weight
-
-            if (
-                str(row["style"]).lower()
-                ==
-                query_style.lower()
-            ):
-
-                metadata_score += weight
-
-
-        # -------------------------
-        # SILHOUETTE
-        # -------------------------
+            if str(row["style"]).lower() == resolved_style:
+                metadata_boost += float(use_style) * 0.05
 
         if (
-            use_silhouette
-            and query_silhouette
-            != "Auto"
+            float(use_silhouette) > 0.0
+            and resolved_silhouette not in ["auto", "unknown", ""]
         ):
-
-            weight = 0.25
-            max_metadata_score += weight
-
-            if (
-                str(row["silhouette"]).lower()
-                ==
-                query_silhouette.lower()
-            ):
-
-                metadata_score += weight
-
-
-        # -------------------------
-        # NECKLINE
-        # -------------------------
+            if str(row["silhouette"]).lower() == resolved_silhouette:
+                metadata_boost += float(use_silhouette) * 0.05
 
         if (
-            use_neckline
-            and query_neckline
-            != "Auto"
+            float(use_neckline) > 0.0
+            and resolved_neckline not in ["auto", "unknown", ""]
         ):
-
-            weight = 0.35
-            max_metadata_score += weight
-
-            if (
-                str(row["neckline"]).lower()
-                ==
-                query_neckline.lower()
-            ):
-
-                metadata_score += weight
-
-
-        # -------------------------
-        # SLEEVE
-        # -------------------------
+            if str(row["neckline"]).lower() == resolved_neckline:
+                metadata_boost += float(use_neckline) * 0.05
 
         if (
-            use_sleeve
-            and query_sleeve
-            != "Auto"
+            float(use_sleeve) > 0.0
+            and resolved_sleeve not in ["auto", "unknown", ""]
         ):
-
-            weight = 0.35
-            max_metadata_score += weight
-
-            if (
-                str(row["sleeve"]).lower()
-                ==
-                query_sleeve.lower()
-            ):
-
-                metadata_score += weight
-
-
-        # -------------------------
-        # PATTERN
-        # -------------------------
+            if str(row["sleeve"]).lower() == resolved_sleeve:
+                metadata_boost += float(use_sleeve) * 0.05
 
         if (
-            use_pattern
-            and query_pattern
-            != "Auto"
+            float(use_pattern) > 0.0
+            and resolved_pattern not in ["auto", "unknown", ""]
         ):
-
-            weight = 0.35
-            max_metadata_score += weight
-
-            if (
-                str(row["pattern"]).lower()
-                ==
-                query_pattern.lower()
-            ):
-
-                metadata_score += weight
-
-
-        # -------------------------
-        # COLOR
-        # -------------------------
+            if str(row["pattern"]).lower() == resolved_pattern:
+                metadata_boost += float(use_pattern) * 0.05
 
         if (
-            use_color
-            and query_color
-            != "Auto"
+            float(use_color) > 0.0
+            and resolved_color not in ["auto", "unknown", ""]
         ):
+            if str(row["color"]).lower() == resolved_color:
+                metadata_boost += float(use_color) * 0.05
 
-            weight = 0.5
-            max_metadata_score += weight
+        # Final score is the visual score plus the cumulative metadata priority boost
+        final_score = visual_score + metadata_boost
 
-            if (
-                str(row["color"]).lower()
-                ==
-                query_color.lower()
-            ):
-
-                metadata_score += weight
-
-
-        # -------------------------
-        # NORMALIZE METADATA SCORE
-        # -------------------------
-
-        if max_metadata_score > 0:
-
-            metadata_score = (
-                metadata_score
-                / max_metadata_score
-            )
-
-        else:
-
-            metadata_score = 0
-
-
-        # -------------------------
-        # FINAL SCORE
-        # -------------------------
-
-        final_score = (
-            visual_score * 0.75
-            +
-            metadata_score * 0.25
-        )
-        
         similarities.append(
             (
                 i,
@@ -1096,7 +1031,6 @@ def find_similar(
 # -------------------------
 # SIDEBAR SETTINGS
 # -------------------------
-
 def reset_filters():
     st.session_state["filter_category"] = "All"
     st.session_state["filter_top_k"] = 6
@@ -1106,13 +1040,14 @@ def reset_filters():
     st.session_state["pref_sleeve"] = "Auto"
     st.session_state["pref_pattern"] = "Auto"
     st.session_state["pref_color"] = "Auto"
-    st.session_state["prioritize_style"] = False
-    st.session_state["prioritize_silhouette"] = False
-    st.session_state["prioritize_neckline"] = False
-    st.session_state["prioritize_sleeve"] = False
-    st.session_state["prioritize_pattern"] = False
-    st.session_state["prioritize_color"] = False
+    st.session_state["prioritize_style"] = 0.0
+    st.session_state["prioritize_silhouette"] = 0.0
+    st.session_state["prioritize_neckline"] = 0.0
+    st.session_state["prioritize_sleeve"] = 0.0
+    st.session_state["prioritize_pattern"] = 0.0
+    st.session_state["prioritize_color"] = 0.0
     st.session_state["sketch_mode"] = False
+    st.session_state["focus_area"] = "Full Garment"
 
 st.sidebar.markdown(
     "<div style='font-size: 32px; font-weight: bold;'>Search Settings</div>",
@@ -1132,13 +1067,14 @@ is_modified = (
     or st.session_state.get("pref_sleeve", "Auto") != "Auto"
     or st.session_state.get("pref_pattern", "Auto") != "Auto"
     or st.session_state.get("pref_color", "Auto") != "Auto"
-    or st.session_state.get("prioritize_style", False)
-    or st.session_state.get("prioritize_silhouette", False)
-    or st.session_state.get("prioritize_neckline", False)
-    or st.session_state.get("prioritize_sleeve", False)
-    or st.session_state.get("prioritize_pattern", False)
-    or st.session_state.get("prioritize_color", False)
+    or st.session_state.get("prioritize_style", 0.0) != 0.0
+    or st.session_state.get("prioritize_silhouette", 0.0) != 0.0
+    or st.session_state.get("prioritize_neckline", 0.0) != 0.0
+    or st.session_state.get("prioritize_sleeve", 0.0) != 0.0
+    or st.session_state.get("prioritize_pattern", 0.0) != 0.0
+    or st.session_state.get("prioritize_color", 0.0) != 0.0
     or st.session_state.get("sketch_mode", False)
+    or st.session_state.get("focus_area", "Full Garment") != "Full Garment"
 )
 
 st.sidebar.button(
@@ -1279,34 +1215,39 @@ with st.sidebar.expander(
     "Prioritize Tags",
     expanded=False
 ):
-
-    use_style = st.checkbox(
-        "Style",
+    weight_style = st.slider(
+        "Style Priority",
+        0.0, 1.0, 0.0, 0.05,
         key="prioritize_style"
     )
 
-    use_silhouette = st.checkbox(
-        "Silhouette",
+    weight_silhouette = st.slider(
+        "Silhouette Priority",
+        0.0, 1.0, 0.0, 0.05,
         key="prioritize_silhouette"
     )
 
-    use_neckline = st.checkbox(
-        "Neckline",
+    weight_neckline = st.slider(
+        "Neckline Priority",
+        0.0, 1.0, 0.0, 0.05,
         key="prioritize_neckline"
     )
 
-    use_sleeve = st.checkbox(
-        "Sleeve",
+    weight_sleeve = st.slider(
+        "Sleeve Priority",
+        0.0, 1.0, 0.0, 0.05,
         key="prioritize_sleeve"
     )
 
-    use_pattern = st.checkbox(
-        "Pattern",
+    weight_pattern = st.slider(
+        "Pattern Priority",
+        0.0, 1.0, 0.0, 0.05,
         key="prioritize_pattern"
     )
 
-    use_color = st.checkbox(
-        "Color",
+    weight_color = st.slider(
+        "Color Priority",
+        0.0, 1.0, 0.0, 0.05,
         key="prioritize_color"
     )
 
@@ -1409,6 +1350,19 @@ if uploaded_file:
     current_file_name = uploaded_file.name
     if st.session_state.get("last_uploaded_file") != current_file_name:
         st.session_state["last_uploaded_file"] = current_file_name
+        st.session_state["focus_area"] = "Full Garment"
+
+    # Crop the image if a focus area is chosen
+    w, h = uploaded_image.size
+    cropped_image = uploaded_image
+    
+    sel_focus = st.session_state.get("focus_area", "Full Garment")
+    if sel_focus == "Neckline & Collar":
+        cropped_image = uploaded_image.crop((0, 0, w, int(h * 0.40)))
+    elif sel_focus == "Sleeves & Upper Body":
+        cropped_image = uploaded_image.crop((0, 0, w, int(h * 0.50)))
+    elif sel_focus == "Silhouette & Bottom":
+        cropped_image = uploaded_image.crop((0, int(h * 0.40), w, h))
 
     st.markdown("---")
 
@@ -1421,9 +1375,16 @@ if uploaded_file:
         st.markdown("### Reference")
 
         st.image(
-            uploaded_image,
+            cropped_image,
             width="stretch"
         )
+        
+        st.selectbox(
+            "Visual Focus Area",
+            ["Full Garment", "Neckline & Collar", "Sleeves & Upper Body", "Silhouette & Bottom"],
+            key="focus_area"
+        )
+
         if st.session_state.get("sketch_mode", False):
             st.caption("✨ Sketch Search Mode Active (matching edge structures)")
 
@@ -1486,17 +1447,18 @@ if uploaded_file:
         st.markdown(
             f"### Top {top_k} Retrieved Results"
         )
+        detected_meta = resolve_query_metadata(uploaded_image, uploaded_file.name)
 
         with st.status("Finding Similar Designs...", expanded=True) as status:
             results = find_similar(
-                uploaded_image,
+                cropped_image,
                 top_k=top_k,
-                use_style=use_style,
-                use_silhouette=use_silhouette,
-                use_neckline=use_neckline,
-                use_sleeve=use_sleeve,
-                use_pattern=use_pattern,
-                use_color=use_color,
+                use_style=weight_style,
+                use_silhouette=weight_silhouette,
+                use_neckline=weight_neckline,
+                use_sleeve=weight_sleeve,
+                use_pattern=weight_pattern,
+                use_color=weight_color,
                 selected_category=selected_category,
                 query_style=query_style,
                 query_silhouette=query_silhouette,
@@ -1504,8 +1466,9 @@ if uploaded_file:
                 query_sleeve=query_sleeve,
                 query_pattern=query_pattern,
                 query_color=query_color,
-                sketch_mode=st.session_state.get("sketch_mode", False)
-            )            
+                sketch_mode=st.session_state.get("sketch_mode", False),
+                detected_metadata=detected_meta
+            )
             status.update(label="Designs Found!", state="complete")
             if len(results) == 0:
 
