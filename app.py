@@ -726,24 +726,54 @@ def cluster_results(results, image_embeddings, image_paths, metadata):
                 
         if cluster_rows:
             df_cluster = pd.DataFrame(cluster_rows)
-            dominant_tags = []
             
+            # Smart category labeling
+            category_label = ""
             if "category" in df_cluster.columns:
-                cats = df_cluster["category"].dropna().str.title().value_counts()
+                cats = df_cluster["category"].dropna().str.title()
                 if not cats.empty:
-                    dominant_tags.append(cats.index[0])
-                    
+                    cat_counts = cats.value_counts()
+                    max_pct = cat_counts.iloc[0] / len(cats)
+                    if max_pct >= 0.6:
+                        base_cat = cat_counts.index[0]
+                        if len(cats) > 1:
+                            if base_cat.lower() in ["pants", "jeans", "shorts", "leggings", "shoes", "socks", "glasses", "heels", "boots"]:
+                                category_label = base_cat
+                            elif base_cat.endswith("y"):
+                                category_label = base_cat[:-1] + "ies"
+                            elif base_cat.endswith(("s", "x", "z", "ch", "sh")):
+                                category_label = base_cat + "es"
+                            else:
+                                category_label = base_cat + "s"
+                        else:
+                            category_label = base_cat
+                    else:
+                        unique_cats = list(cat_counts.index[:3])
+                        if len(unique_cats) == 1:
+                            category_label = unique_cats[0]
+                        elif len(unique_cats) == 2:
+                            category_label = f"{unique_cats[0]} & {unique_cats[1]}"
+                        else:
+                            category_label = ", ".join(unique_cats[:-1]) + f" & {unique_cats[-1]}"
+            
+            # Smart color labeling
+            color_label = ""
             if "color" in df_cluster.columns:
-                colors = df_cluster["color"].dropna().str.title().value_counts()
+                colors = df_cluster["color"].dropna().str.title()
                 if not colors.empty:
-                    dominant_tags.append(colors.index[0])
-                    
-            if "neckline" in df_cluster.columns:
-                necks = df_cluster["neckline"].dropna().str.title().value_counts()
-                if not necks.empty and necks.index[0] not in ["None", "Unknown"]:
-                    dominant_tags.append(necks.index[0])
-                    
-            label = " - ".join(dominant_tags[:2]) if dominant_tags else f"Group {c_id + 1}"
+                    color_counts = colors.value_counts()
+                    max_color_pct = color_counts.iloc[0] / len(colors)
+                    if max_color_pct >= 0.6:
+                        color_label = color_counts.index[0]
+            
+            if color_label and category_label:
+                label = f"{color_label} {category_label}"
+            elif category_label:
+                label = category_label
+            elif color_label:
+                label = f"{color_label} Items"
+            else:
+                label = f"Group {c_id + 1}"
         else:
             label = f"Group {c_id + 1}"
             
