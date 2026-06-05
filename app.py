@@ -187,15 +187,31 @@ h3 {
 
 /* ---------- CARD ---------- */
 
-[data-testid="stVerticalBlockBorderWrapper"] {
-    border-radius: 26px !important;
-    border: 1px solid #ececec !important;
+div[data-testid="stVerticalBlockBorderWrapper"],
+.stVerticalBlockBorderWrapper {
+    border-radius: 4px !important;
+    border: 1px solid #ECECEC !important;
     background: white !important;
-    overflow: hidden !important;
+    padding: 8px !important;
+    overflow: visible !important;
     transition: 0.3s ease;
+    height: auto !important;
 }
 
-[data-testid="stVerticalBlockBorderWrapper"]:hover {
+div[data-testid="stVerticalBlockBorderWrapper"] div,
+.stVerticalBlockBorderWrapper div {
+    overflow: visible !important;
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+div[data-testid="stVerticalBlockBorderWrapper"] [data-testid="stVerticalBlock"],
+.stVerticalBlockBorderWrapper .stVerticalBlock {
+    gap: 8px !important;
+}
+
+div[data-testid="stVerticalBlockBorderWrapper"]:hover,
+.stVerticalBlockBorderWrapper:hover {
     transform: translateY(-4px);
     box-shadow:
     0px 10px 30px rgba(0,0,0,0.08);
@@ -203,8 +219,10 @@ h3 {
 
 /* ---------- IMAGE ---------- */
 
-img {
-    border-radius: 0px;
+img,
+div[data-testid="stVerticalBlockBorderWrapper"] img,
+.stVerticalBlockBorderWrapper img {
+    border-radius: 2px !important;
 }
 
 /* ---------- UPLOAD AREA ---------- */
@@ -251,7 +269,6 @@ img {
 
 [data-testid="stFileUploader"] button:hover {
     background-color: #E5E51A;
-}
 }
 
 /* Upload label text styling */
@@ -950,6 +967,22 @@ def find_similar(
 # SIDEBAR SETTINGS
 # -------------------------
 
+def reset_filters():
+    st.session_state["filter_category"] = "All"
+    st.session_state["filter_top_k"] = 6
+    st.session_state["pref_style"] = "Auto"
+    st.session_state["pref_silhouette"] = "Auto"
+    st.session_state["pref_neckline"] = "Auto"
+    st.session_state["pref_sleeve"] = "Auto"
+    st.session_state["pref_pattern"] = "Auto"
+    st.session_state["pref_color"] = "Auto"
+    st.session_state["prioritize_style"] = False
+    st.session_state["prioritize_silhouette"] = False
+    st.session_state["prioritize_neckline"] = False
+    st.session_state["prioritize_sleeve"] = False
+    st.session_state["prioritize_pattern"] = False
+    st.session_state["prioritize_color"] = False
+
 st.sidebar.markdown(
     "<div style='font-size: 32px; font-weight: bold;'>Search Settings</div>",
     unsafe_allow_html=True
@@ -959,10 +992,34 @@ st.sidebar.markdown(
     "Customize how similar references are retrieved."
 )
 
+is_modified = (
+    st.session_state.get("filter_category", "All") != "All"
+    or st.session_state.get("filter_top_k", 6) != 6
+    or st.session_state.get("pref_style", "Auto") != "Auto"
+    or st.session_state.get("pref_silhouette", "Auto") != "Auto"
+    or st.session_state.get("pref_neckline", "Auto") != "Auto"
+    or st.session_state.get("pref_sleeve", "Auto") != "Auto"
+    or st.session_state.get("pref_pattern", "Auto") != "Auto"
+    or st.session_state.get("pref_color", "Auto") != "Auto"
+    or st.session_state.get("prioritize_style", False)
+    or st.session_state.get("prioritize_silhouette", False)
+    or st.session_state.get("prioritize_neckline", False)
+    or st.session_state.get("prioritize_sleeve", False)
+    or st.session_state.get("prioritize_pattern", False)
+    or st.session_state.get("prioritize_color", False)
+)
+
+st.sidebar.button(
+    "Reset All Filters",
+    on_click=reset_filters,
+    disabled=not is_modified,
+    use_container_width=True
+)
+
 st.sidebar.markdown("---")
 
 with st.sidebar.expander(
-    "Attribute Preferences",
+    "Tag Preferences",
     expanded=True
 ):
 
@@ -980,7 +1037,8 @@ with st.sidebar.expander(
             "Style",
             ["Auto"] + list(
                 style_options
-            )
+            ),
+            key="pref_style"
         )
     )
 
@@ -998,7 +1056,8 @@ with st.sidebar.expander(
             "Silhouette",
             ["Auto"] + list(
                 silhouette_options
-            )
+            ),
+            key="pref_silhouette"
         )
     )
 
@@ -1016,7 +1075,8 @@ with st.sidebar.expander(
             "Neckline",
             ["Auto"] + list(
                 neckline_options
-            )
+            ),
+            key="pref_neckline"
         )
     )
 
@@ -1034,7 +1094,8 @@ with st.sidebar.expander(
             "Sleeve",
             ["Auto"] + list(
                 sleeve_options
-            )
+            ),
+            key="pref_sleeve"
         )
     )
 
@@ -1052,7 +1113,8 @@ with st.sidebar.expander(
             "Pattern",
             ["Auto"] + list(
                 pattern_options
-            )
+            ),
+            key="pref_pattern"
         )
     )
 
@@ -1070,43 +1132,44 @@ with st.sidebar.expander(
             "Color",
             ["Auto"] + list(
                 color_options
-            )
+            ),
+            key="pref_color"
         )
     )
 
 with st.sidebar.expander(
-    "Prioritize Attributes",
+    "Prioritize Tags",
     expanded=False
 ):
 
     use_style = st.checkbox(
         "Style",
-        value=False
+        key="prioritize_style"
     )
 
     use_silhouette = st.checkbox(
         "Silhouette",
-        value=False
+        key="prioritize_silhouette"
     )
 
     use_neckline = st.checkbox(
         "Neckline",
-        value=False
+        key="prioritize_neckline"
     )
 
     use_sleeve = st.checkbox(
         "Sleeve",
-        value=False
+        key="prioritize_sleeve"
     )
 
     use_pattern = st.checkbox(
         "Pattern",
-        value=False
+        key="prioritize_pattern"
     )
 
     use_color = st.checkbox(
         "Color",
-        value=False
+        key="prioritize_color"
     )
 
     category_options = sorted(
@@ -1124,7 +1187,8 @@ selected_category = (
             ["All"] + [
                 category.title()
                 for category in category_options
-            ]
+            ],
+            key="filter_category"
     )
 )
 
@@ -1132,7 +1196,8 @@ top_k = st.sidebar.slider(
     "Number of Results",
     3,
     6,
-    6
+    6,
+    key="filter_top_k"
 )
 
 
@@ -1212,7 +1277,7 @@ if uploaded_file:
 
     with left_col:
 
-        st.markdown("### Query Reference")
+        st.markdown("### Reference")
 
         st.image(
             uploaded_image,
@@ -1220,7 +1285,7 @@ if uploaded_file:
         )
 
         if SHOW_QUERY_METADATA:
-            with st.expander("Query Metadata", expanded=True):
+            with st.expander("Query Metadata", expanded=False):
                 # Check metadata.csv first (just in case)
                 query_image_name = (
                     os.path.basename(uploaded_file.name)
@@ -1280,7 +1345,7 @@ if uploaded_file:
     with right_col:
 
         st.markdown(
-            f"### Top {top_k} Retrieved References"
+            f"### Top {top_k} Retrieved Results"
         )
 
         with st.status("Finding Similar Designs...", expanded=True) as status:
