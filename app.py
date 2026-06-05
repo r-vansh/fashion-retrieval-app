@@ -681,6 +681,77 @@ def on_file_upload():
         st.session_state["sketch_mode"] = False
 
 
+def cluster_results(results, image_embeddings, image_paths, metadata):
+    n_results = len(results)
+    if n_results <= 3:
+        return {0: {"label": "All Results", "items": results}}
+        
+    k = 3
+    
+    embeddings_list = []
+    for idx, _, _ in results:
+        emb = image_embeddings[idx]
+        emb_np = emb.cpu().numpy().reshape(-1).astype("float32")
+        embeddings_list.append(emb_np)
+        
+    embeddings_np = np.stack(embeddings_list)
+    faiss.normalize_L2(embeddings_np)
+    
+    d = embeddings_np.shape[1]
+    try:
+        kmeans = faiss.Kmeans(d=d, k=k, niter=20, verbose=False, spherical=True)
+        kmeans.train(embeddings_np)
+        _, cluster_labels = kmeans.index.search(embeddings_np, 1)
+        cluster_labels = cluster_labels.reshape(-1)
+    except Exception:
+        # Fallback if KMeans fails or n_results is too small for FAISS clustering parameters
+        return {0: {"label": "All Results", "items": results}}
+        
+    clusters = {c: [] for c in range(k)}
+    for item_idx, c_id in enumerate(cluster_labels):
+        clusters[c_id].append(results[item_idx])
+        
+    labeled_clusters = {}
+    for c_id, items in clusters.items():
+        if not items:
+            continue
+            
+        cluster_rows = []
+        for idx, _, _ in items:
+            image_path = image_paths[idx]
+            image_name = os.path.splitext(os.path.basename(image_path))[0].strip()
+            matched_rows = metadata[metadata["image_id"].astype(str).str.strip() == image_name]
+            if not matched_rows.empty:
+                cluster_rows.append(matched_rows.iloc[0])
+                
+        if cluster_rows:
+            df_cluster = pd.DataFrame(cluster_rows)
+            dominant_tags = []
+            
+            if "category" in df_cluster.columns:
+                cats = df_cluster["category"].dropna().str.title().value_counts()
+                if not cats.empty:
+                    dominant_tags.append(cats.index[0])
+                    
+            if "color" in df_cluster.columns:
+                colors = df_cluster["color"].dropna().str.title().value_counts()
+                if not colors.empty:
+                    dominant_tags.append(colors.index[0])
+                    
+            if "neckline" in df_cluster.columns:
+                necks = df_cluster["neckline"].dropna().str.title().value_counts()
+                if not necks.empty and necks.index[0] not in ["None", "Unknown"]:
+                    dominant_tags.append(necks.index[0])
+                    
+            label = " - ".join(dominant_tags[:2]) if dominant_tags else f"Group {c_id + 1}"
+        else:
+            label = f"Group {c_id + 1}"
+            
+        labeled_clusters[c_id] = {"label": label, "items": items}
+        
+    return labeled_clusters
+
+
 def preprocess_query_sketch(pil_img):
     try:
         img_np = np.array(pil_img)
@@ -1031,6 +1102,7 @@ def find_similar(
 # -------------------------
 # SIDEBAR SETTINGS
 # -------------------------
+
 def reset_filters():
     st.session_state["filter_category"] = "All"
     st.session_state["filter_top_k"] = 6
@@ -1048,6 +1120,7 @@ def reset_filters():
     st.session_state["prioritize_color"] = 0.0
     st.session_state["sketch_mode"] = False
     st.session_state["focus_area"] = "Full Garment"
+    st.session_state["enable_clustering"] = False
 
 st.sidebar.markdown(
     "<div style='font-size: 32px; font-weight: bold;'>Search Settings</div>",
@@ -1075,6 +1148,7 @@ is_modified = (
     or st.session_state.get("prioritize_color", 0.0) != 0.0
     or st.session_state.get("sketch_mode", False)
     or st.session_state.get("focus_area", "Full Garment") != "Full Garment"
+    or st.session_state.get("enable_clustering", False)
 )
 
 st.sidebar.button(
@@ -1090,6 +1164,12 @@ sketch_mode = st.sidebar.toggle(
     "Sketch Search Mode",
     key="sketch_mode",
     help="Optimize retrieval for hand-drawn sketch inputs by using edge-matching."
+)
+
+enable_clustering = st.sidebar.toggle(
+    "Group Results (Clustering)",
+    key="enable_clustering",
+    help="Group the retrieved references into similar clusters using K-means on their visual embeddings."
 )
 
 with st.sidebar.expander(
@@ -1477,123 +1557,53 @@ if uploaded_file:
                 )
 
                 st.stop()
-        cols = st.columns(
-            3,
-            gap="small"
-        )
+        def render_results_grid(items_list):
+            cols = st.columns(3, gap="small")
+            for i, (idx, score, visual_similarity) in enumerate(items_list):
+                image_path = image_paths[idx]
+                resolved_image_path = image_path
+                if not os.path.exists(resolved_image_path):
+                    resolved_image_path = os.path.join(APP_DIR, image_path)
 
-        for i, (
-            idx,
-            score,
-            visual_similarity
-        ) in enumerate(results):
-
-            image_path = image_paths[
-                idx
-            ]
-
-            resolved_image_path = image_path
-            if not os.path.exists(resolved_image_path):
-                resolved_image_path = os.path.join(APP_DIR, image_path)
-
-            image_name = (
-                os.path.basename(
-                    image_path
-                )
-                .replace(".jpg", "")
-                .replace(".png", "")
-                .strip()
-            )
-
-            matched_rows = metadata[
-                metadata["image_id"]
-                .astype(str)
-                .str.strip()
-                ==
-                image_name.strip()
-            ]
-
-            if matched_rows.empty:
-                continue
-
-            row = matched_rows.iloc[0]
-
-            with cols[i % 3]:
-
-                card = st.container(
-                    border=True
+                image_name = (
+                    os.path.basename(image_path)
+                    .replace(".jpg", "")
+                    .replace(".png", "")
+                    .strip()
                 )
 
-                with card:
+                matched_rows = metadata[
+                    metadata["image_id"]
+                    .astype(str)
+                    .str.strip()
+                    ==
+                    image_name.strip()
+                ]
 
-                    if os.path.exists(
-                        resolved_image_path
-                    ):
+                if matched_rows.empty:
+                    continue
 
-                        st.image(
-                            resolved_image_path,
-                            width="stretch"
-                        )
+                row = matched_rows.iloc[0]
 
-                    else:
+                with cols[i % 3]:
+                    card = st.container(border=True)
+                    with card:
+                        if os.path.exists(resolved_image_path):
+                            st.image(resolved_image_path, width="stretch")
+                        else:
+                            continue
 
-                        continue
+                        match_score = int(visual_similarity * 100)
+                        category_text = str(row.get("category", "Unknown")).title()
+                        style_text = str(row.get("style", "Unknown")).title()
+                        silhouette_text = str(row.get("silhouette", "Unknown")).title()
+                        neckline_text = str(row.get("neckline", "Unknown")).title()
+                        sleeve_text = str(row.get("sleeve", "Unknown")).title()
+                        pattern_text = str(row.get("pattern", "Unknown")).title()
+                        color_text = str(row.get("color", "Unknown")).title()
 
-                    match_score = int(
-                        visual_similarity * 100
-                    )
-
-                    category_text = str(
-                        row.get(
-                            "category",
-                            "Unknown"
-                        )
-                    ).title()
-
-                    style_text = str(
-                        row.get(
-                            "style",
-                            "Unknown"
-                        )
-                    ).title()
-
-                    silhouette_text = str(
-                        row.get(
-                            "silhouette",
-                            "Unknown"
-                        )
-                    ).title()
-
-                    neckline_text = str(
-                        row.get(
-                            "neckline",
-                            "Unknown"
-                        )
-                    ).title()
-
-                    sleeve_text = str(
-                        row.get(
-                            "sleeve",
-                            "Unknown"
-                        )
-                    ).title()
-
-                    pattern_text = str(
-                        row.get(
-                            "pattern",
-                            "Unknown"
-                        )
-                    ).title()
-
-                    color_text = str(
-                        row.get(
-                            "color",
-                            "Unknown"
-                        )
-                    ).title()
-
-                    st.markdown(
-                        f"""
+                        st.markdown(
+                            f"""
 <div style="display:flex; flex-direction:column; gap:8px;">
     <div style="display:flex; justify-content:space-between; align-items:baseline; width:100%;">
         <span style="font-size:18px; font-weight:700;">{category_text}</span>
@@ -1608,7 +1618,21 @@ if uploaded_file:
         <span class="fashion-tag">{color_text}</span>
     </div>
 </div>
-    """,
-    unsafe_allow_html=True
-)
+""",
+                            unsafe_allow_html=True
+                        )
+
+        if st.session_state.get("enable_clustering", False):
+            labeled_clusters = cluster_results(results, image_embeddings, image_paths, metadata)
+            valid_cluster_ids = sorted([c_id for c_id, info in labeled_clusters.items() if info["items"]])
+            if len(valid_cluster_ids) > 1:
+                tab_titles = [labeled_clusters[c_id]["label"] for c_id in valid_cluster_ids]
+                tabs = st.tabs(tab_titles)
+                for idx, c_id in enumerate(valid_cluster_ids):
+                    with tabs[idx]:
+                        render_results_grid(labeled_clusters[c_id]["items"])
+            else:
+                render_results_grid(results)
+        else:
+            render_results_grid(results)
                     
