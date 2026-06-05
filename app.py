@@ -11,6 +11,12 @@ import zipfile
 import requests
 
 # -------------------------
+# FEATURE CONFIGURATION
+# -------------------------
+SHOW_QUERY_METADATA = True  # Set to False to disable showing metadata of uploaded query images
+
+
+# -------------------------
 # DOWNLOAD IMAGES
 # -------------------------
 
@@ -254,6 +260,15 @@ img {
     height: auto;
 }
 
+/* ---------- TAGS ---------- */
+.fashion-tag {
+    background: #F1F1EE;
+    border: 1px solid #EDEDE9;
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-size: 12px;
+    display: inline-block;
+}
 
 </style>
 """, unsafe_allow_html=True)
@@ -335,6 +350,83 @@ with st.spinner("Loading Fashion Retrieval..."):
 
 
 model, preprocess = load_clip()
+
+# -------------------------
+# ZERO-SHOT CLASSIFICATION FOR UPLOADED IMAGES
+# -------------------------
+
+PROMPT_TEMPLATES = {
+    "category": "a photo of a {}",
+    "silhouette": "a garment with a {} silhouette",
+    "sleeve": "a garment with {}",
+    "neckline": "a garment with a {} neckline",
+    "color": "a {} colored garment",
+    "style": "a {} style outfit",
+    "pattern": "a garment with a {} pattern",
+}
+
+PROMPT_OVERRIDES = {
+    ("sleeve", "none"): "a garment with no sleeves visible, such as pants or a skirt",
+    ("sleeve", "sleeveless"): "a sleeveless garment or tank top",
+    ("neckline", "none"): "a garment with no neckline visible, such as pants or a skirt",
+    ("neckline", "collared"): "a garment with a collar",
+    ("category", "t-shirt"): "a photo of a t-shirt or tee",
+    ("silhouette", "none"): "a garment with no distinct silhouette",
+    ("color", "none"): "a garment with no distinct color",
+    ("style", "none"): "a garment with no distinct style",
+    ("pattern", "none"): "a garment with no distinct pattern",
+    ("pattern", "plain"): "a plain solid color garment with no pattern",
+    ("pattern", "textured"): "a garment with a textured fabric surface",
+    ("silhouette", "fit and flare"): "a garment with a fitted top and flared bottom",
+    ("silhouette", "regular fit"): "a regular fit garment, not too tight or loose",
+    ("category", "top"): "a photo of a women's top or blouse",
+}
+
+@st.cache_resource
+def get_taxonomy_features(_model, _device):
+    import json
+    with open("taxonomy.json", "r", encoding="utf-8") as f:
+        taxonomy = json.load(f)
+    
+    text_features_cache = {}
+    for field in ["category", "silhouette", "sleeve", "neckline", "color", "style", "pattern"]:
+        options = taxonomy[field]
+        prompts = []
+        for opt in options:
+            key = (field, opt)
+            if key in PROMPT_OVERRIDES:
+                prompts.append(PROMPT_OVERRIDES[key])
+            else:
+                template = PROMPT_TEMPLATES.get(field, "a photo of a {}")
+                prompts.append(template.format(opt))
+        
+        tokens = clip.tokenize(prompts).to(_device)
+        with torch.no_grad():
+            text_feats = _model.encode_text(tokens)
+            text_feats = text_feats / text_feats.norm(dim=-1, keepdim=True)
+        
+        text_features_cache[field] = {
+            "options": options,
+            "features": text_feats
+        }
+    return text_features_cache
+
+def classify_uploaded_image(uploaded_image, _model, _preprocess, _device):
+    image_input = _preprocess(uploaded_image).unsqueeze(0).to(_device)
+    with torch.no_grad():
+        image_features = _model.encode_image(image_input)
+        image_features = image_features / image_features.norm(dim=-1, keepdim=True)
+    
+    taxonomy_features = get_taxonomy_features(_model, _device)
+    
+    results = {}
+    for field in ["category", "silhouette", "sleeve", "neckline", "color", "style", "pattern"]:
+        cache = taxonomy_features[field]
+        similarities = (image_features @ cache["features"].T).squeeze(0)
+        best_idx = similarities.argmax().item()
+        results[field] = cache["options"][best_idx]
+    return results
+
 
 # -------------------------
 # LOAD EMBEDDINGS
@@ -1118,6 +1210,64 @@ if uploaded_file:
             width="stretch"
         )
 
+        if SHOW_QUERY_METADATA:
+            with st.expander("Query Metadata", expanded=True):
+                # Check metadata.csv first (just in case)
+                query_image_name = (
+                    os.path.basename(uploaded_file.name)
+                    .replace(".jpg", "")
+                    .replace(".png", "")
+                    .replace(".jpeg", "")
+                    .strip()
+                )
+                query_matched_rows = metadata[
+                    metadata["image_id"]
+                    .astype(str)
+                    .str.strip()
+                    ==
+                    query_image_name
+                ]
+
+                if not query_matched_rows.empty:
+                    query_row = query_matched_rows.iloc[0]
+                    query_row = query_row.fillna("Unknown")
+                    q_category = str(query_row.get("category", "Unknown")).title()
+                    q_style = str(query_row.get("style", "Unknown")).title()
+                    q_silhouette = str(query_row.get("silhouette", "Unknown")).title()
+                    q_neckline = str(query_row.get("neckline", "Unknown")).title()
+                    q_sleeve = str(query_row.get("sleeve", "Unknown")).title()
+                    q_pattern = str(query_row.get("pattern", "Unknown")).title()
+                    q_color = str(query_row.get("color", "Unknown")).title()
+                else:
+                    # Classify the uploaded image dynamically
+                    predicted_meta = classify_uploaded_image(uploaded_image, model, preprocess, device)
+                    q_category = str(predicted_meta.get("category", "Unknown")).title()
+                    q_style = str(predicted_meta.get("style", "Unknown")).title()
+                    q_silhouette = str(predicted_meta.get("silhouette", "Unknown")).title()
+                    q_neckline = str(predicted_meta.get("neckline", "Unknown")).title()
+                    q_sleeve = str(predicted_meta.get("sleeve", "Unknown")).title()
+                    q_pattern = str(predicted_meta.get("pattern", "Unknown")).title()
+                    q_color = str(predicted_meta.get("color", "Unknown")).title()
+
+                st.markdown(
+                    f"""
+<div style="display:flex; flex-direction:column; gap:8px;">
+    <div style="font-size:18px; font-weight:700;">{q_category}</div>
+    <div style="display:flex; flex-wrap:wrap; gap:8px;">
+        <span class="fashion-tag">{q_style}</span>
+        <span class="fashion-tag">{q_silhouette}</span>
+        <span class="fashion-tag">{q_neckline}</span>
+        <span class="fashion-tag">{q_sleeve}</span>
+        <span class="fashion-tag">{q_pattern}</span>
+        <span class="fashion-tag">{q_color}</span>
+    </div>
+</div>
+                    """,
+                    unsafe_allow_html=True
+                )
+
+
+
     with right_col:
 
         st.markdown(
@@ -1265,79 +1415,19 @@ if uploaded_file:
 
                     st.markdown(
                         f"""
-<div style="display:flex; flex-direction:column; gap:4px;">
-
-<div style="
-font-size:18px;
-font-weight:700;
-">
-{category_text}
-</div>
-
-<div style="display:flex; column-gap:8px; row-gap:8px; flex-wrap:wrap;">
-
-<span style="
-background:#F1F1EE;
-border: 1px solid #EDEDE9;
-padding:6px 12px;
-border-radius:20px;
-font-size:13px;
-">
-{style_text}
-</span> <span style="
-background:#F1F1EE;
-border: 1px solid #EDEDE9;
-padding:6px 12px;
-border-radius:20px;
-font-size:13px;
-">
-{silhouette_text}
-</span> <span style="
-background:#F1F1EE;
-border: 1px solid #EDEDE9;
-padding:6px 12px;
-border-radius:20px;
-font-size:13px;
-">
-{neckline_text}
-</span> <span style="
-background:#F1F1EE;
-border: 1px solid #EDEDE9;
-padding:6px 12px;
-border-radius:20px;
-font-size:13px;
-">
-{sleeve_text}
-</span> <span style="
-background:#F1F1EE;
-border: 1px solid #EDEDE9;
-padding:6px 12px;
-border-radius:20px;
-font-size:13px;
-">
-{pattern_text}
-</span>
-
-<span style="
-background:#F1F1EE;
-border: 1px solid #EDEDE9;
-padding:6px 12px;
-border-radius:20px;
-font-size:13px;
-">
-{color_text}
-</span>
-
-</div>
-
-<div style="
-font-size:14px;
-font-weight:500;
-color:#555;
-">
-Visual Match • {match_score}%
-</div>
-
+<div style="display:flex; flex-direction:column; gap:8px;">
+    <div style="display:flex; justify-content:space-between; align-items:baseline; width:100%;">
+        <span style="font-size:18px; font-weight:700;">{category_text}</span>
+        <span style="font-size:14px; font-weight:500; color:#555;">Visual Match • {match_score}%</span>
+    </div>
+    <div style="display:flex; flex-wrap:wrap; gap:8px;">
+        <span class="fashion-tag">{style_text}</span>
+        <span class="fashion-tag">{silhouette_text}</span>
+        <span class="fashion-tag">{neckline_text}</span>
+        <span class="fashion-tag">{sleeve_text}</span>
+        <span class="fashion-tag">{pattern_text}</span>
+        <span class="fashion-tag">{color_text}</span>
+    </div>
 </div>
     """,
     unsafe_allow_html=True
