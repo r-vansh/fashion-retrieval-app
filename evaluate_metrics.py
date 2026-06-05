@@ -47,7 +47,12 @@ def load_catalog(metadata_path, embeddings_path):
     metadata = metadata.set_index("image_id", drop=False)
 
     with open(embeddings_path, "rb") as file:
-        image_paths, image_embeddings = pickle.load(file)
+        loaded_data = pickle.load(file)
+        if isinstance(loaded_data, dict):
+            image_paths = loaded_data["image_paths"]
+            image_embeddings = loaded_data["image_embeddings"]
+        else:
+            image_paths, image_embeddings = loaded_data
 
     catalog = []
 
@@ -81,6 +86,7 @@ def pre_normalize_catalog(catalog):
     df = pd.DataFrame(rows)
 
     df["norm_category"] = df["category"].apply(normalize_category)
+    df["norm_color"] = df["color"].apply(normalize)
     for attr in DEFAULT_WEIGHTS:
         df[f"norm_{attr}"] = df[attr].apply(normalize)
 
@@ -135,6 +141,13 @@ def evaluate_opt(catalog, relevance_map, recall_at, visual_only, sim_weight, met
     total_relevant_items = 0
     average_precision_total = 0.0
 
+    # Error analysis counters
+    wrong_category_count = 0
+    color_bias_count = 0
+    background_bias_count = 0
+    missing_detail_count = 0
+    total_failures_analyzed = 0
+
     n = len(catalog)
     max_metadata_score = sum(meta_weights.values())
 
@@ -144,6 +157,7 @@ def evaluate_opt(catalog, relevance_map, recall_at, visual_only, sim_weight, met
         attr: [catalog[j][1][f"norm_{attr}"] for j in range(n)]
         for attr in attr_keys
     }
+    cand_colors = [catalog[j][1]["norm_color"] for j in range(n)]
 
     for query_index in range(n):
         relevant_indexes = relevance_map[query_index]
@@ -206,6 +220,31 @@ def evaluate_opt(catalog, relevance_map, recall_at, visual_only, sim_weight, met
                 relevant_indexes
             )
 
+        # Analyze errors in the top 5 retrieved candidates
+        for candidate_index, _ in ranked_indexes[:5]:
+            if candidate_index not in relevant_indexes:
+                total_failures_analyzed += 1
+                cand_row = catalog[candidate_index][1]
+                
+                cat_match = query_row["norm_category"] == cand_row["norm_category"]
+                color_match = query_row["norm_color"] == cand_colors[candidate_index]
+                
+                if not cat_match:
+                    wrong_category_count += 1
+                    if color_match:
+                        color_bias_count += 1
+                    else:
+                        # Check background bias: mismatch category, mismatch color, and zero matched features
+                        matching_features = sum(
+                            q_attrs[attr] == cand_attrs[attr][candidate_index]
+                            for attr in attr_keys
+                        )
+                        if matching_features == 0:
+                            background_bias_count += 1
+                else:
+                    # Category matches, but not relevant -> detail mismatch
+                    missing_detail_count += 1
+
     if not evaluated_queries:
         raise ValueError("No queries have relevant items under the configured rule.")
 
@@ -216,6 +255,12 @@ def evaluate_opt(catalog, relevance_map, recall_at, visual_only, sim_weight, met
         "average_relevant_items": total_relevant_items / evaluated_queries,
         "mean_average_precision": average_precision_total / evaluated_queries,
         "recall": {k: recall_totals[k] / evaluated_queries for k in recall_at},
+        "failures": {
+            "wrong_category": (wrong_category_count / total_failures_analyzed * 100) if total_failures_analyzed > 0 else 0.0,
+            "color_bias": (color_bias_count / total_failures_analyzed * 100) if total_failures_analyzed > 0 else 0.0,
+            "missing_detail": (missing_detail_count / total_failures_analyzed * 100) if total_failures_analyzed > 0 else 0.0,
+            "background_bias": (background_bias_count / total_failures_analyzed * 100) if total_failures_analyzed > 0 else 0.0,
+        }
     }
 
 
@@ -324,6 +369,7 @@ def main():
         "# Systematic Retrieval Performance Comparison Report\n",
         f"**Catalog Images:** {len(catalog)}",
         f"**Evaluated Queries:** {results['1. Baseline (Visual Only)']['evaluated_queries']}\n",
+        "## Performance Metrics Comparison\n",
         "| Configuration | mAP | Recall@1 | Recall@3 | Recall@5 | Recall@10 | Description |",
         "| :--- | :---: | :---: | :---: | :---: | :---: | :--- |"
     ]
@@ -333,6 +379,22 @@ def main():
         r = metrics["recall"]
         line = f"| **{name}** | {metrics['mean_average_precision']:.4f} | {r[1]:.4f} | {r[3]:.4f} | {r[5]:.4f} | {r[10]:.4f} | {desc} |"
         report_lines.append(line)
+
+    # Build Error Analysis markdown table
+    report_lines.append("\n## Error Analysis & Failure Modes (Distribution within Top-5 Failures)\n")
+    report_lines.append("| Configuration | Wrong Category | Color Bias | Background Bias | Missing Detail Similarity |")
+    report_lines.append("| :--- | :---: | :---: | :---: | :---: |")
+
+    for name, metrics in results.items():
+        f = metrics["failures"]
+        line = f"| **{name}** | {f['wrong_category']:.1f}% | {f['color_bias']:.1f}% | {f['background_bias']:.1f}% | {f['missing_detail']:.1f}% |"
+        report_lines.append(line)
+
+    report_lines.append("\n### Failure Mode Definitions:")
+    report_lines.append("- **Wrong Category**: The model retrieves a completely different garment type (e.g. retrieving pants when querying for a skirt) due to high-level visual/shape similarities.")
+    report_lines.append("- **Color Bias**: The model retrieves an incorrect garment type that shares the same dominant color as the query (subset of Wrong Category).")
+    report_lines.append("- **Background Bias**: Mismatches on category/color with zero matching tags, indicating similarity was heavily influenced by background, lighting, or model poses.")
+    report_lines.append("- **Missing Detail Similarity**: The model correctly identifies the category but fails to match key design features (e.g. neckline, sleeves, pattern, style).")
 
     report_content = "\n".join(report_lines)
 
