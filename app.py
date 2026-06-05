@@ -432,11 +432,13 @@ def find_similar(
     use_neckline=True,
     use_sleeve=True,
     use_pattern=True,
+    use_color=True,
     query_style="Auto",
     query_silhouette="Auto",
     query_neckline="Auto",
     query_sleeve="Auto",
     query_pattern="Auto",
+    query_color="Auto",
     selected_category="All"
 ):
 
@@ -673,7 +675,7 @@ def find_similar(
             != "Auto"
         ):
 
-            weight = 0.08
+            weight = 0.25
             max_metadata_score += weight
 
             if (
@@ -695,7 +697,7 @@ def find_similar(
             != "Auto"
         ):
 
-            weight = 0.16
+            weight = 0.25
             max_metadata_score += weight
 
             if (
@@ -717,7 +719,7 @@ def find_similar(
             != "Auto"
         ):
 
-            weight = 0.05
+            weight = 0.35
             max_metadata_score += weight
 
             if (
@@ -739,7 +741,7 @@ def find_similar(
             != "Auto"
         ):
 
-            weight = 0.05
+            weight = 0.35
             max_metadata_score += weight
 
             if (
@@ -761,13 +763,35 @@ def find_similar(
             != "Auto"
         ):
 
-            weight = 0.12
+            weight = 0.35
             max_metadata_score += weight
 
             if (
                 str(row["pattern"]).lower()
                 ==
                 query_pattern.lower()
+            ):
+
+                metadata_score += weight
+
+
+        # -------------------------
+        # COLOR
+        # -------------------------
+
+        if (
+            use_color
+            and query_color
+            != "Auto"
+        ):
+
+            weight = 0.5
+            max_metadata_score += weight
+
+            if (
+                str(row["color"]).lower()
+                ==
+                query_color.lower()
             ):
 
                 metadata_score += weight
@@ -794,9 +818,9 @@ def find_similar(
         # -------------------------
 
         final_score = (
-            visual_score * 0.80
+            visual_score * 0.75
             +
-            metadata_score * 0.20
+            metadata_score * 0.25
         )
         
         similarities.append(
@@ -931,6 +955,24 @@ with st.sidebar.expander(
         )
     )
 
+    color_options = sorted(
+        metadata["color"]
+        .dropna()
+        .astype(str)
+        .str.strip()
+        .str.lower()
+        .unique()
+    )
+
+    query_color = (
+        st.selectbox(
+            "Color",
+            ["Auto"] + list(
+                color_options
+            )
+        )
+    )
+
 with st.sidebar.expander(
     "Prioritize Attributes",
     expanded=False
@@ -958,6 +1000,11 @@ with st.sidebar.expander(
 
     use_pattern = st.checkbox(
         "Pattern",
+        value=False
+    )
+
+    use_color = st.checkbox(
+        "Color",
         value=False
     )
 
@@ -1087,12 +1134,14 @@ if uploaded_file:
                 use_neckline=use_neckline,
                 use_sleeve=use_sleeve,
                 use_pattern=use_pattern,
+                use_color=use_color,
                 selected_category=selected_category,
                 query_style=query_style,
                 query_silhouette=query_silhouette,
                 query_neckline=query_neckline,
                 query_sleeve=query_sleeve,
-                query_pattern=query_pattern
+                query_pattern=query_pattern,
+                query_color=query_color
             )
             
             status.update(label="Designs Found!", state="complete")
@@ -1207,6 +1256,13 @@ if uploaded_file:
                         )
                     ).title()
 
+                    color_text = str(
+                        row.get(
+                            "color",
+                            "Unknown"
+                        )
+                    ).title()
+
                     st.markdown(
                         f"""
 <div style="display:flex; flex-direction:column; gap:4px;">
@@ -1260,6 +1316,16 @@ border-radius:20px;
 font-size:13px;
 ">
 {pattern_text}
+</span>
+
+<span style="
+background:#F1F1EE;
+border: 1px solid #EDEDE9;
+padding:6px 12px;
+border-radius:20px;
+font-size:13px;
+">
+{color_text}
 </span>
 
 </div>
