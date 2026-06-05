@@ -15,6 +15,8 @@ import requests
 # -------------------------
 SHOW_QUERY_METADATA = True  # Set to False to disable showing metadata of uploaded query images
 
+APP_DIR = os.path.dirname(os.path.abspath(__file__))
+
 
 # -------------------------
 # DOWNLOAD IMAGES
@@ -28,22 +30,27 @@ ZIP_URL = (
     "https://github.com/r-vansh/fashion-retrieval-app/releases/download/v2/images.zip"
 )
 
-DATASET_FOLDER = (
-    "dataset/images"
-)
-
-VERSION_FILE = (
-    "dataset/version.txt"
-)
+DATASET_FOLDER = os.path.join(APP_DIR, "dataset", "images")
+VERSION_FILE = os.path.join(APP_DIR, "dataset", "version.txt")
+DATASET_PARENT = os.path.join(APP_DIR, "dataset")
 
 
 def download_dataset():
+    # If version file already exists and matches target version (written by another thread), exit early
+    if os.path.exists(VERSION_FILE):
+        try:
+            with open(VERSION_FILE, "r") as f:
+                installed_version = f.read().strip()
+            if installed_version == DATASET_VERSION:
+                return
+        except Exception:
+            pass
 
     st.info(
         f"Downloading dataset ({DATASET_VERSION})..."
     )
 
-    zip_path = "images.zip"
+    zip_path = os.path.join(APP_DIR, "images.zip")
 
     response = requests.get(
         ZIP_URL,
@@ -63,18 +70,22 @@ def download_dataset():
 
             f.write(chunk)
 
-    with zipfile.ZipFile(
-        zip_path,
-        "r"
-    ) as zip_ref:
+    if os.path.exists(zip_path):
+        with zipfile.ZipFile(
+            zip_path,
+            "r"
+        ) as zip_ref:
 
-        zip_ref.extractall(
-            "dataset"
-        )
+            zip_ref.extractall(
+                DATASET_PARENT
+            )
 
-    os.remove(
-        zip_path
-    )
+        try:
+            os.remove(
+                zip_path
+            )
+        except Exception:
+            pass
 
     with open(
         VERSION_FILE,
@@ -122,7 +133,7 @@ if needs_download:
         )
 
     os.makedirs(
-        "dataset",
+        DATASET_PARENT,
         exist_ok=True
     )
 
@@ -315,9 +326,7 @@ import glob
 # -------------------------
 
 with st.spinner("Loading Fashion Retrieval..."):
-    metadata_path = (
-     "metadata.csv"
-    )
+    metadata_path = os.path.join(APP_DIR, "metadata.csv")
 
     metadata = pd.read_csv(
      metadata_path
@@ -336,7 +345,7 @@ with st.spinner("Loading Fashion Retrieval..."):
         model, preprocess = clip.load(
             "ViT-B/32",
             device=device,
-            download_root="./clip_cache"
+            download_root=os.path.join(APP_DIR, "clip_cache")
         )
 
         model.eval()
@@ -385,7 +394,7 @@ PROMPT_OVERRIDES = {
 @st.cache_resource
 def get_taxonomy_features(_model, _device):
     import json
-    with open("taxonomy.json", "r", encoding="utf-8") as f:
+    with open(os.path.join(APP_DIR, "taxonomy.json"), "r", encoding="utf-8") as f:
         taxonomy = json.load(f)
     
     text_features_cache = {}
@@ -436,7 +445,7 @@ def classify_uploaded_image(uploaded_image, _model, _preprocess, _device):
 def load_embeddings():
 
     with open(
-        "embeddings.pkl",
+        os.path.join(APP_DIR, "embeddings.pkl"),
         "rb"
     ) as f:
 
@@ -1317,6 +1326,10 @@ if uploaded_file:
                 idx
             ]
 
+            resolved_image_path = image_path
+            if not os.path.exists(resolved_image_path):
+                resolved_image_path = os.path.join(APP_DIR, image_path)
+
             image_name = (
                 os.path.basename(
                     image_path
@@ -1348,11 +1361,11 @@ if uploaded_file:
                 with card:
 
                     if os.path.exists(
-                        image_path
+                        resolved_image_path
                     ):
 
                         st.image(
-                            image_path,
+                            resolved_image_path,
                             width="stretch"
                         )
 

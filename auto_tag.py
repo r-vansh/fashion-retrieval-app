@@ -257,7 +257,7 @@ def main():
 
     # Final save
     metadata_df.to_csv(METADATA_PATH, index=False)
-    print(f"\n✅ Done! Auto-tagged {tagged_count} images.")
+    print(f"\n[Done] Auto-tagged {tagged_count} images.")
     print(f"   Results saved to {METADATA_PATH}")
     print(f"   Use metadata_reviewer.py to review and correct predictions.")
 
