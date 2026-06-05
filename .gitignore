@@ -10,3 +10,4 @@ deepfashion_review_dataset/
 *.npy
 *.pkl
 *.faiss
+Evaluation Results
