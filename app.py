@@ -9,6 +9,7 @@ import pickle
 from PIL import Image
 import zipfile
 import requests
+import cv2
 
 # -------------------------
 # FEATURE CONFIGURATION
@@ -471,9 +472,14 @@ def load_embeddings():
         )
 
 
-image_paths, image_embeddings = (
-    load_embeddings()
-)
+loaded_data = load_embeddings()
+if isinstance(loaded_data, dict):
+    image_paths = loaded_data["image_paths"]
+    image_embeddings = loaded_data["image_embeddings"]
+    edge_embeddings = loaded_data.get("edge_embeddings", None)
+else:
+    image_paths, image_embeddings = loaded_data
+    edge_embeddings = None
 
 
 @st.cache_resource
@@ -534,9 +540,120 @@ def load_faiss_index():
     )
 
 
+@st.cache_resource
+def load_faiss_edge_index():
+    if edge_embeddings is None:
+        return None, None
+
+    valid_embeddings = []
+    original_indices = []
+
+    for i, embedding in enumerate(
+        edge_embeddings
+    ):
+
+        if (
+            embedding is None
+            or embedding.numel() == 0
+        ):
+
+            continue
+
+        vector = (
+            embedding
+            .cpu()
+            .numpy()
+            .reshape(-1)
+            .astype("float32")
+        )
+
+        valid_embeddings.append(
+            vector
+        )
+        original_indices.append(
+            i
+        )
+
+    if not valid_embeddings:
+        return None, None
+
+    vectors = np.stack(
+        valid_embeddings
+    )
+    faiss.normalize_L2(
+        vectors
+    )
+
+    index = faiss.IndexFlatIP(
+        vectors.shape[1]
+    )
+    index.add(
+        vectors
+    )
+
+    return (
+        index,
+        original_indices
+    )
+
+
 faiss_index, faiss_original_indices = (
     load_faiss_index()
 )
+
+faiss_edge_index, faiss_edge_original_indices = (
+    load_faiss_edge_index()
+)
+
+
+def detect_is_sketch(image):
+    try:
+        img_np = np.array(image)
+        if len(img_np.shape) == 3:
+            hsv = cv2.cvtColor(img_np, cv2.COLOR_RGB2HSV)
+            s_channel = hsv[:, :, 1]
+            mean_sat = np.mean(s_channel)
+            gray = cv2.cvtColor(img_np, cv2.COLOR_RGB2GRAY)
+        else:
+            mean_sat = 0
+            gray = img_np
+            
+        white_pixels = np.sum(gray > 240) / gray.size
+        black_pixels = np.sum(gray < 15) / gray.size
+        
+        if mean_sat < 20 and (white_pixels > 0.70 or black_pixels > 0.70):
+            return True
+    except Exception:
+        pass
+    return False
+
+
+def on_file_upload():
+    uploaded = st.session_state.get("uploaded_file_widget")
+    if uploaded:
+        try:
+            img = Image.open(uploaded).convert("RGB")
+            st.session_state["sketch_mode"] = detect_is_sketch(img)
+        except Exception:
+            pass
+    else:
+        st.session_state["sketch_mode"] = False
+
+
+def preprocess_query_sketch(pil_img):
+    try:
+        img_np = np.array(pil_img)
+        if len(img_np.shape) == 3:
+            gray = cv2.cvtColor(img_np, cv2.COLOR_RGB2GRAY)
+        else:
+            gray = img_np
+        mean_val = np.mean(gray)
+        if mean_val < 127:
+            gray = cv2.bitwise_not(gray)
+        return Image.fromarray(gray).convert("RGB")
+    except Exception:
+        return pil_img
+
     
 # -------------------------
 # FIND SIMILAR
@@ -557,11 +674,17 @@ def find_similar(
     query_sleeve="Auto",
     query_pattern="Auto",
     query_color="Auto",
-    selected_category="All"
+    selected_category="All",
+    sketch_mode=False
 ):
 
+    if sketch_mode:
+        processed_img = preprocess_query_sketch(uploaded_image)
+    else:
+        processed_img = uploaded_image
+
     image = preprocess(
-        uploaded_image
+        processed_img
     ).unsqueeze(0).to(device)
 
     with torch.no_grad():
@@ -591,10 +714,17 @@ def find_similar(
         query_vector
     )
 
+    active_index = faiss_index
+    active_indices = faiss_original_indices
+
+    if sketch_mode and faiss_edge_index is not None:
+        active_index = faiss_edge_index
+        active_indices = faiss_edge_original_indices
+
     faiss_similarities, faiss_positions = (
-        faiss_index.search(
+        active_index.search(
             query_vector,
-            faiss_index.ntotal
+            active_index.ntotal
         )
     )
 
@@ -602,7 +732,7 @@ def find_similar(
         faiss_similarities[0],
         faiss_positions[0]
     ):
-        i = faiss_original_indices[
+        i = active_indices[
             faiss_position
         ]
         similarity = float(
@@ -982,6 +1112,7 @@ def reset_filters():
     st.session_state["prioritize_sleeve"] = False
     st.session_state["prioritize_pattern"] = False
     st.session_state["prioritize_color"] = False
+    st.session_state["sketch_mode"] = False
 
 st.sidebar.markdown(
     "<div style='font-size: 32px; font-weight: bold;'>Search Settings</div>",
@@ -1007,6 +1138,7 @@ is_modified = (
     or st.session_state.get("prioritize_sleeve", False)
     or st.session_state.get("prioritize_pattern", False)
     or st.session_state.get("prioritize_color", False)
+    or st.session_state.get("sketch_mode", False)
 )
 
 st.sidebar.button(
@@ -1017,6 +1149,12 @@ st.sidebar.button(
 )
 
 st.sidebar.markdown("---")
+
+sketch_mode = st.sidebar.toggle(
+    "Sketch Search Mode",
+    key="sketch_mode",
+    help="Optimize retrieval for hand-drawn sketch inputs by using edge-matching."
+)
 
 with st.sidebar.expander(
     "Tag Preferences",
@@ -1237,8 +1375,9 @@ with col1:
     uploaded_file = st.file_uploader(
         label="Upload fashion images",
         type=["jpg", "jpeg", "png"],
-        label_visibility="collapsed"
-        
+        label_visibility="collapsed",
+        key="uploaded_file_widget",
+        on_change=on_file_upload
     )
 
 with col2:
@@ -1257,8 +1396,6 @@ with col2:
 
 #        Use an inspiration image, fashion photograph, garment detail, or sketch to retrieve visually similar references.
 
-#        """, unsafe_allow_html=True)
-
 if uploaded_file:
 
     uploaded_image = Image.open(
@@ -1268,6 +1405,10 @@ if uploaded_file:
     uploaded_image.thumbnail(
         (512, 512)
     )
+
+    current_file_name = uploaded_file.name
+    if st.session_state.get("last_uploaded_file") != current_file_name:
+        st.session_state["last_uploaded_file"] = current_file_name
 
     st.markdown("---")
 
@@ -1283,10 +1424,11 @@ if uploaded_file:
             uploaded_image,
             width="stretch"
         )
+        if st.session_state.get("sketch_mode", False):
+            st.caption("✨ Sketch Search Mode Active (matching edge structures)")
 
         if SHOW_QUERY_METADATA:
             with st.expander("Query Metadata", expanded=False):
-                # Check metadata.csv first (just in case)
                 query_image_name = (
                     os.path.basename(uploaded_file.name)
                     .replace(".jpg", "")
@@ -1313,7 +1455,6 @@ if uploaded_file:
                     q_pattern = str(query_row.get("pattern", "Unknown")).title()
                     q_color = str(query_row.get("color", "Unknown")).title()
                 else:
-                    # Classify the uploaded image dynamically
                     predicted_meta = classify_uploaded_image(uploaded_image, model, preprocess, device)
                     q_category = str(predicted_meta.get("category", "Unknown")).title()
                     q_style = str(predicted_meta.get("style", "Unknown")).title()
@@ -1340,8 +1481,6 @@ if uploaded_file:
                     unsafe_allow_html=True
                 )
 
-
-
     with right_col:
 
         st.markdown(
@@ -1349,7 +1488,6 @@ if uploaded_file:
         )
 
         with st.status("Finding Similar Designs...", expanded=True) as status:
-
             results = find_similar(
                 uploaded_image,
                 top_k=top_k,
@@ -1365,9 +1503,9 @@ if uploaded_file:
                 query_neckline=query_neckline,
                 query_sleeve=query_sleeve,
                 query_pattern=query_pattern,
-                query_color=query_color
-            )
-            
+                query_color=query_color,
+                sketch_mode=st.session_state.get("sketch_mode", False)
+            )            
             status.update(label="Designs Found!", state="complete")
             if len(results) == 0:
 
