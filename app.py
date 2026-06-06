@@ -6,7 +6,7 @@ import faiss
 import numpy as np
 import torch
 import pickle
-from PIL import Image
+from PIL import Image, ImageOps
 import zipfile
 import requests
 import cv2
@@ -1449,9 +1449,8 @@ with col2:
 
 if uploaded_file:
 
-    uploaded_image = Image.open(
-        uploaded_file
-    ).convert("RGB")
+    raw_image = Image.open(uploaded_file)
+    uploaded_image = ImageOps.exif_transpose(raw_image).convert("RGB")
 
     uploaded_image.thumbnail(
         (512, 512)
